@@ -1,8 +1,8 @@
+![Pythia](media/pythia.png)
+
 # CLOUDY LOGIC: AN ABSURD TALE FROM THE CLOUD
 
 A browser-based multi-user dimension. URL: *cloudylogic.space*.
-
-![Pythia](media/pythia.png)
 
 ### Context
 
