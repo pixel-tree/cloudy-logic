@@ -1,6 +1,6 @@
-# Cloudy Logic: An Absurd Tale in the Cloud
+# CLOUDY LOGIC: AN ABSURD TALE IN THE CLOUD
 
-A browser-based multi-user dimension.
+A browser-based multi-user dimension. URL: *cloudylogic.space*.
 
 ### Context
 
@@ -15,8 +15,6 @@ Prototypes:
 
 Current version: a hybrid of terminal and browser.
 
-Combining some social aspects of a classical MUD / users using a shared virtual machine; but with elements of performance that emerge from the interactions between (individual) players and NPCs
+Combining some social aspects of a classical MUD / users using a shared virtual machine; but with elements of performance that emerge from the interplay between players, NPCs, and the complex ecosystem as a whole.
 
-###### Requirements
-
-For a detailed list refer to *requirements.txt*. The programme has been developed using Python 3 + Node v13 and the servers run on GCP.
+If you wish to implement a version of this yourself, please refer to *requirements.txt* for a detailed list of libraries. The programme has been developed using Python 3 + Node v13 and the servers run on GCP.
