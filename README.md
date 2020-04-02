@@ -1,4 +1,4 @@
-# CLOUDY LOGIC: AN ABSURD TALE IN THE CLOUD
+# CLOUDY LOGIC: AN ABSURD TALE FROM THE CLOUD
 
 A browser-based multi-user dimension. URL: *cloudylogic.space*.
 
