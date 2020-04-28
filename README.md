@@ -16,6 +16,7 @@ Prototypes:
 3. Browser
 
 Current implementation: x.
+
 Yada yada.
 
 ### Installation
@@ -28,7 +29,7 @@ Clone repository (if you have git installed -- otherwise download):
 git clone https://github.com/pixel-tree/cloudy-logic.git
 ```
 
-Create and activate virtualenv (alternatively use whatever you use):
+Create and activate virtualenv (or alternatively use whatever you use):
 
 ```
 cd cloudy-logic
@@ -51,11 +52,13 @@ cd ../server
 pip install -r requirements.txt
 ```
 
-For development and local testing run:
+For local development and testing run:
 
 ```
 python cloudy_logic.py
 ```
+
+Now you should be able to access the application on [localhost](http://localhost:8000).
 
 For deployment configure a production WSGI such as *gunicorn* and use:
 
