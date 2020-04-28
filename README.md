@@ -2,7 +2,7 @@
 
 # CLOUDY LOGIC: An Alternative Guide to Bias in AI
 
-Live demo: [cloudylogic.space](cloudylogic.space).
+Live demo: [cloudylogic.space](http://cloudylogic.space).
 
 ### Context
 
