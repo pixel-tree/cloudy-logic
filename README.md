@@ -60,4 +60,4 @@ python cloudy_logic.py
 
 You now have access to the application through [localhost](http://localhost:8000).
 
-For deployment configure a production WSGI such as *Gunicorn* and use *wsgi.py* instead. For more information on this see [Gunicorn docs](https://docs.gunicorn.org/en/stable/index.html). Required packages included in *requirements.txt*.
+For deployment configure a production WSGI such as *Gunicorn* and use *wsgi.py* instead. For more information on this see [Gunicorn docs](https://docs.gunicorn.org/en/stable/index.html). Required packages included in server dependencies.
