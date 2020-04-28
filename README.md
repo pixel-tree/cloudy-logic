@@ -6,7 +6,7 @@ Live demo: [cloudylogic.space](http://cloudylogic.space).
 
 ### Context
 
-Cloudy Logic essay. Adorno. Postmodernism. Representationalism to performativity. Neural nets. Abstract authority - dressing up superstitions in empirical terms to make them seem more credible. Tension between different logics in AI development - business and technical / the expectation vs reality - design and appearance are magic tricks to divert attention from flaws and limitations - enveloping the world / developing space for technology rather than vice versa. Yada yada.
+Cloudy Logic essay. Adorno. Postmodernism. Representationalism to performativity. Axiomatic knowledge. Neural nets. Abstract authority -- dressing up superstitions in empirical terms to make them seem more credible. Tension between different logics in AI development: business <---> technical / the expectation vs reality -- design and appearance are like magic tricks to divert attention from flaws and limitations -- enveloping the world / developing space for technology rather than vice versa. Yada yada.
 
 ### Development
 
@@ -21,15 +21,15 @@ Yada yada.
 
 ### Installation
 
-Developed and tested using Python 3.6 and Node v13.
+Developed using Python 3.6 and Node v13.
 
-Clone repository (if you have git installed -- otherwise download):
+Clone (or download) repository:
 
 ```
 git clone https://github.com/pixel-tree/cloudy-logic.git
 ```
 
-Create and activate virtualenv (or alternatively use whatever you use):
+Create and activate virtualenv (alternatively use whatever you use):
 
 ```
 cd cloudy-logic
@@ -37,7 +37,7 @@ virtualenv -p python3.6 .
 source ./bin/activate
 ```
 
-To install and build front-end JS:
+Install and build front-end JS:
 
 ```
 cd static
@@ -58,12 +58,6 @@ For local development and testing run:
 python cloudy_logic.py
 ```
 
-Now you should be able to access the application on [localhost](http://localhost:8000).
+You now have access through to the application through [localhost](http://localhost:8000).
 
-For deployment configure a production WSGI such as *gunicorn* and use:
-
-```
-python wsgi.py
-```
-
-For more information on the latter see [Gunicorn docs](https://docs.gunicorn.org/en/stable/index.html).
+For deployment configure a production WSGI such as *gunicorn* and use *wsgi.py* instead. For more information on this see [Gunicorn docs](https://docs.gunicorn.org/en/stable/index.html).
