@@ -52,12 +52,12 @@ cd ../server
 pip install -r requirements.txt
 ```
 
-For local development and testing run:
+For development and testing run:
 
 ```
 python cloudy_logic.py
 ```
 
-You now have access through to the application through [localhost](http://localhost:8000).
+You now have access to the application through [localhost](http://localhost:8000).
 
-For deployment configure a production WSGI such as *gunicorn* and use *wsgi.py* instead. For more information on this see [Gunicorn docs](https://docs.gunicorn.org/en/stable/index.html).
+For deployment configure a production WSGI such as *Gunicorn* and use *wsgi.py* instead. For more information on this see [Gunicorn docs](https://docs.gunicorn.org/en/stable/index.html).
