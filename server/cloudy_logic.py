@@ -18,6 +18,6 @@ def index():
 
 
 # Use cloudy_logic.py for development;
-# but use gunicorn (or other production WSGI) for deployment.
+# but gunicorn (or other production WSGI) + _wsgi.py_ for deployment.
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
