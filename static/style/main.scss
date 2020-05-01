@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* Main Stylesheet */
+
+$font : "Adobe Devanagari";
+
+$black : rgb(0, 0, 0);
+$white : rgb(255, 255, 255);
+
+/* Container */
+
+body, #container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background-color: black;
+}

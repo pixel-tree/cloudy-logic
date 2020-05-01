@@ -4,13 +4,13 @@ module.exports = {
   entry: {
     main: './src/Main.js',
   },
+  output: {
+    filename: '[name].bundle.js',
+    path: __dirname+'build/',
+  },
   plugins: [
     new CleanWebpackPlugin(),
   ],
-  output: {
-    filename: '[name].bundle.js',
-    path: __dirname+'/build',
-  },
   module: {
     rules: [
       {
@@ -30,6 +30,14 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
+      },
+      {
+				test: /\.(png|gif|svg)$/,
+				loader: 'url-loader',
+			},
+      {
+        test: /\.txt$/i,
+        use: 'raw-loader',
       },
     ],
   },
