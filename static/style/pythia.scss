@@ -1,0 +1,28 @@
+@import 'main.scss';
+
+/* Pythia */
+
+#pythiaFrame{
+	width: 900px;
+	height: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 100px;
+}
+
+#pythiaImg{
+  float: left;
+}
+
+/* Terminal */
+
+#pythiaTextBox{
+  margin: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+  width: 560px;
+  height: 600px;
+  float: left;
+  background-image: url('../media/pythia_bg.png')
+}

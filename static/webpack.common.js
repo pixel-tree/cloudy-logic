@@ -6,7 +6,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: __dirname+'build/',
+    path: __dirname+'/build',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -30,6 +30,12 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader'],
       },
       {
 				test: /\.(png|gif|svg)$/,

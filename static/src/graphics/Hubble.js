@@ -1,4 +1,4 @@
-/*
+/**
  * CLOUDY LOGIC
  * An Alternative Guide to Bias in AI
  * Scene 1
@@ -7,11 +7,12 @@
 
 import '../../style/hubble.scss'
 
-import { hubble_gif, hubble_text } from '../Media.js'
+import { hubble_gif, hubble_txt } from '../Media.js'
 
 class Hubble {
   constructor(container) {
-    var $ = require('jquery');
+
+    var $ = require('jquery')
 
     // Main container.
     this._element = document.createElement('div')
@@ -45,9 +46,9 @@ class Hubble {
     continueBox.appendChild(continueText)
 
     // Load text file to array.
-    var textArray = hubble_text.split('\n')
+    var textArray = hubble_txt.split('\n')
 
-    /*
+    /**
      * Animation.
      */
     var i = 0,
