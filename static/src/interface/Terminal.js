@@ -24,8 +24,9 @@ class Terminal {
         if (command !== '') {
 
           /**
-           * Option no. 1.
+           * Option no. 1 (freeze on submission).
            */
+
 
           function messaging() {
             var dialogflow
@@ -42,9 +43,9 @@ class Terminal {
 
           this.echo(String('\n' + messaging() + '\n'))
 
+
           /**
-           * Option no. 2.
-           * TO DO: Figure out linebreaks.
+           * Option no. 2 (continue to next line before response).
            */
 
 /*
@@ -53,8 +54,9 @@ class Terminal {
              type: 'POST',
              data: command,
              success: function(data) {
-               $('.terminal-output').append(data.message)
+               $('.terminal-output').append('<p>' + data.message + '</p>')
              }
+           })
 */
 
         }
