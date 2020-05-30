@@ -1,0 +1,493 @@
+@import 'main.scss';
+
+/**
+ * Set height of multi-column typewriters depending on amount of text.
+ * TO DO: automate above.
+ *
+ * Cursors: 8/10 of font size; width = height / 2.
+ */
+
+/* Quote */
+
+#quoteFrame {
+  width: 1200px;
+	height: 150px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 210px;
+}
+
+#apoQ {
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 61px;
+		font-style: normal;
+		text-align: center;
+		color: $white;
+  }
+}
+
+.apoQcursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.apoQcursor::after {
+  height: 48.8px;
+  width: 24.4px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#apoReQ {
+  width: 735px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 210px;
+  p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 45px;
+		font-style: normal;
+		text-align: justify;
+    text-justify: inter-word;
+		color: $white;
+  }
+  #Qsource {
+    padding-top: 21px;
+    font-size: 27px;
+    font-style: italic;
+  }
+}
+
+#continueAQ {
+  width: 735px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	padding-top: 30px;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: $font;
+	font-size: 21px;
+	font-style: normal;
+	text-align: right;
+	color: $white;
+}
+
+#scrollDiv {
+	height: 600px;
+}
+
+/* Particles */
+
+#particleFrame {
+  width: 1200px;
+  height: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#reglFrame {
+  width: 600px;
+  height: 900px;
+  float: left;
+  width: 50%;
+}
+
+#particleTextBox {
+  margin-left: 600px;
+  width: 600px;
+  height: 900px;
+  p {
+    padding-top: 250px;
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 27px;
+		font-style: italic;
+		text-align: justify;
+    text-justify: inter-word;
+		color: $white;
+  }
+}
+
+.apo0cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.apo0cursor::after {
+  height: 21.6px;
+  width: 10.8px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Chaos */
+
+#particleReFrame {
+  width: 1200px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chaosGIF {
+width: 900px;
+height: 386px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+#chaosTextBox {
+  width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	height: 315px;
+	column-count: 3;
+	column-gap: 39px;
+	column-fill: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 24px;
+		font-style: italic;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+.apo1cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.apo1cursor::after {
+  height: 19.2px;
+  width: 8.6px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#continueChaos {
+  width: 1200px;
+  display: block;
+  height: auto;
+}
+
+.continueAP1 {
+	margin: 0px;
+	padding-top: 15px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 30px;
+	font-family: $font;
+	font-size: 15px;
+	font-style: normal;
+	text-align: right;
+	color: $white;
+}
+
+#twinkleGIF {
+padding-top: 120px;
+width: 1200px;
+height: 240px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+#historyTextBox {
+  padding-top: 39px;
+  width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	height: 185px;
+	column-count: 3;
+	column-gap: 39px;
+	column-fill: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 24px;
+		font-style: italic;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+#demonTextBox {
+  padding-top: 12px;
+  width: 1200px;
+	height: 375px;
+	p {
+    float: right;
+    width: 366px;
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 21px;
+		font-style: italic;
+    font-weight: lighter;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+.apo2cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.apo2cursor::after {
+  height: 16.8px;
+  width: 8.4px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#quantumTextBox {
+  padding-top: 90px;
+  width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	height: 300px;
+	column-count: 3;
+	column-gap: 39px;
+	column-fill: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 24px;
+		font-style: italic;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+#maxwellTextBox {
+  padding-top: 45px;
+  width: 1200px;
+	height: 196px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 36px;
+		font-style: italic;
+    font-weight: lighter;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+.apo3cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.apo3cursor::after {
+  height: 28.8px;
+  width: 14.4px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#maxwellNameBox {
+  padding-top: 12px;
+  width: 1200px;
+	height: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 30px;
+		font-style: italic;
+    font-weight: lighter;
+		text-align: left;
+		color: $white;
+  }
+}
+
+.apo4cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.apo4cursor::after {
+  height: 24px;
+  width: 12px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#abstractTextBox {
+  padding-top: 150px;
+  width: 787px;
+  height: 630px;
+  column-count: 2;
+  column-gap: 39px;
+  column-fill: auto;
+  float: left;
+  padding-bottom: 30px;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 24px;
+		font-style: italic;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+#fillerBox {
+  width: 413px;
+  height: 810px;
+  float: right;
+}

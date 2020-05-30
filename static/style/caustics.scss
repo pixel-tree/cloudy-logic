@@ -1,0 +1,240 @@
+@import 'main.scss';
+
+/**
+ * Set height of multi-column typewriters depending on amount of text.
+ * TO DO: automate above.
+ *
+ * Cursors: 8/10 of font size; width = height / 2.
+ */
+
+/* Shared */
+
+#cFrame {
+	width: 1200px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 60px;
+}
+
+/* i */
+
+#causticsI {
+	width: 1200px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $black;
+	opacity: 100%;
+	padding-top: 90px;
+	p {
+		column-count: 3;
+		height: 300px;
+		column-gap: 42px;
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 30px;
+		font-style: normal;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+#continueI {
+	margin: 0px;
+	padding-top: 30px;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: $font;
+	font-size: 24px;
+	font-style: normal;
+	text-align: center;
+	color: $white;
+}
+
+#scrollDiv {
+	height: 600px;
+}
+
+/* 3ch */
+
+#c3chGIF {
+	width: 1200px;
+	height: 267px;
+	padding-top: 60px;
+}
+
+#causticsTextBox {
+	width: 1200px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $black;
+	opacity: 100%;
+	padding-top: 30px;
+}
+
+#causticsText {
+	height: 200px;
+	column-count: 3;
+	column-gap: 42px;
+	column-fill: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 24px;
+		font-style: italic;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+.cursorCaustics::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.cursorCaustics::after {
+  height: 19.2px;
+  width: 8.6px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#continueCaustics {
+	width: 1200px;
+	height: auto;
+}
+
+.continue {
+	margin: 0px;
+	padding-top: 15px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 45px;
+	font-family: $font;
+	font-size: 15px;
+	font-style: normal;
+	text-align: right;
+	color: $white;
+}
+
+#caustics3chL {
+	width: 410px;
+	height: auto;
+	float: left;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $black;
+	opacity: 100%;
+	padding-top: 60px;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		padding-bottom: 33.3px;
+		font-family: $font;
+		font-size: 36px;
+		font-style: italic;
+		text-align: left;
+		color: $white;
+  }
+}
+
+#caustics3chR {
+	width: 790px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $black;
+	opacity: 100%;
+	padding-top: 60px;
+	padding-left: 410px;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		padding-bottom: 30px;
+		font-family: $font;
+		font-size: 24px;
+		font-style: normal;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+#scrollDiv2 {
+	height: 600px;
+}
+
+/* RGB */
+
+#cRGBGIF {
+	width: 900px;
+	height: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#cRGBtext {
+	width: 900px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 45px;
+		letter-spacing: 74px;
+		font-style: italic;
+		text-align: center;
+		color: $white;
+  }
+}
+
+#continueRGB {
+	margin: 0px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 15px;
+	padding-bottom: 9px;
+	font-family: $font;
+	font-size: 15px;
+	font-style: normal;
+	text-align: center;
+	color: $white;
+}

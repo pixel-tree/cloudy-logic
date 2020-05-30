@@ -1,0 +1,75 @@
+@import 'main.scss';
+
+/* Splash */
+
+#splashFrame {
+	width: 900px;
+	height: 600px;
+  position: relative;
+	margin-left: auto;
+	margin-right: auto;
+  padding-top: 30px;
+}
+
+#titleText {
+  width: 900px;
+  position: absolute;
+  top: 90px;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 90px;
+    letter-spacing: 3px;
+		font-style: normal;
+		text-align: center;
+		color: $white;
+    text-shadow: 1.8px 1.8px $gray;
+  }
+}
+
+#subTitleText {
+  width: 900px;
+  position: absolute;
+  top: 510px;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+    padding-bottom: 60px;
+		font-family: $font;
+		font-size: 24px;
+    word-spacing: 27px;
+    letter-spacing: 3px;
+		font-style: italic;
+		text-align: center;
+		color: $white;
+    text-shadow: 1.2px 1.2px $gray;
+  }
+}
+
+#button {
+  width: 120px;
+  height: 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: inherit;
+  border-color: $white;
+  cursor: pointer;
+  font-family: $font;
+  color: $white;
+  font-size: 10px;
+  text-shadow: 0.6px 0.6px $gray;
+  letter-spacing: 1.5px;
+  padding-left: 9px;
+  transform: skewX(9deg);
+  font-style: oblique 9deg;
+}
+
+#button:hover {
+  width: 144px;
+  height: 54px;
+  font-size: 12px;
+}

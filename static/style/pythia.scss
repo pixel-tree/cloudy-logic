@@ -2,7 +2,7 @@
 
 /* Pythia */
 
-#pythiaFrame{
+#pythiaFrame {
 	width: 900px;
 	height: 600px;
 	display: block;
@@ -11,18 +11,18 @@
 	padding-top: 100px;
 }
 
-#pythiaImg{
+#pythiaImg {
   float: left;
 }
 
 /* Terminal */
 
-#pythiaTextBox{
+#pythiaTextBox {
   margin: 0px;
   padding-left: 3px;
   padding-right: 3px;
   width: 560px;
   height: 600px;
   float: left;
-  background-image: url('../media/pythia_bg.png')
+  background-image: url('../media/pythia_bg.png');
 }

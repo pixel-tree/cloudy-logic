@@ -1,14 +1,16 @@
 @charset "UTF-8";
-/* Main Stylesheet */
+
+/* Main */
 
 $font : "Adobe Devanagari";
 
 $black : rgb(0, 0, 0);
 $white : rgb(255, 255, 255);
+$gray : rgb(105, 105, 105);
 
 /* Container */
 
-body, #container{
+body, #container {
 	width: 100%;
 	height: 100%;
 	position: absolute;

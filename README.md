@@ -1,4 +1,4 @@
-![Pythia](media/pythia.png)
+![Pythia](repo-media/pythia.png)
 
 # CLOUDY LOGIC: An Alternative Guide to Bias in AI
 

@@ -2,7 +2,7 @@
 
 /* Hubble */
 
-#hubbleFrame{
+#hubbleFrame {
 	width: 600px;
 	height: 391px;
 	display: block;
@@ -11,10 +11,7 @@
 	padding-top: 100px;
 }
 
-#hubbleGif{
-}
-
-#hubbleTextBox, #continueBox{
+#hubbleTextBox, #continueHubble {
 	width: 600px;
 	height: auto;
 	display: block;
@@ -24,7 +21,7 @@
 	opacity: 100%;
 }
 
-#hubbleText{
+#hubbleText {
 	p {
 		margin: 0px;
 		padding-left: 3px;
@@ -47,9 +44,11 @@
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
+
 p.cursor::after {
+	/* 8/10 of font size; width = height / 2. */
   height: 24px;
-  width: 13px;
+  width: 12px;
 }
 
 @keyframes blink {
@@ -67,11 +66,12 @@ p.cursor::after {
   }
 }
 
-.continue{
+.continue {
 	margin: 0px;
 	padding-top: 15px;
 	padding-left: 3px;
 	padding-right: 3px;
+	padding-bottom: 45px;
 	font-family: $font;
 	font-size: 15px;
 	font-style: normal;

@@ -1,0 +1,192 @@
+@import 'main.scss';
+
+/* Quote */
+
+#quoteFrame {
+  width: 1200px;
+	height: 150px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 210px;
+}
+
+#noiseQ {
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 61px;
+		font-style: normal;
+		text-align: center;
+		color: $white;
+  }
+}
+
+.noiseQcursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.noiseQcursor::after {
+	/* 8/10 of font size; width = height / 2. */
+  height: 48.8px;
+  width: 24.4px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.continueQ {
+	margin: 0px;
+	padding-top: 15px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 45px;
+	font-family: $font;
+	font-size: 15px;
+	font-style: normal;
+	text-align: right;
+	color: $white;
+}
+
+/* Noise 0 */
+
+#noiseText0 {
+	p {
+		margin: 0px;
+    padding-top: 90px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 69px;
+		font-style: italic;
+		text-align: center;
+		color: $white;
+  }
+}
+
+#continue0 {
+	margin: 0px;
+	padding-top: 30px;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: $font;
+	font-size: 18px;
+	font-style: normal;
+	text-align: center;
+	color: $white;
+}
+
+/* Noise A */
+
+#noiseFrame {
+	width: 600px;
+	height: 391px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 100px;
+}
+
+#noiseTextBox, #continueNoise {
+	width: 600px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $black;
+	opacity: 100%;
+}
+
+#noiseText {
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 30px;
+		font-style: italic;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+.cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.cursor::after {
+	/* 8/10 of font size; width = height / 2. */
+  height: 24px;
+  width: 12px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.continueNA {
+	margin: 0px;
+	padding-top: 15px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 45px;
+	font-family: $font;
+	font-size: 15px;
+	font-style: normal;
+	text-align: right;
+	color: $white;
+}
+
+/* Noise B */
+
+#noiseNA {
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $font;
+		font-size: 30px;
+		font-style: normal;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}

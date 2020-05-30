@@ -1,18 +1,17 @@
 /**
  * CLOUDY LOGIC
- * jQuery.terminal CSS, slightly modified.
- * Original file copyright (c) Jakub Jankiewicz.
+ * jQuery.terminal CSS.
+ * Original implementation (c) Jakub Jankiewicz.
  */
 
-/* TO DO: fix transparency issue. Notes below. */
-
-  /* Quickfix for transparent bg:
-   *   - replaced 33 #000 with $none;
-   *   - scss (if changing back remember to change in terminal.js);
-   *   - problem with highlighted text.
-   */
-
 $none : none;
+
+/**
+ * TO DO: fix highlight issue.
+ *
+ * Quickfix for transparent BG:
+ * replaced #000 x33 with $none variable.
+ */
 
 .terminal .terminal-output .format, .cmd .format,
 .cmd-prompt, .cmd-prompt div {
