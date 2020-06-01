@@ -1,12 +1,35 @@
 @charset "UTF-8";
 
-/* Main */
+/* Shared */
 
 $font : "Adobe Devanagari";
+$fontN : adobeDevRegular;
+$fontB : adobeDevBold;
+$fontI : adobeDevItalic;
 
 $black : rgb(0, 0, 0);
 $white : rgb(255, 255, 255);
 $gray : rgb(105, 105, 105);
+
+/* Fonts */
+
+@font-face {
+	font-family: adobeDevRegular;
+	src: url('../media/fonts/AdobeDevanagari-Regular.woff') format('woff'),
+	     url('../media/fonts/AdobeDevanagari-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: adobeDevBold;
+	src: url('../media/fonts/AdobeDevanagari-Bold.woff') format('woff'),
+	     url('../media/fonts/AdobeDevanagari-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: adobeDevItalic;
+	src: url('../media/fonts/AdobeDevanagari-Italic.woff') format('woff'),
+	     url('../media/fonts/AdobeDevanagari-Italic.ttf') format('truetype');
+}
 
 /* Container */
 

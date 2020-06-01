@@ -41,6 +41,13 @@ const container = document.createElement('div')
 container.id = 'container'
 document.body.appendChild(container)
 
+// External scripts.
+
+const regl = document.createElement('script')
+regl.type = "text/javascript"
+regl.src = "https://npmcdn.com/regl/dist/regl.js"
+document.head.appendChild(regl)
+
 /**
  * Begin (comment sequencer function for dev).
  */
@@ -140,7 +147,6 @@ export { clear, sequencer }
  * TO DO (in order of importance):
  *
  * Fix mistype bug, last sequence of Noise.
- * Randomise greetings for fragmented mode Pythia.
  * Full screen request before Pythia => onclick? => deal with system sounds problem.
  * Test linear mode.
  * Make sure Pythia instructions are as clear as they can be.

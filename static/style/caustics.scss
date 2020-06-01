@@ -36,9 +36,8 @@
 		margin: 0px;
 		padding-left: 3px;
 		padding-right: 3px;
-		font-family: $font;
+		font-family: $fontN;
 		font-size: 30px;
-		font-style: normal;
 		text-align: justify;
 		text-justify: inter-word;
 		color: $white;
@@ -50,9 +49,8 @@
 	padding-top: 30px;
 	padding-left: 3px;
 	padding-right: 3px;
-	font-family: $font;
+	font-family: $fontN;
 	font-size: 24px;
-	font-style: normal;
 	text-align: center;
 	color: $white;
 }
@@ -89,9 +87,8 @@
 		margin: 0px;
 		padding-left: 3px;
 		padding-right: 3px;
-		font-family: $font;
+		font-family: $fontI;
 		font-size: 24px;
-		font-style: italic;
 		text-align: justify;
 		text-justify: inter-word;
 		color: $white;
@@ -139,9 +136,8 @@ p.cursorCaustics::after {
 	padding-left: 3px;
 	padding-right: 3px;
 	padding-bottom: 45px;
-	font-family: $font;
+	font-family: $fontN;
 	font-size: 15px;
-	font-style: normal;
 	text-align: right;
 	color: $white;
 }
@@ -161,9 +157,8 @@ p.cursorCaustics::after {
 		padding-left: 3px;
 		padding-right: 3px;
 		padding-bottom: 33.3px;
-		font-family: $font;
+		font-family: $fontI;
 		font-size: 36px;
-		font-style: italic;
 		text-align: left;
 		color: $white;
   }
@@ -184,9 +179,8 @@ p.cursorCaustics::after {
 		padding-left: 3px;
 		padding-right: 3px;
 		padding-bottom: 30px;
-		font-family: $font;
+		font-family: $fontN;
 		font-size: 24px;
-		font-style: normal;
 		text-align: justify;
 		text-justify: inter-word;
 		color: $white;
@@ -213,9 +207,8 @@ p.cursorCaustics::after {
 	padding-right: 3px;
 	padding-top: 60px;
 	padding-bottom: 30px;
-	font-family: $font;
+	font-family: $fontN;
 	font-size: 21px;
-	font-style: normal;
 	text-align: center;
 	color: $white;
 }

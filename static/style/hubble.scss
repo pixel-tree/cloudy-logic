@@ -26,9 +26,8 @@
 		margin: 0px;
 		padding-left: 3px;
 		padding-right: 3px;
-		font-family: $font;
+		font-family: $fontI;
 		font-size: 30px;
-		font-style: italic;
 		text-align: justify;
 		text-justify: inter-word;
 		color: $white;
@@ -72,9 +71,8 @@ p.cursor::after {
 	padding-left: 3px;
 	padding-right: 3px;
 	padding-bottom: 45px;
-	font-family: $font;
+	font-family: $fontN;
 	font-size: 15px;
-	font-style: normal;
 	text-align: right;
 	color: $white;
 }

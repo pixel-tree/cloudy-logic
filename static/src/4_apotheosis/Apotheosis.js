@@ -167,7 +167,7 @@ class Apotheosis {
 
               function particles() {
 
-                const regl = require('regl')(reglFrame)
+                const regl = createREGL(reglFrame)
                 const mat4 = require('gl-mat4')
                 const hsv2rgb = require('hsv2rgb')
 
