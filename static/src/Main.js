@@ -41,13 +41,6 @@ const container = document.createElement('div')
 container.id = 'container'
 document.body.appendChild(container)
 
-// External scripts.
-
-const regl = document.createElement('script')
-regl.type = "text/javascript"
-regl.src = "https://npmcdn.com/regl/dist/regl.js"
-document.head.appendChild(regl)
-
 /**
  * Begin (comment sequencer function for dev).
  */
