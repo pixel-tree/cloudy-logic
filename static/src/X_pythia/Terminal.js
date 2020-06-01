@@ -28,6 +28,7 @@ class Terminal {
       'noise', 'Noise', 'NOISE',
       'apotheosis', 'Apotheosis', 'APOTHEOSIS',
       'chaos', 'Chaos', 'CHAOS',
+      'no', 'No', 'NO',
       'exit', 'Exit', 'EXIT'
     ]
 
@@ -117,7 +118,7 @@ class Terminal {
           || command == 'Linear'
           || command == 'LINEAR'
         ) {
-          this.echo(String('\n' + 'May the stars be with you, adventurer!' + '\n'))
+          this.echo(String('\n' + '[[b;;]' + 'May the stars be with you, adventurer!' + ']' + '\n'))
           document.getElementById('mode').content = 'linear'
           document.getElementById('scene').content = 'hubble'
           setTimeout(function(){ sequencer() }, 1500)
@@ -128,7 +129,7 @@ class Terminal {
           || command == 'Hubble'
           || command == 'HUBBLE'
         ) {
-          this.echo(String('\n' + farewell[random] + '\n'))
+          this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'hubble'
           setTimeout(function(){ sequencer() }, 900)
@@ -139,7 +140,7 @@ class Terminal {
           || command == 'Caustics'
           || command == 'CAUSTICS'
         ) {
-          this.echo(String('\n' + farewell[random] + '\n'))
+          this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'caustics'
           setTimeout(function(){ sequencer() }, 900)
@@ -150,7 +151,7 @@ class Terminal {
           || command == 'Noise'
           || command == 'NOISE'
         ) {
-          this.echo(String('\n' + farewell[random] + '\n'))
+          this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'noise'
           setTimeout(function(){ sequencer() }, 900)
@@ -161,7 +162,7 @@ class Terminal {
           || command == 'Apotheosis'
           || command == 'APOTHEOSIS'
         ) {
-          this.echo(String('\n' + farewell[random] + '\n'))
+          this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'apotheosis'
           setTimeout(function(){ sequencer() }, 900)
@@ -172,7 +173,7 @@ class Terminal {
           || command == 'Chaos'
           || command == 'CHAOS'
         ) {
-          this.echo(String('\n' + farewell[random] + '\n'))
+          this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'chaos'
           setTimeout(function(){ sequencer() }, 900)
@@ -182,6 +183,9 @@ class Terminal {
           command == 'exit'
           || command == 'Exit'
           || command == 'EXIT'
+          || command == 'no'
+          || command == 'No'
+          || command == 'NO'
         ) {
           setTimeout(function(){ location.reload() }, 900)
         }
