@@ -21,7 +21,7 @@ class Terminal {
      */
 
     const forbidden = [
-      '',
+      '', 'test',
       'linear', 'Linear', 'LINEAR',
       'hubble', 'Hubble', 'HUBBLE',
       'caustics', 'Caustics', 'CAUSTICS',
@@ -31,6 +31,16 @@ class Terminal {
       'exit', 'Exit', 'EXIT'
     ]
 
+    const farewell = [
+      'Farewell, traveller!', 'All the best for your travels, pilgrim...',
+      'Until we meet again, stranger.', 'Take care, pilgrim.',
+      'Goodbye for now, traveller.', 'May the stars be with you, adventurer.'
+    ]
+
+    var random = Math.floor(Math.random() * 6)
+
+    const testString = 'String for dev and test.'
+
     /**
      * Determine greeting.
      */
@@ -39,12 +49,11 @@ class Terminal {
     var greeting
 
     if (mode == 'fragmented') {
-      greeting = pythia_txt.split('\n')[1] + '\n'
-      // TO DO: write a greeting.
+      greeting = '[[b;;]' + pythia_txt.split('\n')[1] + ']' + '\n'
     }
 
     else {
-      greeting = pythia_txt.split('\n')[0] + '\n'
+      greeting = '[[b;;]' + pythia_txt.split('\n')[0] + ']' + '\n'
     }
 
     /**
@@ -80,7 +89,7 @@ class Terminal {
 
           }
 
-          this.echo(String('\n' + messaging() + '\n'))
+          this.echo(String('\n' + '[[b;;]' + messaging() + ']' + '\n'))
 
           /**
            * Option no. 2 (continue to next line before response).
@@ -108,7 +117,7 @@ class Terminal {
           || command == 'Linear'
           || command == 'LINEAR'
         ) {
-          this.echo(String('\n' + 'Good luck adventurer!' + '\n'))
+          this.echo(String('\n' + 'May the stars be with you, adventurer!' + '\n'))
           document.getElementById('mode').content = 'linear'
           document.getElementById('scene').content = 'hubble'
           setTimeout(function(){ sequencer() }, 1500)
@@ -119,9 +128,10 @@ class Terminal {
           || command == 'Hubble'
           || command == 'HUBBLE'
         ) {
+          this.echo(String('\n' + farewell[random] + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'hubble'
-          setTimeout(function(){ sequencer() }, 50)
+          setTimeout(function(){ sequencer() }, 900)
         }
 
         else if (
@@ -129,9 +139,10 @@ class Terminal {
           || command == 'Caustics'
           || command == 'CAUSTICS'
         ) {
+          this.echo(String('\n' + farewell[random] + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'caustics'
-          setTimeout(function(){ sequencer() }, 50)
+          setTimeout(function(){ sequencer() }, 900)
         }
 
         else if (
@@ -139,9 +150,10 @@ class Terminal {
           || command == 'Noise'
           || command == 'NOISE'
         ) {
+          this.echo(String('\n' + farewell[random] + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'noise'
-          setTimeout(function(){ sequencer() }, 50)
+          setTimeout(function(){ sequencer() }, 900)
         }
 
         else if (
@@ -149,9 +161,10 @@ class Terminal {
           || command == 'Apotheosis'
           || command == 'APOTHEOSIS'
         ) {
+          this.echo(String('\n' + farewell[random] + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'apotheosis'
-          setTimeout(function(){ sequencer() }, 50)
+          setTimeout(function(){ sequencer() }, 900)
         }
 
         else if (
@@ -159,9 +172,10 @@ class Terminal {
           || command == 'Chaos'
           || command == 'CHAOS'
         ) {
+          this.echo(String('\n' + farewell[random] + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'chaos'
-          setTimeout(function(){ sequencer() }, 50)
+          setTimeout(function(){ sequencer() }, 900)
         }
 
         else if (
@@ -169,7 +183,7 @@ class Terminal {
           || command == 'Exit'
           || command == 'EXIT'
         ) {
-          setTimeout(function(){ location.reload() }, 50)
+          setTimeout(function(){ location.reload() }, 900)
         }
 
       },
