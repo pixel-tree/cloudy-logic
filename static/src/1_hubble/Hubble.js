@@ -147,7 +147,7 @@ class Hubble {
 
     } // typewriter
 
-  } // constructor
-} // class
+  }
+}
 
 export { Hubble }

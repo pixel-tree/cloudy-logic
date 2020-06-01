@@ -14,11 +14,6 @@ class Apotheosis {
 
     var $ = require('jquery')
 
-    // Counter.
-    var meta = document.createElement('meta')
-    meta.id = 'meta'
-    document.head.appendChild(meta)
-
     // Main container.
     this._element = document.createElement('div')
     this._element.id = 'quoteFrame'
@@ -44,6 +39,8 @@ class Apotheosis {
 
     var speedForwardAQ = Math.random() * (90 - 10) + 15,
         speedBackspaceAQ = 9
+
+    var counterApoQ = 0
 
     typeWriterAQ('apoQ', textArrayAQ)
 
@@ -133,194 +130,207 @@ class Apotheosis {
         document.getElementById('continueAQ').innerHTML = '<p>' + continueText + '</p>'
 
         document.addEventListener('keyup', event => {
-          if (event.keyCode === 40) {
+          if (counterApoQ == 0) {
+            if (event.keyCode === 40) {
 
-            /**
-             * Next sequence.
-             */
+              /**
+               * Next sequence.
+               */
 
-            const scrollDiv = document.createElement('div')
-            scrollDiv.id = 'scrollDiv'
-            container.appendChild(scrollDiv)
+              counterApoQ += 1
+              document.removeEventListener('keyup', event)
 
-            const particleFrame = document.createElement('div')
-            particleFrame.id = 'particleFrame'
-            container.appendChild(particleFrame)
+              const scrollDiv = document.createElement('div')
+              scrollDiv.id = 'scrollDiv'
+              container.appendChild(scrollDiv)
 
-            const reglFrame = document.createElement('div')
-            reglFrame.id = 'reglFrame'
-            particleFrame.appendChild(reglFrame)
+              const particleFrame = document.createElement('div')
+              particleFrame.id = 'particleFrame'
+              container.appendChild(particleFrame)
 
-            // Particles.
-            var REGL_COUNT = 1
-            var FREQ_X = 10
-            var FREQ_Y = 10
-            var NUM_POINTS = 3e3
+              const reglFrame = document.createElement('div')
+              reglFrame.id = 'reglFrame'
+              particleFrame.appendChild(reglFrame)
 
-            particles()
+              // Particles.
+              var REGL_COUNT = 1
+              var FREQ_X = 10
+              var FREQ_Y = 10
+              var NUM_POINTS = 3e3
 
-            const apoText = new ApoText(container)
+              particles()
 
-            var scrollingElement = (document.scrollingElement || document.body)
-            scrollingElement.scrollTop = scrollingElement.scrollHeight
+              const apoText = new ApoText(container)
 
-            function particles() {
-
-              const regl = require('regl')(reglFrame)
-              const mat4 = require('gl-mat4')
-              const hsv2rgb = require('hsv2rgb')
-
-              const VERT_SIZE = 4 * (4 + 4 + 3)
-
-              const pointBuffer = regl.buffer(Array(NUM_POINTS).fill().map(function () {
-                const color = hsv2rgb(Math.random() * 360, 0.3, 0.9)
-                return [
-                  // freq
-                  Math.random() * FREQ_X,
-                  Math.random() * FREQ_Y,
-                  Math.random() * 10,
-                  Math.random() * 10,
-                  // phase
-                  2.0 * Math.PI * Math.random(),
-                  2.0 * Math.PI * Math.random(),
-                  2.0 * Math.PI * Math.random(),
-                  2.0 * Math.PI * Math.random(),
-                  // color
-                  color[0] / 0, color[1] / 0, color[2] / 0
-                ]
-              }))
-
-              const drawParticles = regl({
-                vert: `
-                precision mediump float;
-                attribute vec4 freq, phase;
-                attribute vec3 color;
-                uniform float time;
-                uniform mat4 view, projection;
-                varying vec3 fragColor;
-                void main() {
-                  vec3 position = 8.0 * cos(freq.xyz * time + phase.xyz);
-                  gl_PointSize = 3.0 * (1.0 + cos(freq.w * time + phase.w));
-                  gl_Position = projection * view * vec4(position, 1);
-                  fragColor = color;
-                }`,
-
-                frag: `
-                precision lowp float;
-                varying vec3 fragColor;
-                void main() {
-                  if (length(gl_PointCoord.xy - 0.5) > 0.5) {
-                    discard;
-                  }
-                  gl_FragColor = vec4(fragColor, 1);
-                }`,
-
-                attributes: {
-                  freq: {
-                    buffer: pointBuffer,
-                    stride: VERT_SIZE,
-                    offset: 0
-                  },
-                  phase: {
-                    buffer: pointBuffer,
-                    stride: VERT_SIZE,
-                    offset: 16
-                  },
-                  color: {
-                    buffer: pointBuffer,
-                    stride: VERT_SIZE,
-                    offset: 32
-                  }
-                },
-
-                uniforms: {
-                  view: ({tick}) => {
-                    return mat4.lookAt([],
-                      [30, 0, 45], /* 30, 30, 45 alt */
-                      [0, 0, 0],
-                      [0, 1, 0])
-                  },
-                  projection: ({viewportWidth, viewportHeight}) =>
-                    mat4.perspective([],
-                      Math.PI / 5,
-                      viewportWidth / viewportHeight,
-                      0.01,
-                      1000),
-                  time: ({tick}) => tick * 0.003
-                },
-
-                count: NUM_POINTS,
-
-                primitive: 'points'
-              })
-
-              regl.frame(() => {
-                regl.clear({
-                  depth: 1,
-                  color: [0, 0, 0, 1]
-                })
-
-                drawParticles()
-              })
-
-            } // particle function.
-
-            document.addEventListener('keyup', event => {
-              // D (horizontal freq increase)
-              if (event.keyCode === 68) {
-                if (FREQ_Y != 10) {
-                  FREQ_Y = 10
-                }
-                FREQ_X *= 3
-              }
-              // A (horizontal freq decrease)
-              if (event.keyCode === 65) {
-                if (FREQ_X <= 10) {
-                  FREQ_X = 10
-                }
-                else {
-                  FREQ_X /= 3
-                }
-              }
-              // W (vertical freq increase) {
-              if (event.keyCode === 87) {
-                if (FREQ_X != 10) {
-                  FREQ_X = 10
-                }
-                FREQ_Y *= 3
-              }
-              // S (horizontal freq decrease)
-              if (event.keyCode === 83) {
-                if (FREQ_Y <= 10) {
-                  FREQ_Y = 10
-                }
-                else {
-                  FREQ_Y /= 3
-                }
-              }
-
-              REGL_COUNT += 1
-
-              if (REGL_COUNT < 9) {
-                clear('reglFrame')
-                particles()
-                document.getElementById('meta').content = REGL_COUNT
-              }
-              else if (REGL_COUNT === 9) {
-                console.log("You've had your fun...")
-                NUM_POINTS = 1e5
-                clear('reglFrame')
-                particles()
-                document.getElementById('meta').content = REGL_COUNT
-                document.removeEventListener('keyup', event)
-              }
-
+              var scrollingElement = (document.scrollingElement || document.body)
               scrollingElement.scrollTop = scrollingElement.scrollHeight
 
-            })
+              function particles() {
 
+                const regl = require('regl')(reglFrame)
+                const mat4 = require('gl-mat4')
+                const hsv2rgb = require('hsv2rgb')
+
+                const VERT_SIZE = 4 * (4 + 4 + 3)
+
+                const pointBuffer = regl.buffer(Array(NUM_POINTS).fill().map(function () {
+                  const color = hsv2rgb(Math.random() * 360, 0.3, 0.9)
+                  return [
+                    // freq
+                    Math.random() * FREQ_X,
+                    Math.random() * FREQ_Y,
+                    Math.random() * 10,
+                    Math.random() * 10,
+                    // phase
+                    2.0 * Math.PI * Math.random(),
+                    2.0 * Math.PI * Math.random(),
+                    2.0 * Math.PI * Math.random(),
+                    2.0 * Math.PI * Math.random(),
+                    // color
+                    color[0] / 0, color[1] / 0, color[2] / 0
+                  ]
+                }))
+
+                const drawParticles = regl({
+                  vert: `
+                  precision mediump float;
+                  attribute vec4 freq, phase;
+                  attribute vec3 color;
+                  uniform float time;
+                  uniform mat4 view, projection;
+                  varying vec3 fragColor;
+                  void main() {
+                    vec3 position = 8.0 * cos(freq.xyz * time + phase.xyz);
+                    gl_PointSize = 3.0 * (1.0 + cos(freq.w * time + phase.w));
+                    gl_Position = projection * view * vec4(position, 1);
+                    fragColor = color;
+                  }`,
+
+                  frag: `
+                  precision lowp float;
+                  varying vec3 fragColor;
+                  void main() {
+                    if (length(gl_PointCoord.xy - 0.5) > 0.5) {
+                      discard;
+                    }
+                    gl_FragColor = vec4(fragColor, 1);
+                  }`,
+
+                  attributes: {
+                    freq: {
+                      buffer: pointBuffer,
+                      stride: VERT_SIZE,
+                      offset: 0
+                    },
+                    phase: {
+                      buffer: pointBuffer,
+                      stride: VERT_SIZE,
+                      offset: 16
+                    },
+                    color: {
+                      buffer: pointBuffer,
+                      stride: VERT_SIZE,
+                      offset: 32
+                    }
+                  },
+
+                  uniforms: {
+                    view: ({tick}) => {
+                      return mat4.lookAt([],
+                        [30, 0, 45], /* 30, 30, 45 alt */
+                        [0, 0, 0],
+                        [0, 1, 0])
+                    },
+                    projection: ({viewportWidth, viewportHeight}) =>
+                      mat4.perspective([],
+                        Math.PI / 5,
+                        viewportWidth / viewportHeight,
+                        0.01,
+                        1000),
+                    time: ({tick}) => tick * 0.003
+                  },
+
+                  count: NUM_POINTS,
+
+                  primitive: 'points'
+                })
+
+                regl.frame(() => {
+                  regl.clear({
+                    depth: 1,
+                    color: [0, 0, 0, 1]
+                  })
+
+                  drawParticles()
+                })
+
+              } // particle function.
+
+              document.addEventListener('keyup', event => {
+                // D (horizontal freq increase)
+                if (event.keyCode === 68) {
+                  if (FREQ_Y != 10) {
+                    FREQ_Y = 10
+                  }
+                  FREQ_X *= 3
+                  REGL_COUNT += 1
+                  clear('reglFrame')
+                  particles()
+                  document.getElementById('meta').content = REGL_COUNT
+                }
+                // A (horizontal freq decrease)
+                if (event.keyCode === 65) {
+                  if (FREQ_X <= 10) {
+                    FREQ_X = 10
+                  }
+                  else {
+                    FREQ_X /= 3
+                  }
+                  REGL_COUNT += 1
+                  clear('reglFrame')
+                  particles()
+                  document.getElementById('meta').content = REGL_COUNT
+                }
+                // W (vertical freq increase) {
+                if (event.keyCode === 87) {
+                  if (FREQ_X != 10) {
+                    FREQ_X = 10
+                  }
+                  FREQ_Y *= 3
+                  REGL_COUNT += 1
+                  clear('reglFrame')
+                  particles()
+                  document.getElementById('meta').content = REGL_COUNT
+                }
+                // S (horizontal freq decrease)
+                if (event.keyCode === 83) {
+                  if (FREQ_Y <= 10) {
+                    FREQ_Y = 10
+                  }
+                  else {
+                    FREQ_Y /= 3
+                  }
+                  REGL_COUNT += 1
+                  clear('reglFrame')
+                  particles()
+                  document.getElementById('meta').content = REGL_COUNT
+                }
+
+                if (REGL_COUNT === 9) {
+                  console.log("You've had your fun...")
+                  NUM_POINTS = 1e5
+                  clear('reglFrame')
+                  particles()
+                  document.getElementById('meta').content = REGL_COUNT
+                  document.removeEventListener('keyup', event)
+                }
+
+                scrollingElement.scrollTop = scrollingElement.scrollHeight
+              })
+
+            }
           }
-        }, {once : true})
+        })
 
       }
 
@@ -384,8 +394,8 @@ class ApoText {
 
             if (document.getElementById('meta').content != 9) {
               document.addEventListener('keyup', event => {
-                var counter = document.getElementById('meta').content
-                if (counter == 9) {
+                var counterAP0 = document.getElementById('meta').content
+                if (counterAP0 == 9) {
                   isBackspacingAP0 = true
                   setTimeout(function(){ typeWriterAP0(idAP0, arAP0) })
                   document.removeEventListener('keyup', event)
@@ -491,7 +501,10 @@ class Chaos {
         speedBackspaceAP1 = 3
 
     // Counter to determine order of events.
-    var counter = 0
+    var counterAP1 = 0
+
+    // Counter for eventlistener.
+    var counterEvAP1 = 0
 
     typeWriterAP1('chaosTextBox', textArrayAP1)
 
@@ -502,13 +515,13 @@ class Chaos {
           typeTextAP1 = cursorElementAP1.children('p')
 
       // Set correct cursor size relative to text size.
-      if (counter < 2 || counter == 3 || counter == 6) {
+      if (counterAP1 < 2 || counterAP1 == 3 || counterAP1 == 6) {
         typeTextAP1.addClass('apo1cursor')
-      } else if (counter == 2) {
+      } else if (counterAP1 == 2) {
         typeTextAP1.addClass('apo2cursor')
-      } else if (counter == 4) {
+      } else if (counterAP1 == 4) {
         typeTextAP1.addClass('apo3cursor')
-      } else if (counter == 5) {
+      } else if (counterAP1 == 5) {
         typeTextAP1.addClass('apo4cursor')
       }
 
@@ -537,10 +550,11 @@ class Chaos {
           else if (iAP1 == stringAP1.length) {
 
             // Add to counter after each line in text file.
-            counter += 1
+            counterAP1 += 1
 
-            if (counter != 5) {
+            if (counterAP1 != 5 && counterAP1 != 2) {
               toContinueAP1.text('{ press space to continue }')
+              counterEvAP1 = 0
             }
 
             scrollingElement.scrollTop = scrollingElement.scrollHeight
@@ -549,7 +563,7 @@ class Chaos {
              * Sequences without user interaction.
              */
 
-            if (counter == 2) {
+            if (counterAP1 == 2) {
 
               historyTextBox.innerHTML = '<p>' + textArrayAP1[1] + '</p>'
 
@@ -566,7 +580,7 @@ class Chaos {
 
             }
 
-            else if (counter == 4) {
+            else if (counterAP1 == 4) {
 
               quantumTextBox.innerHTML = '<p>' + textArrayAP1[3] + '</p>'
 
@@ -583,7 +597,7 @@ class Chaos {
 
             }
 
-            else if (counter == 5) {
+            else if (counterAP1 == 5) {
 
               maxwellTextBox.innerHTML = '<p>' + textArrayAP1[4] + '</p>'
 
@@ -608,76 +622,80 @@ class Chaos {
 
               document.addEventListener('keyup', event => {
                 if (event.code === 'Space' && aAP1 < arAP1.length) {
+                  if (counterEvAP1 == 0) {
 
-                  if (counter == 1) {
+                    counterEvAP1 += 1
 
-                    chaosTextBox.innerHTML = '<p>' + textArrayAP1[0] + '</p>'
+                    if (counterAP1 == 1) {
 
-                    const twinkleGIF = document.createElement('img')
-                    twinkleGIF.id = 'twinkleGIF'
-                    twinkleGIF.src = twinkle_gif
-                    particleReFrame.insertBefore(twinkleGIF, continueBox)
+                      chaosTextBox.innerHTML = '<p>' + textArrayAP1[0] + '</p>'
 
-                    const historyTextBox = document.createElement('div')
-                    historyTextBox.id = 'historyTextBox'
-                    particleReFrame.insertBefore(historyTextBox, continueBox)
+                      const twinkleGIF = document.createElement('img')
+                      twinkleGIF.id = 'twinkleGIF'
+                      twinkleGIF.src = twinkle_gif
+                      particleReFrame.insertBefore(twinkleGIF, continueBox)
 
-                    const historyCursor = document.createElement('p')
-                    historyTextBox.appendChild(historyCursor)
+                      const historyTextBox = document.createElement('div')
+                      historyTextBox.id = 'historyTextBox'
+                      particleReFrame.insertBefore(historyTextBox, continueBox)
 
-                    iAP1 = 0
-                    aAP1 = (aAP1 + 1)
-                    setTimeout(function(){ typeWriterAP1('historyTextBox', arAP1) }, 50)
+                      const historyCursor = document.createElement('p')
+                      historyTextBox.appendChild(historyCursor)
+
+                      iAP1 = 0
+                      aAP1 = (aAP1 + 1)
+                      setTimeout(function(){ typeWriterAP1('historyTextBox', arAP1) }, 50)
+                    }
+
+                    else if (counterAP1 == 3) {
+
+                      demonTextBox.innerHTML = '<p>' + textArrayAP1[2] + '</p>'
+
+                      const quantumTextBox = document.createElement('div')
+                      quantumTextBox.id = 'quantumTextBox'
+                      particleReFrame.insertBefore(quantumTextBox, continueBox)
+
+                      const quantumCursor = document.createElement('p')
+                      quantumTextBox.appendChild(quantumCursor)
+
+                      iAP1 = 0
+                      aAP1 = (aAP1 + 1)
+                      setTimeout(function(){ typeWriterAP1('quantumTextBox', arAP1) }, 50)
+
+                    }
+
+                    else if (counterAP1 == 6) {
+
+                      maxwellNameBox.innerHTML = '<p>' + textArrayAP1[5] + '</p>'
+
+                      const abstractTextBox = document.createElement('div')
+                      abstractTextBox.id = 'abstractTextBox'
+                      particleReFrame.insertBefore(abstractTextBox, continueBox)
+
+                      const abstractCursor = document.createElement('p')
+                      abstractTextBox.appendChild(abstractCursor)
+
+                      const fillerBox = document.createElement('div')
+                      fillerBox.id = 'fillerBox'
+                      particleReFrame.insertBefore(fillerBox, continueBox)
+
+                      iAP1 = 0
+                      aAP1 = (aAP1 + 1)
+                      setTimeout(function(){ typeWriterAP1('abstractTextBox', arAP1) }, 50)
+
+                    }
+
+                    else if (counterAP1 == 7) {
+
+                      iAP1 = 0
+                      aAP1 = (aAP1 + 1)
+                      setTimeout(function(){ typeWriterAP1(idAP1, arAP1) }, 50)
+
+                    }
+
                   }
-
-                  else if (counter == 3) {
-
-                    demonTextBox.innerHTML = '<p>' + textArrayAP1[2] + '</p>'
-
-                    const quantumTextBox = document.createElement('div')
-                    quantumTextBox.id = 'quantumTextBox'
-                    particleReFrame.insertBefore(quantumTextBox, continueBox)
-
-                    const quantumCursor = document.createElement('p')
-                    quantumTextBox.appendChild(quantumCursor)
-
-                    iAP1 = 0
-                    aAP1 = (aAP1 + 1)
-                    setTimeout(function(){ typeWriterAP1('quantumTextBox', arAP1) }, 50)
-
-                  }
-
-                  else if (counter == 6) {
-
-                    maxwellNameBox.innerHTML = '<p>' + textArrayAP1[5] + '</p>'
-
-                    const abstractTextBox = document.createElement('div')
-                    abstractTextBox.id = 'abstractTextBox'
-                    particleReFrame.insertBefore(abstractTextBox, continueBox)
-
-                    const abstractCursor = document.createElement('p')
-                    abstractTextBox.appendChild(abstractCursor)
-
-                    const fillerBox = document.createElement('div')
-                    fillerBox.id = 'fillerBox'
-                    particleReFrame.insertBefore(fillerBox, continueBox)
-
-                    iAP1 = 0
-                    aAP1 = (aAP1 + 1)
-                    setTimeout(function(){ typeWriterAP1('abstractTextBox', arAP1) }, 50)
-
-                  }
-
-                  else if (counter == 7) {
-
-                    iAP1 = 0
-                    aAP1 = (aAP1 + 1)
-                    setTimeout(function(){ typeWriterAP1(idAP1, arAP1) }, 50)
-
-                  }
-
                 }
-              }, {once : true})
+              })
 
             }
 

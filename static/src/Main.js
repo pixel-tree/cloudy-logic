@@ -32,6 +32,10 @@ var scene = document.createElement('meta')
 scene.id = 'scene'
 document.head.appendChild(scene)
 
+var meta = document.createElement('meta')
+meta.id = 'meta'
+document.head.appendChild(meta)
+
 // Main container.
 const container = document.createElement('div')
 container.id = 'container'
@@ -41,7 +45,7 @@ document.body.appendChild(container)
  * Begin (comment sequencer function for dev).
  */
 
-// sequencer()
+sequencer()
 
 /**
  * Essential functions.
@@ -126,38 +130,30 @@ function sequencer() {
  * Dev section.
  */
 
-const chaos = new Chaos(container)
+// const chaos = new Chaos(container)
 
 /* --------- */
 
 export { clear, sequencer }
 
+/**
+ * TO DO (in order of importance):
+ *
+ * Fix mistype bug, last sequence of Noise.
+ * Randomise greetings for fragmented mode Pythia.
+ * Full screen request before Pythia => onclick? => deal with system sounds problem.
+ * Test linear mode.
+ * Make sure Pythia instructions are as clear as they can be.
+ * Clean up scripts.
+ */
+
 /*
  * OUTRO IDEA
  * "The weird and wonderful world of neural networks and mathematics..."
  * Lucid visualisation.
+ * To be continued...
  */
 
-// BIG TO DO: change typewriter variables from caustics ->.
-
-// TO DO: random welcome backs Pythia rows 2-10.
-
-// BIG TO DO: sort out misclicks eventlistener
-// (try removeEventListener inside function)
-
-// BIG TO DO: at the end of each script...
-// if (mode.content === 'linear') { next sequence }
-// else if (mode.content === 'fragemented') { back to pythia }
-// BUT IF returning to pythia => different welcome message
-// ... if (mode.content === 'fragmented') { greeting: welcome back... etc... }
-// ... else { regular greeting }
-
-// BIG TO DO: make sure that pythia instructions are clear.
-
-// TO DO: clean up scripts.
-
-// TO DO: make sure that full screen request comes before beginning.
-// TO DO: disable system sounds (unexpected sound on space)?
 
 /*
 document.addEventListener('keyup', event => {

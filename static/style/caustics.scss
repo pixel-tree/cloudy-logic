@@ -207,33 +207,14 @@ p.cursorCaustics::after {
 	margin-right: auto;
 }
 
-#cRGBtext {
-	width: 900px;
-	height: auto;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	p {
-		margin: 0px;
-		padding-left: 3px;
-		padding-right: 3px;
-		font-family: $font;
-		font-size: 45px;
-		letter-spacing: 74px;
-		font-style: italic;
-		text-align: center;
-		color: $white;
-  }
-}
-
 #continueRGB {
 	margin: 0px;
 	padding-left: 3px;
 	padding-right: 3px;
-	padding-top: 15px;
-	padding-bottom: 9px;
+	padding-top: 60px;
+	padding-bottom: 30px;
 	font-family: $font;
-	font-size: 15px;
+	font-size: 21px;
 	font-style: normal;
 	text-align: center;
 	color: $white;

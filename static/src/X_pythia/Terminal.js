@@ -24,6 +24,7 @@ class Terminal {
       '',
       'linear', 'Linear', 'LINEAR',
       'hubble', 'Hubble', 'HUBBLE',
+      'caustics', 'Caustics', 'CAUSTICS',
       'noise', 'Noise', 'NOISE',
       'apotheosis', 'Apotheosis', 'APOTHEOSIS',
       'chaos', 'Chaos', 'CHAOS',
@@ -34,13 +35,16 @@ class Terminal {
      * Determine greeting.
      */
 
-    if (document.getElementById('mode').content == 'linear') {
-      const greeting = pythia_txt.split('\n')[0]
+    const mode = document.getElementById('mode').content
+    var greeting
+
+    if (mode == 'fragmented') {
+      greeting = pythia_txt.split('\n')[1] + '\n'
+      // TO DO: write a greeting.
     }
 
-    else if (document.getElementById('mode').content == 'fragmented') {
-      const greeting = pythia_txt.split('\n')[1]
-      // TO DO: write a greeting.
+    else {
+      greeting = pythia_txt.split('\n')[0] + '\n'
     }
 
     /**
@@ -96,7 +100,7 @@ class Terminal {
 
         /**
          * Sequencing tool.
-         * TO DO: replace ||s => if (command in forbidden 1-3).
+         * TO DO: replace ||s => if (command in forbidden array 1-3).
          */
 
         if (

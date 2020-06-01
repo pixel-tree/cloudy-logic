@@ -30,7 +30,6 @@ class Caustics {
     document.getElementById('causticsI').innerHTML = '<p>' + iText + '</p>'
 
     // Press to continue.
-
     const continueBox = document.createElement('div')
     continueBox.id = 'continueI'
     this._element.appendChild(continueBox)
@@ -38,24 +37,31 @@ class Caustics {
     const continueText = '{ ↓ }'
     document.getElementById('continueI').innerHTML = '<p>' + continueText + '</p>'
 
+    var counter = 0
+
     document.addEventListener('keyup', event => {
-      if (event.keyCode === 40) {
+      if (counter == 0) {
+        if (event.keyCode === 40) {
+          /**
+           * Next sequence.
+           */
 
-        /**
-         * Next sequence.
-         */
+          const scrollDiv = document.createElement('div')
+          scrollDiv.id = 'scrollDiv'
+          this._element.appendChild(scrollDiv)
 
-        const scrollDiv = document.createElement('div')
-        scrollDiv.id = 'scrollDiv'
-        this._element.appendChild(scrollDiv)
+          const caustics_3ch = new Caustics_3ch(container)
 
-        const caustics_3ch = new Caustics_3ch(container)
+          var scrollingElement = (document.scrollingElement || document.body)
+          scrollingElement.scrollTop = scrollingElement.scrollHeight
 
-        var scrollingElement = (document.scrollingElement || document.body)
-        scrollingElement.scrollTop = scrollingElement.scrollHeight
+          counter += 1
 
+          // Doesn't remove, hence the counter (same throughout script).
+          document.removeEventListener('keyup', event)
+        }
       }
-    }, {once : true})
+    })
 
   }
 }
@@ -114,6 +120,8 @@ class Caustics_3ch {
     var speedForwardCA = Math.random() * (90 - 10) + 15,
         speedBackspaceCA = 3
 
+    var counter = 0
+
     typeWriterCA('causticsText', textArrayCA)
 
     function typeWriterCA(idCA, arCA) {
@@ -157,20 +165,22 @@ class Caustics_3ch {
           else if (iCA == stringCA.length) {
 
             // Press space to continue.
-
-            // TO DO: continue id to change font size;
-            // (affects other scenes as it is).
-
             toContinueCA.text('{ press space to continue }')
             scrollingElement.scrollTop = scrollingElement.scrollHeight
 
+            counter = 0
+
             document.addEventListener('keyup', event => {
-              if (event.code === 'Space' && aCA < arCA.length) {
-                toContinueCA.text('')
-                isBackspacingCA = true
-                setTimeout(function(){ typeWriterCA(idCA, arCA) })
+              if (counter == 0) {
+                if (event.code === 'Space' && aCA < arCA.length) {
+                  toContinueCA.text('')
+                  isBackspacingCA = true
+                  setTimeout(function(){ typeWriterCA(idCA, arCA) })
+                  counter += 1
+                  document.removeEventListener('keyup', event)
+                }
               }
-            }, {once : true})
+            })
 
           }
 
@@ -248,8 +258,8 @@ class Caustics_3ch {
 
     } // typewriter
 
-  } // constructor
-} // class
+  }
+}
 
 class Caustics_RGB {
   constructor(container) {
@@ -263,16 +273,6 @@ class Caustics_RGB {
      * Media.
      */
 
-    // TO DO: TEST WITHOUT TEXT (BELOW).
-/*
-    // Text.
-    const cRGBtext = document.createElement('div')
-    cRGBtext.id = 'cRGBtext'
-    this._element.appendChild(cRGBtext)
-
-    const dispersionText = 'DISPERSION'
-    document.getElementById('cRGBtext').innerHTML = '<p>' + dispersionText + '</p>'
-*/
     // Caustic RGB GIF.
     const cRGBGIF = document.createElement('img')
     cRGBGIF.id = 'cRGBGIF'
@@ -285,33 +285,38 @@ class Caustics_RGB {
     continueBox.id = 'continueRGB'
     this._element.appendChild(continueBox)
 
-    const continueText = '{ press enter to continue }'
+    const continueText = '{ → }'
     document.getElementById('continueRGB').innerHTML = '<p>' + continueText + '</p>'
 
     var scrollingElement = (document.scrollingElement || document.body)
     scrollingElement.scrollTop = scrollingElement.scrollHeight
 
+    var counter = 0
+
     document.addEventListener('keyup', event => {
-      if (event.keyCode === 13) {
+      if (counter == 0) {
+        if (event.keyCode === 39) {
+          /**
+           * Next sequence.
+           */
 
-        /**
-         * Next sequence.
-         */
+          if (document.getElementById('mode').content == 'linear') {
+            document.getElementById('scene').content = 'noise'
+            sequencer()
+          }
 
-        if (document.getElementById('mode').content == 'linear') {
-          document.getElementById('scene').content = 'noise'
-          sequencer()
+          else {
+            document.getElementById('scene').content = 'pythia'
+            sequencer()
+          }
+
+          counter += 1
+          document.removeEventListener('keyup', event)
         }
-
-        else {
-          document.getElementById('scene').content = 'pythia'
-          sequencer()
-        }
-
       }
-    }, {once : true})
+    })
 
-  } // constructor
-} // class
+  }
+}
 
 export { Caustics }

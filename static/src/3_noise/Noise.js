@@ -48,6 +48,8 @@ class Noise {
     var speedForwardQ = Math.random() * (90 - 10) + 15,
         speedBackspaceQ = 3
 
+    var counterQ = 0
+
     typeWriterQ('noiseQ', textArrayQ)
 
     function typeWriterQ(idQ, arQ) {
@@ -83,12 +85,16 @@ class Noise {
             toContinueQ.text('{ press space to continue }')
 
             document.addEventListener('keyup', event => {
-              if (event.code === 'Space' && aQ < arQ.length) {
-                toContinueQ.text('')
-                isBackspacingQ = true
-                setTimeout(function(){ typeWriterQ(idQ, arQ) })
+              if (counterQ == 0) {
+                if (event.code === 'Space' && aQ < arQ.length) {
+                  toContinueQ.text('')
+                  isBackspacingQ = true
+                  setTimeout(function(){ typeWriterQ(idQ, arQ) })
+                  counterQ += 1
+                  document.removeEventListener('keyup', event)
+                }
               }
-            }, {once : true})
+            })
 
           }
 
@@ -161,24 +167,29 @@ class Noise_0 {
     const continueText = '{ ← }'
     document.getElementById('continue0').innerHTML = '<p>' + continueText + '</p>'
 
+    var counter0 = 0
+
     document.addEventListener('keyup', event => {
-      if (event.keyCode === 37) {
-
-        /**
-         * Next sequence.
-         */
-
-        clear('container')
-        const noise_A = new Noise_A(container)
-
+      if (counter0 == 0) {
+        if (event.keyCode === 37) {
+          /**
+           * Next sequence.
+           */
+          clear('container')
+          const noise_A = new Noise_A(container)
+          counter0 += 1
+          document.removeEventListener('keyup', event)
+        }
       }
-    }, {once : true})
+    })
 
   }
 }
 
 class Noise_A {
   constructor(container) {
+
+    // BIG TO DO: add counter to eventlistener.
 
     var $ = require('jquery')
 
@@ -188,7 +199,7 @@ class Noise_A {
     container.appendChild(this._element)
 
     // Noise GIF.
-    const noiseGIF = document.createElement('img')
+    var noiseGIF = document.createElement('img')
     noiseGIF.id = 'noiseGIF'
     noiseGIF.src = noise1_gif
     this._element.appendChild(noiseGIF)
@@ -228,6 +239,9 @@ class Noise_A {
         speedBackspaceNA = 3
 
     typeWriterNA('noiseText', textArrayNA)
+
+    var meta = document.getElementById('meta').content
+    meta = 1
 
     function typeWriterNA(idNA, arNA) {
 
@@ -305,7 +319,9 @@ class Noise_A {
          * Next sequence.
          */
 
-        if (document.getElementById('noiseGIF').src === noise1_gif) {
+        if (meta == 1) {
+
+          meta += 1
 
           document.getElementById('noiseGIF').src = noise2_gif
 
@@ -317,7 +333,9 @@ class Noise_A {
           setTimeout(function(){ typeWriterNA(idNA, textArrayNB) }, 50)
         }
 
-        else if (document.getElementById('noiseGIF').src === noise2_gif) {
+        else if (meta == 2) {
+
+          meta += 1
 
           document.getElementById('noiseGIF').src = noise3_gif
 
@@ -329,11 +347,13 @@ class Noise_A {
           setTimeout(function(){ typeWriterNA(idNA, textArrayNC) }, 50)
         }
 
-        else if (document.getElementById('noiseGIF').src === noise3_gif) {
+        else if (meta == 3) {
 
           /**
            * Next scene.
            */
+
+          clear('meta')
 
           if (document.getElementById('mode').content == 'linear') {
             document.getElementById('scene').content = 'apotheosis'
