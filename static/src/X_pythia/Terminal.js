@@ -29,6 +29,7 @@ class Terminal {
       'apotheosis', 'Apotheosis', 'APOTHEOSIS',
       'chaos', 'Chaos', 'CHAOS',
       'no', 'No', 'NO',
+      'nope', 'Nope', 'NOPE',
       'exit', 'Exit', 'EXIT'
     ]
 
@@ -186,6 +187,9 @@ class Terminal {
           || command == 'no'
           || command == 'No'
           || command == 'NO'
+          || command == 'nope'
+          || command == 'Nope'
+          || command == 'NOPE'
         ) {
           setTimeout(function(){ location.reload() }, 900)
         }

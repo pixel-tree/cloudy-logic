@@ -1,11 +1,82 @@
 @import 'main.scss';
 
+/* Container */
+
+#splashContainer {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	background-color: $black;
+}
+
+/* Loader */
+
+#blurSplash {
+	width: 900px;
+	height: 600px;
+  position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+  padding-top: 30px;
+	-webkit-filter: blur(9px);
+	-moz-filter: blur(9px);
+	-o-filter: blur(9px);
+	-ms-filter: blur(9px);
+	filter: blur(9px);
+}
+
+#loaderFrame {
+	top: 300px;
+	width: 900px;
+	height: 120px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		padding-top: 9px;
+		font-family: $fontI;
+		font-size: 15px;
+    letter-spacing: 1.5px;
+		text-align: center;
+		color: $white;
+    text-shadow: 1.2px 1.2px $black;
+	}
+}
+
+#loader {
+	width: 60px;
+  height: 60px;
+  margin-left: auto;
+	margin-right: auto;
+  border: 3px solid $black;
+  border-top: 3px solid $white;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Splash */
 
 #splashFrame {
 	width: 900px;
 	height: 600px;
-  position: relative;
+  position: absolute;
+	left: 0;
+	right: 0;
 	margin-left: auto;
 	margin-right: auto;
   padding-top: 30px;
@@ -36,7 +107,6 @@
 		margin: 0px;
 		padding-left: 3px;
 		padding-right: 3px;
-    padding-bottom: 60px;
 		font-family: $fontI;
 		font-size: 24px;
     word-spacing: 21px;
@@ -62,8 +132,8 @@
   text-shadow: 0.6px 0.6px $gray;
   letter-spacing: 1.5px;
   padding-left: 9px;
-  transform: skewX(9deg);
-  font-style: oblique 9deg;
+  transform: skewX(6deg);
+  font-style: oblique 6deg;
 }
 
 #button:hover {

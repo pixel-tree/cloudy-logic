@@ -7,7 +7,6 @@
 
 import '../style/main.scss'
 
-import { Splash } from './0_splash/Splash'
 import { Pythia } from './X_pythia/Pythia'
 import { Hubble } from './1_hubble/Hubble'
 import { Caustics } from './2_caustics/Caustics'
@@ -36,7 +35,10 @@ var meta = document.createElement('meta')
 meta.id = 'meta'
 document.head.appendChild(meta)
 
-// Main container.
+/**
+ * Main container.
+ */
+
 const container = document.createElement('div')
 container.id = 'container'
 document.body.appendChild(container)
@@ -85,21 +87,17 @@ function clear(elementID) {
 // Checks which sequence to run.
 function sequencer() {
 
-  // Splash
-  if (document.getElementById('scene').content === '') {
-    const splash = new Splash(container)
-  }
-
-  // Navigation tool.
-  if (document.getElementById('scene').content === 'pythia') {
-    document.getElementById('container').removeAttribute('style')
+  // Navigation.
+  if (
+    document.getElementById('scene').content === ''
+    || document.getElementById('scene').content === 'pythia'
+  ) {
     clear('container')
     const pythia = new Pythia(container)
   }
 
   // Scene I, II, III, etc.
   else if (document.getElementById('scene').content === 'hubble') {
-    document.getElementById('container').removeAttribute('style')
     clear('container')
     const hubble = new Hubble(container)
   }

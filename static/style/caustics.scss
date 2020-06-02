@@ -31,13 +31,13 @@
 	padding-top: 90px;
 	p {
 		column-count: 3;
-		height: 300px;
-		column-gap: 42px;
+		height: 390px;
+		column-gap: 51px;
 		margin: 0px;
 		padding-left: 3px;
 		padding-right: 3px;
 		font-family: $fontN;
-		font-size: 30px;
+		font-size: 33px;
 		text-align: justify;
 		text-justify: inter-word;
 		color: $white;
@@ -179,7 +179,7 @@ p.cursorCaustics::after {
 		padding-left: 3px;
 		padding-right: 3px;
 		padding-bottom: 30px;
-		font-family: $fontN;
+		font-family: $fontI;
 		font-size: 24px;
 		text-align: justify;
 		text-justify: inter-word;
@@ -194,8 +194,8 @@ p.cursorCaustics::after {
 /* RGB */
 
 #cRGBGIF {
-	width: 900px;
-	height: 600px;
+	width: 750px;
+	height: 500px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -205,8 +205,8 @@ p.cursorCaustics::after {
 	margin: 0px;
 	padding-left: 3px;
 	padding-right: 3px;
-	padding-top: 60px;
-	padding-bottom: 30px;
+	padding-top: 90px;
+	padding-bottom: 60px;
 	font-family: $fontN;
 	font-size: 21px;
 	text-align: center;

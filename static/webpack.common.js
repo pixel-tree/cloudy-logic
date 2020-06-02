@@ -2,11 +2,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/Main.js',
+    main: './src/Splash.js',
   },
   output: {
-    filename: '[name].bundle.js',
     path: __dirname+'/build',
+    filename: '[name].bundle.js',
+    sourceMapFilename : '[file].map',
   },
   plugins: [
     new CleanWebpackPlugin(),

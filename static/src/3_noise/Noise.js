@@ -238,6 +238,8 @@ class Noise_A {
     var speedForwardNA = Math.random() * (90 - 10) + 15,
         speedBackspaceNA = 3
 
+    var counterNA = 0
+
     typeWriterNA('noiseText', textArrayNA)
 
     var meta = document.getElementById('meta').content
@@ -279,13 +281,18 @@ class Noise_A {
             toContinueNA.text('{ press space to continue }')
             scrollingElement.scrollTop = scrollingElement.scrollHeight
 
+            var counterNA = 0
+
             document.addEventListener('keyup', event => {
-              if (event.code === 'Space' && aNA < arNA.length) {
-                toContinueNA.text('')
-                isBackspacingNA = true
-                setTimeout(function(){ typeWriterNA(idNA, arNA) })
+              if (counterNA == 0) {
+                if (event.code === 'Space') {
+                  counterNA += 1
+                  toContinueNA.text('')
+                  isBackspacingNA = true
+                  setTimeout(function(){ typeWriterNA(idNA, arNA) })
+                }
               }
-            }, {once : true})
+            })
 
           }
 
