@@ -117,7 +117,25 @@
   }
 }
 
-#zButton, #button {
+#zButton {
+  width: 120px;
+  height: 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: inherit;
+  border-color: $white;
+  font-family: $fontI;
+  color: $white;
+  font-size: 10px;
+  text-shadow: 0.6px 0.6px $gray;
+  letter-spacing: 1.5px;
+  padding-left: 9px;
+  transform: skewX(6deg);
+  font-style: oblique 6deg;
+}
+
+#button {
   width: 120px;
   height: 45px;
   display: block;
