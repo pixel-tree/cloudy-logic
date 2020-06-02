@@ -3,9 +3,13 @@
  * Media interface.
  */
 
+/* Loader */
+
+export { default as cloudy_Z } from '../media/cloudyZ.gif'
+
 /* Splash */
 
-export {default as cloudy_gif} from '../media/cloudy.gif'
+export { default as cloudy_gif } from '../media/cloudy.gif'
 
 /* Pythia */
 

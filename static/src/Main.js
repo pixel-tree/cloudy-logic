@@ -7,6 +7,7 @@
 
 import '../style/main.scss'
 
+import { Splash } from './0_splash/Splash'
 import { Pythia } from './X_pythia/Pythia'
 import { Hubble } from './1_hubble/Hubble'
 import { Caustics } from './2_caustics/Caustics'
@@ -14,7 +15,7 @@ import { Noise } from './3_noise/Noise'
 import { Apotheosis } from './4_apotheosis/Apotheosis'
 import { Chaos } from './5_chaos/Chaos'
 
-// Dev server notification.
+// Dev notification.
 if (process.env.NODE_ENV !== 'production') {
   console.log('Development mode.')
 }
@@ -36,21 +37,13 @@ meta.id = 'meta'
 document.head.appendChild(meta)
 
 /**
- * Main container.
- */
-
-const container = document.createElement('div')
-container.id = 'container'
-document.body.appendChild(container)
-
-/**
- * Begin (comment sequencer function for dev).
+ * Begin (comment for dev).
  */
 
 sequencer()
 
 /**
- * Essential functions.
+ * Utilities.
  */
 
 // Request full screen.
@@ -87,12 +80,19 @@ function clear(elementID) {
 // Checks which sequence to run.
 function sequencer() {
 
+  // Splash.
+  if (document.getElementById('scene').content === '') {
+    document.getElementById('staticSplash').style.display = 'none'
+    const splash = new Splash()
+  }
+
   // Navigation.
-  if (
-    document.getElementById('scene').content === ''
-    || document.getElementById('scene').content === 'pythia'
-  ) {
-    clear('container')
+  if (document.getElementById('scene').content === 'pythia') {
+
+    const container = document.createElement('div')
+    container.id = 'container'
+    document.body.appendChild(container)
+
     const pythia = new Pythia(container)
   }
 

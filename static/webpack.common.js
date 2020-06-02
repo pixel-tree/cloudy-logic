@@ -1,13 +1,9 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: {
-    main: './src/Splash.js',
-  },
   output: {
     path: __dirname+'/build',
     filename: '[name].bundle.js',
-    sourceMapFilename : '[file].map',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -48,7 +44,7 @@ module.exports = {
       },
       {
 				test   : /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-				loader : 'file-loader?name=build-fonts/[hash].[ext]',
+				loader : 'file-loader?name=../build-fonts/[name].[ext]',
 			},
     ],
   },
