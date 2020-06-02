@@ -73,12 +73,3 @@ loaderText.id = 'loaderText'
 loaderFrame.appendChild(loaderText)
 
 loaderText.innerHTML = 'loading...'
-
-/**
- * Load main script.
- */
-
-const main = document.createElement('script')
-main.type = 'text/javascript'
-main.src = 'build/main.bundle.js'
-document.body.appendChild(main)
