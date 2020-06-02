@@ -141,6 +141,8 @@ export { clear, sequencer }
  * Full screen request before Pythia => onclick? => deal with system sounds problem.
  * Test linear mode.
  * Make sure Pythia instructions are as clear as they can be.
+ * Optimise CloudyZ GIF (reduce size and rebuild).
+ * Favico (black borders).
  * Clean up scripts.
  */
 

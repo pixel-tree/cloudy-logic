@@ -5,6 +5,8 @@
 
 import '../style/splash.scss'
 
+import { cloudy_Z } from './Media'
+
 /* Any changes to LOADER must be reproduced in SPLASH. */
 
 /**
@@ -25,7 +27,7 @@ splashContainer.appendChild(splashFrame)
 
 const cloudyGIF = document.createElement('img')
 cloudyGIF.id = 'cloudyGIF'
-cloudyGIF.src = '../media/cloudyZ.gif'
+cloudyGIF.src = cloudy_Z
 splashFrame.appendChild(cloudyGIF)
 
 const titleTextBox = document.createElement('div')
