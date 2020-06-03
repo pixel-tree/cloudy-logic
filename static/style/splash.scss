@@ -40,7 +40,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	p {
-		margin: 0px;
 		padding-left: 3px;
 		padding-right: 3px;
 		padding-top: 9px;
@@ -54,19 +53,70 @@
 }
 
 #loader {
-	width: 42px;
-  height: 42px;
-  margin-left: auto;
+  width: 105px;
+  height: 45px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
 	margin-right: auto;
-  border: 2.1px solid $black;
-  border-top: 2.1px solid $white;
-  border-radius: 50%;
-  animation: spin 12s linear infinite;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+#loader div {
+  position: absolute;
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 50%;
+  background: #fff;
+	box-shadow: 1.2px 1.2px $black;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+#loader div:nth-child(1) {
+  left: 6px;
+  animation: ld1 0.9s infinite;
+}
+
+#loader div:nth-child(2) {
+  left: 6px;
+  animation: ld2 0.9s infinite;
+}
+
+#loader div:nth-child(3) {
+  left: 48px;
+  animation: ld2 0.9s infinite;
+}
+
+#loader div:nth-child(4) {
+  left: 90px;
+  animation: ld3 0.9s infinite;
+}
+
+@keyframes ld1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ld2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(42px, 0);
+  }
+}
+
+@keyframes ld3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
 /* Splash */

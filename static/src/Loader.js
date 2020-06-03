@@ -68,6 +68,18 @@ const loader = document.createElement('div')
 loader.id = 'loader'
 loaderFrame.appendChild(loader)
 
+const ld1 = document.createElement('div')
+loader.appendChild(ld1)
+
+const ld2 = document.createElement('div')
+loader.appendChild(ld2)
+
+const ld3 = document.createElement('div')
+loader.appendChild(ld3)
+
+const ld4 = document.createElement('div')
+loader.appendChild(ld4)
+
 var loaderText = document.createElement('p')
 loaderText.id = 'loaderText'
 loaderFrame.appendChild(loaderText)
@@ -95,6 +107,6 @@ $.ajax({
       $('#loaderText').show()
   },
   complete: function(json) {
-      $('#loaderText').html("initialising")
+      $('#loaderText').html("initialising...")
   }
 })
