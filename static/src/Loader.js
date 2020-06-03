@@ -95,6 +95,6 @@ $.ajax({
       $('#loaderText').show()
   },
   complete: function(json) {
-      $('#loaderText').html("ready")
+      $('#loaderText').html("initialising")
   }
 })
