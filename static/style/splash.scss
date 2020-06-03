@@ -54,14 +54,14 @@
 }
 
 #loader {
-	width: 60px;
-  height: 60px;
+	width: 42px;
+  height: 42px;
   margin-left: auto;
 	margin-right: auto;
-  border: 3px solid $black;
-  border-top: 3px solid $white;
+  border: 2.1px solid $black;
+  border-top: 2.1px solid $white;
   border-radius: 50%;
-  animation: spin 3s linear infinite;
+  animation: spin 12s linear infinite;
 }
 
 @keyframes spin {

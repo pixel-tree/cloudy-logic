@@ -74,10 +74,7 @@ loaderFrame.appendChild(loaderText)
 
 var $ = require('jquery')
 
-XMLHttpRequest.onprogress = function (event) {
-  event.loaded
-  event.total
-}
+var URL = './build/main.bundle.js'
 
 $.ajax({
   type: 'GET',
@@ -85,26 +82,19 @@ $.ajax({
   url: URL,
   cache: false,
   xhr: function() {
-
     var xhr = new window.XMLHttpRequest()
-
-    xhr.addEventListener('progress', function(evt) {
-      if (evt.lengthComputable) {
-          var perc = Math.round(evt.loaded / evt.total * 100)
+    xhr.addEventListener('progress', function(event) {
+      if (event.lengthComputable) {
+          var perc = Math.round(event.loaded / event.total * 100)
           loaderText.innerHTML = 'loading... ' + perc + '%'
       }
     }, false)
-
     return xhr
-
   },
   beforeSend: function() {
-      $('loaderText').show()
+      $('#loaderText').show()
   },
-  complete: function() {
-      $('#loaderText').hide()
-  },
-  success: function(json) {
+  complete: function(json) {
       $('#loaderText').html("ready")
   }
 })
