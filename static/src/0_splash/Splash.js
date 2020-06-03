@@ -13,6 +13,12 @@ import { cloudy_gif } from '../Media'
 class Splash {
   constructor(container) {
 
+    // Clear static Splash.
+
+    if (process.env.NODE_ENV == 'production') {
+      document.getElementById('staticSplash').style.display = 'none'
+    }
+
     /**
      * Main container.
      */

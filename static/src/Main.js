@@ -82,7 +82,6 @@ function sequencer() {
 
   // Splash.
   if (document.getElementById('scene').content === '') {
-    document.getElementById('staticSplash').style.display = 'none'
     const splash = new Splash()
   }
 
@@ -142,6 +141,7 @@ export { clear, sequencer }
  * Test linear mode.
  * Make sure Pythia instructions are as clear as they can be.
  * Optimise CloudyZ GIF (reduce size and rebuild).
+ * DOMREADY function for loader.
  * Favico (black borders).
  * Clean up scripts.
  */
