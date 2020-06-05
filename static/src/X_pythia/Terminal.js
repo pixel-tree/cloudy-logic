@@ -133,7 +133,7 @@ class Terminal {
           this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'hubble'
-          setTimeout(function(){ sequencer() }, 900)
+          setTimeout(function(){ sequencer() }, 1500)
         }
 
         else if (
@@ -144,7 +144,7 @@ class Terminal {
           this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'caustics'
-          setTimeout(function(){ sequencer() }, 900)
+          setTimeout(function(){ sequencer() }, 1500)
         }
 
         else if (
@@ -155,7 +155,7 @@ class Terminal {
           this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'noise'
-          setTimeout(function(){ sequencer() }, 900)
+          setTimeout(function(){ sequencer() }, 1500)
         }
 
         else if (
@@ -166,7 +166,7 @@ class Terminal {
           this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'apotheosis'
-          setTimeout(function(){ sequencer() }, 900)
+          setTimeout(function(){ sequencer() }, 1500)
         }
 
         else if (
@@ -177,7 +177,7 @@ class Terminal {
           this.echo(String('\n' + '[[b;;]' + farewell[random] + ']' + '\n'))
           document.getElementById('mode').content = 'fragmented'
           document.getElementById('scene').content = 'chaos'
-          setTimeout(function(){ sequencer() }, 900)
+          setTimeout(function(){ sequencer() }, 1500)
         }
 
         else if (
@@ -191,7 +191,7 @@ class Terminal {
           || command == 'Nope'
           || command == 'NOPE'
         ) {
-          setTimeout(function(){ location.reload() }, 900)
+          setTimeout(function(){ location.reload() }, 300)
         }
 
       },

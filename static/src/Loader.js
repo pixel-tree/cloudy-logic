@@ -5,9 +5,11 @@
 
 import '../style/splash.scss'
 
-import { cloudy_Z } from './Media'
+import { cloudy_Z, hints_txt } from './Media'
 
 /* Any changes to LOADER must be reproduced in SPLASH. */
+
+var $ = require('jquery')
 
 /**
  * Main container.
@@ -38,7 +40,7 @@ const subTitleTextBox = document.createElement('div')
 subTitleTextBox.id = 'zSubTitleText'
 splashFrame.appendChild(subTitleTextBox)
 
-// Text
+// Text.
 
 const titleText = 'CLOUDY LOGIC'
 const subTitleText = 'AN ALTERNATIVE GUIDE TO BIAS IN AI'
@@ -46,7 +48,7 @@ const subTitleText = 'AN ALTERNATIVE GUIDE TO BIAS IN AI'
 document.getElementById('zTitleText').innerHTML = '<p>' + titleText + '</p>'
 document.getElementById('zSubTitleText').innerHTML = '<p>' + subTitleText + '</p>'
 
-// Button
+// Button.
 
 const button = document.createElement('button')
 button.id = 'zButton'
@@ -64,6 +66,8 @@ const loaderFrame = document.createElement('div')
 loaderFrame.id = 'loaderFrame'
 splashContainer.appendChild(loaderFrame)
 
+// Spinner.
+
 const loader = document.createElement('div')
 loader.id = 'loader'
 loaderFrame.appendChild(loader)
@@ -80,11 +84,13 @@ loader.appendChild(ld3)
 const ld4 = document.createElement('div')
 loader.appendChild(ld4)
 
+// Text.
+
 var loaderText = document.createElement('p')
 loaderText.id = 'loaderText'
 loaderFrame.appendChild(loaderText)
 
-var $ = require('jquery')
+// Display progress.
 
 var URL = './build/main.bundle.js'
 
@@ -97,16 +103,71 @@ $.ajax({
     var xhr = new window.XMLHttpRequest()
     xhr.addEventListener('progress', function(event) {
       if (event.lengthComputable) {
-          var perc = Math.round(event.loaded / event.total * 100)
-          loaderText.innerHTML = 'loading... ' + perc + '%'
+        var perc = Math.round(event.loaded / event.total * 100)
+        loaderText.innerHTML = 'loading... ' + perc + '%'
       }
     }, false)
     return xhr
   },
   beforeSend: function() {
-      $('#loaderText').show()
+    $('#loaderText').show()
   },
   complete: function(json) {
-      $('#loaderText').html("initialising...")
+
+    // Notify.
+    $('#loaderText').html("initialising...")
+
+    // Execute main script.
+    const main = document.createElement('script')
+    main.type = 'text/javascript'
+    main.src = 'build/main.bundle.js'
+    document.body.append(main)
+
   }
 })
+
+/**
+ * Hints section.
+ */
+
+const hintBox = document.createElement('div')
+hintBox.id = 'hintBox'
+staticSplash.insertBefore(hintBox, blurSplash)
+
+const hintText = document.createElement('p')
+hintText.id = 'hintText'
+hintBox.appendChild(hintText)
+
+const hintPress = document.createElement('p')
+hintPress.id = 'hintPress'
+hintBox.appendChild(hintPress)
+
+const hints = hints_txt.split('\n')
+
+var i = 0
+
+$('#hintText:hidden').text(hints[i]).fadeIn(1500, function() {
+  $('#hintPress').text('{ press space to continue }')
+})
+
+fadeHint()
+
+function fadeHint() {
+  document.addEventListener('keyup', event => {
+    if (event.code === 'Space') {
+      $('#hintPress').hide()
+      $('#hintText').fadeOut(600, function() {
+        i++
+        if (i < hints.length) {
+          $('#hintText').text(hints[i])
+        }
+        else {
+          i = 2
+          $('#hintText').text(hints[i])
+        }
+        $('#hintText').fadeIn(300)
+      })
+    }
+    fadeHint()
+  }, {once: true})
+}

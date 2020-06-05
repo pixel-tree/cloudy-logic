@@ -13,16 +13,13 @@ import { Hubble } from './1_hubble/Hubble'
 import { Caustics } from './2_caustics/Caustics'
 import { Noise } from './3_noise/Noise'
 import { Apotheosis } from './4_apotheosis/Apotheosis'
-import { Chaos } from './5_chaos/Chaos'
-
-// Dev notification.
-if (process.env.NODE_ENV !== 'production') {
-  console.log('Development mode.')
-}
+import { Butterfly } from './5_chaos/Chaos'
 
 /**
- * Metadata for sequencing scenes.
+ * Essential metadata.
  */
+
+var env = process.env.NODE_ENV
 
 var mode = document.createElement('meta')
 mode.id = 'mode'
@@ -37,62 +34,54 @@ meta.id = 'meta'
 document.head.appendChild(meta)
 
 /**
- * Begin (comment for dev).
+ * Begin (by default ignored in dev; for which dedicated section at bottom).
  */
 
-sequencer()
+if (env !== 'development') {
+  sequencer()
+}
 
 /**
  * Utilities.
  */
 
-// Request full screen.
-function fullScreen() {
+// Clear element.
 
-  var confirmation = confirm("recommended: full screen");
-  var site = document.documentElement;
-
-  if (confirmation == true) {
-    if (site.requestFullscreen) {
-      site.requestFullscreen()
-    }
-    // Firefox.
-    else if (site.mozRequestFullScreen) {
-      site.mozRequestFullScreen()
-    }
-    // Chrome, Safari, Opera.
-    else if (site.webkitRequestFullScreen) {
-      site.webkitRequestFullScreen()
-    }
-    // IE/Edge.
-    else if (site.msRequestFullscreen) {
-      site.msRequestFullscreen()
-    }
-  }
-
-}
-
-// Clears chosen element.
 function clear(elementID) {
   document.getElementById(elementID).innerHTML = ''
 }
 
-// Checks which sequence to run.
+// Visual sequencer (for scenes).
+
 function sequencer() {
+
+  // Play sound.
+  if (mode.content != '') {
+    audio()
+  }
 
   // Splash.
   if (document.getElementById('scene').content === '') {
     const splash = new Splash()
   }
 
-  // Navigation.
+  // Enter temple. Prelude/navigation.
   if (document.getElementById('scene').content === 'pythia') {
 
-    const container = document.createElement('div')
-    container.id = 'container'
-    document.body.appendChild(container)
+    // Main container (created once; shared across scenes).
+    if (mode.content == '') {
+      const container = document.createElement('div')
+      container.id = 'container'
+      document.body.appendChild(container)
+    }
 
+    else if (mode.content != '') {
+      clear('container')
+    }
+
+    // Summon Pythia.
     const pythia = new Pythia(container)
+
   }
 
   // Scene I, II, III, etc.
@@ -118,30 +107,91 @@ function sequencer() {
 
   else if (document.getElementById('scene').content === 'chaos') {
     clear('container')
-    const chaos = new Chaos(container)
+    const chaos = new Butterfly(container)
+  }
+
+}
+
+// Audio sequencer.
+
+function audio() {
+
+  var $ = require('jquery')
+
+  // Upon first entrance to temple.
+  if (mode.content == '' && scene.content == 'pythia') {
+    $('#temple')[0].volume = 0
+    $('#temple')[0].play()
+    $('#temple').animate({volume: 0.03}, 12000)
+  }
+
+  // Fragmented narrative; back in temple.
+  else if (mode.content == 'fragmented' && scene.content == 'pythia') {
+    $('#amb').animate({volume: 0}, 1500)
+    $('#temple')[0].volume = 0
+    $('#temple')[0].play()
+    $('#temple').animate({volume: 0.03}, 12000)
+    setTimeout(function(){ $('#amb')[0].pause() }, 6000)
+  }
+
+  // Linear narrative; back in temple.
+  else if (mode.content == 'linear' && scene.content == 'end') {
+    $('#amb').animate({volume: 0}, 1500)
+    $('#temple')[0].volume = 0
+    $('#temple')[0].play()
+    $('#temple').animate({volume: 0.03}, 12000)
+    setTimeout(function(){ $('#amb')[0].pause() }, 6000)
+  }
+
+  // Fragmented narrative; in scene.
+  else if (mode.content == 'fragmented' && scene.content != 'pythia') {
+    $('#temple').animate({volume: 0}, 1500)
+    $('#amb')[0].volume = 0
+    $('#amb')[0].play()
+    $('#amb').animate({volume: 0.03}, 18000)
+    setTimeout(function(){ $('#temple')[0].pause() }, 6000)
+  }
+
+  // Linear narrative; into first scene.
+  else if (mode.content == 'linear' && scene.content == 'hubble') {
+    $('#temple').animate({volume: 0}, 1500)
+    $('#amb')[0].volume = 0
+    $('#amb')[0].play()
+    $('#amb').animate({volume: 0.03}, 18000)
+    setTimeout(function(){ $('#temple')[0].pause() }, 6000)
   }
 
 }
 
 /**
- * Dev section.
+ * Dev section (by default ignored in production).
  */
 
-// const chaos = new Chaos(container)
+if (env !== 'production') {
 
-/* --------- */
+  console.log('Development mode.')
 
-export { clear, sequencer }
+  const container = document.createElement('div')
+  container.id = 'container'
+  document.body.appendChild(container)
+
+  // Scene under development.
+  const chaos = new Chaos(container)
+
+}
+
+/* -------------------------------------------- */
+
+export { audio, clear, sequencer }
 
 /**
  * TO DO (in order of importance):
  *
- * Fix mistype bug, last sequence of Noise.
- * Full screen request before Pythia => onclick? => deal with system sounds problem.
- * Test linear mode.
- * Make sure Pythia instructions are as clear as they can be.
+ * Oliver notes.
+ * Pythia instructions.
+ * Pythia fragmented multiple contexts.
+ * Regl test (screen resolution? os?)
  * Loader: execute ajax only on first load (skip at refresh).
- * Favico (black borders).
  * Clean up scripts.
  */
 
@@ -151,10 +201,3 @@ export { clear, sequencer }
  * Lucid visualisation.
  * To be continued...
  */
-
-
-/*
-document.addEventListener('keyup', event => {
-  fullScreen()
-}, {once : true})
-*/

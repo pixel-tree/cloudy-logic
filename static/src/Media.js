@@ -3,9 +3,18 @@
  * Media interface.
  */
 
-/* Splash */
+/* Audio */
+
+export { default as jh } from '../media/jh.mp3'
+export { default as drone } from '../media/drone.mp3'
+
+/* Loader */
 
 export { default as cloudy_Z } from '../media/cloudyZ.gif'
+export { default as hints_txt } from '../media/hints.txt'
+
+/* Splash */
+
 export { default as cloudy_gif } from '../media/cloudy.gif'
 
 /* Pythia */
@@ -37,3 +46,7 @@ export { default as noise_txt } from '../media/noise.txt'
 export { default as apotheosis_txt } from '../media/apotheosis.txt'
 export { default as chaos_gif } from '../media/chaos.gif'
 export { default as twinkle_gif } from '../media/twinkle.gif'
+
+/* Chaos */
+
+export { default as chaos_txt } from '../media/chaos.txt'

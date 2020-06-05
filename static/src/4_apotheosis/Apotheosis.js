@@ -262,6 +262,7 @@ class Apotheosis {
                   })
 
                   drawParticles()
+
                 })
 
               } // particle function.
@@ -326,6 +327,7 @@ class Apotheosis {
                 }
 
                 scrollingElement.scrollTop = scrollingElement.scrollHeight
+
               })
 
             }
@@ -441,10 +443,13 @@ class ApoText {
          */
 
         if (document.getElementById('particleFrame') != null) {
+
           clear('particleFrame')
           clear('meta')
           document.getElementById('particleFrame').setAttribute("id", "particleReFrame")
+
           const chaos = new Chaos(container)
+
         }
 
       }
