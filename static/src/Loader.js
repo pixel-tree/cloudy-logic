@@ -96,7 +96,7 @@ var URL = './build/main.bundle.js'
 
 $.ajax({
   type: 'GET',
-  dataType: 'json',
+  dataType: 'script',
   url: URL,
   cache: false,
   xhr: function() {
@@ -112,7 +112,8 @@ $.ajax({
   beforeSend: function() {
     $('#loaderText').show()
   },
-  complete: function(json) {
+  complete: function() {
+    // Notify.
     $('#loaderText').html("initialising...")
   }
 })
