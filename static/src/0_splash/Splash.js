@@ -77,11 +77,7 @@ class Splash {
 
       document.getElementById('scene').content = 'pythia'
 
-      // Fade into next sequence.
-      $(splashFrame).delay(3).fadeOut('slow')
-      setTimeout(function(){ sequencer() }, 2100)
-
-      // Create audio objects and launch sequencer.
+      // Create audio objects; launch sequencer.
       const temple = document.createElement('audio'),
             amb = document.createElement('audio')
 
@@ -98,6 +94,10 @@ class Splash {
       document.body.appendChild(amb)
 
       audio()
+
+      // Fade into next sequence.
+      $(splashFrame).delay(3).fadeOut('slow')
+      setTimeout(function(){ sequencer() }, 2100)
 
     }
 

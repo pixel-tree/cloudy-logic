@@ -112,7 +112,7 @@ $.ajax({
   beforeSend: function() {
     $('#loaderText').show()
   },
-  complete: function() {
+  success: function() {
     // Notify.
     $('#loaderText').html("initialising...")
   }
