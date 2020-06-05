@@ -113,16 +113,7 @@ $.ajax({
     $('#loaderText').show()
   },
   complete: function(json) {
-
-    // Notify.
     $('#loaderText').html("initialising...")
-
-    // Execute main script.
-    const main = document.createElement('script')
-    main.type = 'text/javascript'
-    main.src = 'build/main.bundle.js'
-    document.body.append(main)
-
   }
 })
 
