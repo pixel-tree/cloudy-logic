@@ -203,7 +203,7 @@ class ButterflyText {
             }
 
             else if (counterBF == 8) {
-              toContinueBF.text('{ press space to end }')
+              toContinueBF.text('{ SPACE TO END }')
               // Zero eventlistener counter.
               counterEvBF = 0
             }
