@@ -48,14 +48,22 @@ class Terminal {
      */
 
     const mode = document.getElementById('mode').content
+
     var greeting
 
-    if (mode == 'fragmented') {
+    // First encounter.
+    if (mode != 'fragmented' && mode != 'end') {
+      greeting = '[[b;;]' + pythia_txt.split('\n')[0] + ']' + '\n'
+    }
+
+    // I've been expecting you to return...
+    else if (mode == 'fragmented') {
       greeting = '[[b;;]' + pythia_txt.split('\n')[1] + ']' + '\n'
     }
 
-    else {
-      greeting = '[[b;;]' + pythia_txt.split('\n')[0] + ']' + '\n'
+    // End.
+    else if (mode == 'end') {
+      greeting = '[[b;;]' + pythia_txt.split('\n')[2] + ']' + '\n'
     }
 
     /**
@@ -191,7 +199,9 @@ class Terminal {
           || command == 'Nope'
           || command == 'NOPE'
         ) {
-          setTimeout(function(){ location.reload() }, 300)
+          document.getElementById('mode').content = ''
+          document.getElementById('scene').content = ''
+          setTimeout(function(){ sequencer() }, 900)
         }
 
       },

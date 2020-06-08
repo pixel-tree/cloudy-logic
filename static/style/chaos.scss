@@ -8,7 +8,149 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 15px;
+	padding-top: 21px;
+  padding-bottom: 45px;
 }
 
-/* Chaos */
+/* Text */
+
+/**
+ * Set height of multi-column typewriters depending on amount of text.
+ * TO DO: automate above.
+ *
+ * Cursors: 8/10 of font size; width = height / 2.
+ */
+
+#butterflyFrame {
+  width: 600px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#fichteTextBox {
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $fontN;
+		font-size: 22px;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}
+
+.bf1cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink1;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.bf1cursor::after {
+  height: 19.2px;
+  width: 8.6px;
+}
+
+@keyframes blink1 {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bf2cursor::after {
+  content: '';
+  display: inline-block;
+  margin-left: 3px;
+  background-color: $white;
+  animation-name: blink2;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+p.bf2cursor::after {
+  height: 14.4px;
+  width: 7.2px;
+}
+
+@keyframes blink2 {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#fichteNameBox {
+  padding-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $fontN;
+		font-size: 18px;
+    font-weight: lighter;
+		text-align: left;
+		color: $white;
+  }
+}
+
+#continueButterfly {
+  width: 600px;
+  display: block;
+  height: auto;
+}
+
+.continueBF {
+	margin: 0px;
+	padding-top: 21px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 30px;
+	font-family: $fontN;
+	font-size: 15px;
+	text-align: right;
+	color: $white;
+}
+
+#fillerB {
+  height: 30px;
+}
+
+#bfTextBox, #neuralTextBox, #expTextBox, #dataTextBox, #cplxTextBox, #cbTextBox {
+  padding-top: 27px;
+	p {
+		margin: 0px;
+		padding-left: 3px;
+		padding-right: 3px;
+		font-family: $fontI;
+		font-size: 24px;
+		text-align: justify;
+		text-justify: inter-word;
+		color: $white;
+  }
+}

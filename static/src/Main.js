@@ -122,7 +122,7 @@ function audio() {
   if (mode.content == '' && scene.content == 'pythia') {
     $('#temple')[0].volume = 0
     $('#temple')[0].play()
-    $('#temple').animate({volume: 0.03}, 12000)
+    $('#temple').animate({volume: 0.1}, 12000)
   }
 
   // Fragmented narrative; back in temple.
@@ -130,7 +130,7 @@ function audio() {
     $('#amb').animate({volume: 0}, 1500)
     $('#temple')[0].volume = 0
     $('#temple')[0].play()
-    $('#temple').animate({volume: 0.03}, 12000)
+    $('#temple').animate({volume: 0.1}, 12000)
     setTimeout(function(){ $('#amb')[0].pause() }, 6000)
   }
 
@@ -139,7 +139,7 @@ function audio() {
     $('#amb').animate({volume: 0}, 1500)
     $('#temple')[0].volume = 0
     $('#temple')[0].play()
-    $('#temple').animate({volume: 0.03}, 12000)
+    $('#temple').animate({volume: 0.1}, 12000)
     setTimeout(function(){ $('#amb')[0].pause() }, 6000)
   }
 
@@ -148,7 +148,7 @@ function audio() {
     $('#temple').animate({volume: 0}, 1500)
     $('#amb')[0].volume = 0
     $('#amb')[0].play()
-    $('#amb').animate({volume: 0.03}, 18000)
+    $('#amb').animate({volume: 0.1}, 18000)
     setTimeout(function(){ $('#temple')[0].pause() }, 6000)
   }
 
@@ -157,7 +157,7 @@ function audio() {
     $('#temple').animate({volume: 0}, 1500)
     $('#amb')[0].volume = 0
     $('#amb')[0].play()
-    $('#amb').animate({volume: 0.03}, 18000)
+    $('#amb').animate({volume: 0.1}, 18000)
     setTimeout(function(){ $('#temple')[0].pause() }, 6000)
   }
 
@@ -175,8 +175,13 @@ if (env !== 'production') {
   container.id = 'container'
   document.body.appendChild(container)
 
-  // Scene under development.
-  const chaos = new Chaos(container)
+  /**
+   * Currently, cannot run transitions.
+   * To dev these, build first and run in Flask.
+   */
+
+  // Scene under development:
+  // new Scene().
 
 }
 

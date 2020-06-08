@@ -64,7 +64,6 @@ class Splash {
     splashFrame.appendChild(button)
 
     const buttonText = 'BEGIN'
-
     document.getElementById('button').innerHTML = buttonText
 
     /**

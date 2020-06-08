@@ -241,10 +241,10 @@ class Apotheosis {
                         [0, 0, 0],
                         [0, 1, 0])
                     },
-                    projection: ({viewportWidth, viewportHeight}) =>
+                    projection: () =>
                       mat4.perspective([],
-                        Math.PI / 5,
-                        viewportWidth / viewportHeight,
+                        Math.PI / 4,
+                        600 / 900,
                         0.01,
                         1000),
                     time: ({tick}) => tick * 0.003
@@ -394,10 +394,20 @@ class ApoText {
           // Switch to backspace mode.
           else if (iAP0 == stringAP0.length) {
 
+            // Press to continue.
+            const wasd = document.createElement('p')
+            wasd.id = 'continueWASD'
+            particleTextBox.appendChild(wasd)
+            $('#continueWASD').text('{ W A S D }')
+
+            var scrollingElement = (document.scrollingElement || document.body)
+            scrollingElement.scrollTop = scrollingElement.scrollHeight
+
             if (document.getElementById('meta').content != 9) {
               document.addEventListener('keyup', event => {
                 var counterAP0 = document.getElementById('meta').content
                 if (counterAP0 == 9) {
+                  $('#continueWASD').remove()
                   isBackspacingAP0 = true
                   setTimeout(function(){ typeWriterAP0(idAP0, arAP0) })
                   document.removeEventListener('keyup', event)
@@ -507,7 +517,6 @@ class Chaos {
 
     // Counter to determine order of events.
     var counterAP1 = 0
-
     // Counter for eventlistener.
     var counterEvAP1 = 0
 
@@ -558,7 +567,7 @@ class Chaos {
             counterAP1 += 1
 
             if (counterAP1 != 5 && counterAP1 != 2) {
-              toContinueAP1.text('{ press space to continue }')
+              toContinueAP1.text('{ SPACE }')
               counterEvAP1 = 0
             }
 
@@ -635,6 +644,8 @@ class Chaos {
 
                       chaosTextBox.innerHTML = '<p>' + textArrayAP1[0] + '</p>'
 
+                      toContinueAP1.text('')
+
                       const twinkleGIF = document.createElement('img')
                       twinkleGIF.id = 'twinkleGIF'
                       twinkleGIF.src = twinkle_gif
@@ -656,6 +667,8 @@ class Chaos {
 
                       demonTextBox.innerHTML = '<p>' + textArrayAP1[2] + '</p>'
 
+                      toContinueAP1.text('')
+
                       const quantumTextBox = document.createElement('div')
                       quantumTextBox.id = 'quantumTextBox'
                       particleReFrame.insertBefore(quantumTextBox, continueBox)
@@ -672,6 +685,8 @@ class Chaos {
                     else if (counterAP1 == 6) {
 
                       maxwellNameBox.innerHTML = '<p>' + textArrayAP1[5] + '</p>'
+
+                      toContinueAP1.text('')
 
                       const abstractTextBox = document.createElement('div')
                       abstractTextBox.id = 'abstractTextBox'

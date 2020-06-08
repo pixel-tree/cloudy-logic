@@ -35,7 +35,7 @@
   display: inline-block;
   margin-left: 3px;
   background-color: $white;
-  animation-name: blink;
+  animation-name: blink1;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
@@ -45,7 +45,7 @@ p.apoQcursor::after {
   width: 24.4px;
 }
 
-@keyframes blink {
+@keyframes blink1 {
   0% {
     opacity: 1;
   }
@@ -121,18 +121,27 @@ p.apoQcursor::after {
 #particleTextBox {
   margin-left: 600px;
   width: 600px;
-  height: 900px;
+  height: 602px;
+  padding-top: 298px;
+  font-family: $fontI;
+  font-size: 22.5px;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 6px;
   p {
-    padding-top: 250px;
-		margin: 0px;
+    margin: 0px;
+    margin-right: 43px;
 		padding-left: 3px;
 		padding-right: 3px;
-		font-family: $fontI;
-		font-size: 27px;
-		text-align: justify;
-    text-justify: inter-word;
 		color: $white;
   }
+}
+
+#continueWASD {
+	padding-top: 30px;
+	font-family: $fontN;
+	font-size: 15px;
+	text-align: right;
 }
 
 .apo0cursor::after {
@@ -140,17 +149,17 @@ p.apoQcursor::after {
   display: inline-block;
   margin-left: 3px;
   background-color: $white;
-  animation-name: blink;
+  animation-name: blink2;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
 
 p.apo0cursor::after {
-  height: 21.6px;
-  width: 10.8px;
+  height: 18px;
+  width: 9px;
 }
 
-@keyframes blink {
+@keyframes blink2 {
   0% {
     opacity: 1;
   }
@@ -209,7 +218,7 @@ margin-right: auto;
   display: inline-block;
   margin-left: 3px;
   background-color: $white;
-  animation-name: blink;
+  animation-name: blink3;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
@@ -219,7 +228,7 @@ p.apo1cursor::after {
   width: 8.6px;
 }
 
-@keyframes blink {
+@keyframes blink3 {
   0% {
     opacity: 1;
   }
@@ -307,7 +316,7 @@ margin-right: auto;
   display: inline-block;
   margin-left: 3px;
   background-color: $white;
-  animation-name: blink;
+  animation-name: blink4;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
@@ -317,7 +326,7 @@ p.apo2cursor::after {
   width: 8.4px;
 }
 
-@keyframes blink {
+@keyframes blink4 {
   0% {
     opacity: 1;
   }
@@ -379,7 +388,7 @@ p.apo2cursor::after {
   display: inline-block;
   margin-left: 3px;
   background-color: $white;
-  animation-name: blink;
+  animation-name: blink5;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
@@ -389,7 +398,7 @@ p.apo3cursor::after {
   width: 14.4px;
 }
 
-@keyframes blink {
+@keyframes blink5 {
   0% {
     opacity: 1;
   }
@@ -428,7 +437,7 @@ p.apo3cursor::after {
   display: inline-block;
   margin-left: 3px;
   background-color: $white;
-  animation-name: blink;
+  animation-name: blink6;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
 }
@@ -438,7 +447,7 @@ p.apo4cursor::after {
   width: 12px;
 }
 
-@keyframes blink {
+@keyframes blink6 {
   0% {
     opacity: 1;
   }

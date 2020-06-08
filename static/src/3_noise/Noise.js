@@ -82,7 +82,7 @@ class Noise {
           else if (iQ == stringQ.length) {
 
             // Press space to continue.
-            toContinueQ.text('{ press space to continue }')
+            toContinueQ.text('{ SPACE }')
 
             document.addEventListener('keyup', event => {
               if (counterQ == 0) {
@@ -278,7 +278,7 @@ class Noise_A {
           else if (iNA == stringNA.length) {
 
             // Press space to continue.
-            toContinueNA.text('{ press space to continue }')
+            toContinueNA.text('{ SPACE }')
             scrollingElement.scrollTop = scrollingElement.scrollHeight
 
             var counterNA = 0

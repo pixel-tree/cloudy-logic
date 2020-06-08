@@ -165,7 +165,7 @@ class Caustics_3ch {
           else if (iCA == stringCA.length) {
 
             // Press space to continue.
-            toContinueCA.text('{ press space to continue }')
+            toContinueCA.text('{ SPACE }')
             scrollingElement.scrollTop = scrollingElement.scrollHeight
 
             counter = 0

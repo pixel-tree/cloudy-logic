@@ -94,7 +94,7 @@ class Hubble {
           else if (i == string.length) {
 
             // Press space to continue.
-            toContinue.text('{ press space to continue }')
+            toContinue.text('{ SPACE }')
             scrollingElement.scrollTop = scrollingElement.scrollHeight
 
             document.addEventListener('keyup', event => {
