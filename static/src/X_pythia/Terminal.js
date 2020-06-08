@@ -199,7 +199,6 @@ class Terminal {
           || command == 'Nope'
           || command == 'NOPE'
         ) {
-          document.getElementById('mode').content = ''
           document.getElementById('scene').content = ''
           setTimeout(function(){ sequencer() }, 900)
         }

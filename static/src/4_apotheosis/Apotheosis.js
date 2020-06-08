@@ -731,7 +731,7 @@ class Chaos {
          * Next sequence...
          */
 
-        clear('meta')
+        document.getElementById('meta').content = ''
 
         if (document.getElementById('mode').content == 'linear') {
           document.getElementById('scene').content = 'chaos'
