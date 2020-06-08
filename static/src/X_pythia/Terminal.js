@@ -199,8 +199,7 @@ class Terminal {
           || command == 'Nope'
           || command == 'NOPE'
         ) {
-          document.getElementById('scene').content = ''
-          setTimeout(function(){ sequencer() }, 900)
+          setTimeout(function(){ location.reload() }, 300)
         }
 
       },

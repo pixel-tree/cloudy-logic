@@ -122,7 +122,7 @@ function audio() {
   if (mode.content == '' && scene.content == 'pythia') {
     $('#temple')[0].volume = 0
     $('#temple')[0].play()
-    $('#temple').animate({volume: 0.1}, 12000)
+    setTimeout(function(){ $('#temple').animate({volume: 0.1}, 12000) }, 1500)
   }
 
   // Fragmented narrative; back in temple.
@@ -181,7 +181,7 @@ if (env !== 'production') {
    */
 
   // Scene under development:
-  // new Scene().
+  // new Splash()
 
 }
 
