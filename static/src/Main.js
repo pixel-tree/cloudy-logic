@@ -181,7 +181,7 @@ if (env !== 'production') {
    */
 
   // Scene under development:
-  // new Splash()
+  // new Scene(container)
 
 }
 

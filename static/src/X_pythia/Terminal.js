@@ -99,7 +99,7 @@ class Terminal {
 
           }
 
-          this.echo(String('\n' + '[[b;;]' + messaging() + ']' + '\n'))
+          this.echo(String('\n' + '[[b;;]' + messaging() + ']' + '\n'), {keepWords: true})
 
           /**
            * Option no. 2 (continue to next line before response).
