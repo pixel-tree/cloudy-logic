@@ -4,25 +4,27 @@
 
 Live demo: [cloudylogic.space](https://cloudylogic.space).
 
-### Context
+### CONTEXT
 
-Cloudy Logic is a piece of philosophical writing and a multimedia artwork hosted online, made up of several narratives that broadly contemplate representations, knowledge and the nature of reality. It is inspired by an article of the same name (James, 2015; PDF in repo), in which parallels are made between machine learning and pseudo-rational practices such as astrological forecasting: essentially, masquerading superstitions in empirical terms to make them seem more credible.
+Cloudy Logic is a piece of philosophical writing and a multimedia artwork hosted online, made up of several narratives that broadly contemplate representations, knowledge and the nature of reality. It is inspired by an article of the same name ([James, 2015](https://thenewinquiry.com/cloudy-logic/)), in which parallels are made between machine learning and pseudo-rational practices such as astrological forecasting: essentially, masquerading superstitions in empirical terms to make them seem more credible.
 
 Most machine learning systems may be broken down into three main components: data representation (how information is fed into the network), objective function (a way to represent the problem) and optimisation method (the means to achieve our objective). Bias, in this context, is often associated with its negative connotations (e.g. racial bias) or in a more technical sense with underfitting (i.e. failure to capture underlying patterns in the data). The mainstream conversation rarely addresses (inductive) bias for its utility, as the necessary evil: assumptions help learning algorithms distinguish signal from noise (further reading: priors).
 
 Developed in response to conversations with various experts and nonexperts about interpretability in AI, the core idea behind the featured stories is to consider bias in the context of knowledge production, because, without specificity it is merely reduced to rhetoric—a scapegoat for a more expansive problem.
 
-### Development
+### DEVELOPMENT
 
 Yada yada. TBW.
 
-### Installation
+### INSTALLATION
 
 Developed using Python 3 and Node v13.
 
 Project split into two folders: server/ for Python backend and static/ for frontend. The reason being that one of the backend for one of the main components is written in Python. For frontend development use the provided Node development server.
 
-Disclaimer! I was learning JS and Node during this project and therefore the code is pretty messy. Needs a major rework, e.g., lazy loading, build a class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... basically needs to be redesigned top-down.
+**Disclaimer!**
+
+*I was learning JS and Node during this project and therefore the code is pretty messy. Needs a major rework, e.g., lazy loading, build class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... basically needs to be redesigned top-down.*
 
 Clone repository:
 
@@ -30,7 +32,7 @@ Clone repository:
 git clone https://github.com/pixel-tree/cloudy-logic.git
 ```
 
-###### Frontend
+#### FRONTEND
 
 Install Node dependencies:
 
@@ -45,7 +47,7 @@ Start webpack-dev-server:
 npm run start
 ```
 
-Access the app through [localhost](http://localhost:8080). Browser refreshes automatically when changes are made.
+Access the app through [localhost:8080](http://localhost:8080). Browser refreshes automatically when changes are made.
 
 Once finished developing frontend, build the app:
 
@@ -54,13 +56,13 @@ npm run build
 npm run loader
 ```
 
-###### Dialogflow
+#### DIALOGFLOW
 
 Chatbot component uses Dialogflow v2.
 
-Create a new agent; navigate to GCP and create a Service Account for agent; export the keys as a .json file and place in project root; create a .env file in root for environment variables (include project ID from Dialogflow and path to .json file; see placeholders in this repo) -- used to prevent sharing sensitive information!
+Create a new agent; navigate to GCP and create a Service Account for agent; export the keys as a .json file and place in project root; create a .env file in root for environment variables (include project ID from Dialogflow and path to .json file; see placeholders in this repo) -- ***used to prevent sharing sensitive information!***
 
-###### Server
+#### SERVER
 
 Install dependencies:
 
@@ -74,9 +76,9 @@ For local dev server simply run:
 python ../server/cloudy_logic.py
 ```
 
-Access the app through [localhost](http://localhost:8000). Chatbot will work when running Flask server.
+Access the app through [localhost:8000](http://localhost:8000). Chatbot will work when running Flask server.
 
-###### Deployment
+#### DEPLOYMENT
 
 Having made sure that everything functions as intended, configure production server for deployment. There are a multitude of options and it may be easiest to use an app hosting service (GCP App Engine, Heroku, etc.), but I will briefly describe my workflow:
 
