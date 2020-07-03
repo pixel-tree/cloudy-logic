@@ -22,7 +22,7 @@ Developed using Python 3 and Node v13.
 
 Project split into two folders: **server/** for Python backend and **static/** for frontend. The reason being that one of the backend for one of the main components is written in Python.
 
-**Disclaimer!**
+***Disclaimer!***
 
 *I was learning JS and Node during this project and so the code is fairly messy. Needs a major rework, e.g., lazy loading, build class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... basically needs to be redesigned top-down.*
 
@@ -30,6 +30,16 @@ Clone repository:
 
 ```
 git clone https://github.com/pixel-tree/cloudy-logic.git
+```
+
+Create virtualenv/pipenv install:
+
+e.g.
+
+```
+cd cloudy-logic
+virtualenv -p python3 .
+source ./bin/activate
 ```
 
 #### FRONTEND
@@ -41,7 +51,9 @@ cd static
 npm install
 ```
 
-Start webpack-dev-server:
+In dev mode, sequencer functions are disables by default. You may develop individual components using a dedicated dev section in src/Main.js.
+
+Start webpack-dev-server (skip to build if no further development needed):
 
 ```
 npm run start
@@ -62,7 +74,7 @@ The chatbot component should be implemented using Dialogflow v2.
 
 It is possible to use a bespoke machine learning model instead; but in that case you will have to rewrite pythia.py. I have chosen to use Dialogflow as Pythia NPC is used for navigation (needs to be trained to recognise specific intents).
 
-Create new project and agent; navigate to GCP console and create a Service Account for agent; export the keys as .json file and place in project root; create .env file for environment variables and place in root (Dialogflow Project ID and path to .json file; see placeholders in repo) ***--important!--*** used to prevent sharing sensitive information.
+Create new project and agent; navigate to GCP console and create a Service Account for agent; export the keys as .json file and place in project root; create .env file for environment variables and place in root (Dialogflow Project ID and path to .json file; see placeholders in repo) ***-- important! --*** used to prevent sharing sensitive information.
 
 Chatbot will work only when running Flask/Python WSGI server; not with Node server (see below).
 
@@ -92,10 +104,10 @@ clone repo and install dependencies;
 
 purchase domain and set up DNS A record for external IP;
 
-configure [NGINX](http://nginx.org/en/docs/beginners_guide.html#conf_structure) and [Gunicorn](https://docs.gunicorn.org/en/stable/index.html);
+configure ***[NGINX](http://nginx.org/en/docs/beginners_guide.html#conf_structure)*** and ***[Gunicorn](https://docs.gunicorn.org/en/stable/index.html)***;
 
-request SSL certificate using [Certbot](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx);
+request SSL certificate using ***[Certbot](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)***;
 
 set up a background service for the server to stay live 24/7 + automate server launch on boot;
 
-use wsgi.py as entrypoint, e.g., gunicorn wsgi:app.
+and use wsgi.py as entrypoint, e.g., gunicorn wsgi:app.
