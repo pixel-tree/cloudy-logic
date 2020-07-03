@@ -76,7 +76,7 @@ It is possible to use a bespoke machine learning model instead; but in that case
 
 Create new project and agent; navigate to GCP console and create a Service Account for agent; export the keys as .json file and place in project root; create .env file for environment variables and place in root (Dialogflow Project ID and path to .json file; see placeholders in repo) ***-- important! --*** used to prevent sharing sensitive information.
 
-Chatbot will work only when running Flask/Python WSGI server; not with Node server (see below).
+Chatbot will only work when running Flask/Python WSGI server; not with Node server (see below).
 
 #### SERVER
 
