@@ -5,7 +5,7 @@
 
 import '../../style/intro.scss'
 
-import { sequencer } from '../Main'
+import { audio, sequencer } from '../Main'
 import { intro_txt } from '../Media'
 
 class Intro {
@@ -45,10 +45,34 @@ class Intro {
     document.addEventListener('keyup', event => {
       if (event.code === 'Space') {
         if (counter == 0) {
+
+          // Audio objects; launch sequencer.
+          const temple = document.createElement('audio'),
+                amb = document.createElement('audio')
+
+          temple.id = 'temple'
+          temple.src = jh
+          temple.type = 'audio/mpeg'
+          temple.loop = true
+          temple.autoplay = false
+          document.body.appendChild(temple)
+
+          amb.id = 'amb'
+          amb.src = drone
+          amb.type = 'audio/mpeg'
+          amb.loop = true
+          amb.autoplay = false
+          document.body.appendChild(amb)
+
+          audio()
+
+          // Visual sequencer.
           document.getElementById('scene').content = 'pythia'
           sequencer()
           counter += 1
+          
           document.removeEventListener('keyup', event)
+
         }
       }
     })

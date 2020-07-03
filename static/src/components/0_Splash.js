@@ -77,28 +77,8 @@ class Splash {
       document.getElementById('scene').content = 'intro'
 
       // Fade into next sequence.
-      $(splashFrame).delay(3).fadeOut('slow')
+      $(splashContainer).delay(3).fadeOut('slow')
       setTimeout(function(){ sequencer() }, 2100)
-
-      // Audio objects; launch sequencer.
-      const temple = document.createElement('audio'),
-            amb = document.createElement('audio')
-
-      temple.id = 'temple'
-      temple.src = jh
-      temple.type = 'audio/mpeg'
-      temple.loop = true
-      temple.autoplay = false
-      document.body.appendChild(temple)
-
-      amb.id = 'amb'
-      amb.src = drone
-      amb.type = 'audio/mpeg'
-      amb.loop = true
-      amb.autoplay = false
-      document.body.appendChild(amb)
-
-      audio()
 
     }
 
