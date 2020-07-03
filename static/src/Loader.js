@@ -43,7 +43,7 @@ splashFrame.appendChild(subTitleTextBox)
 // Text.
 
 const titleText = 'CLOUDY LOGIC'
-const subTitleText = 'AN ALTERNATIVE GUIDE TO BIAS IN AI'
+const subTitleText = 'A VISUAL MANIFESTO ON BIAS'
 
 document.getElementById('zTitleText').innerHTML = '<p>' + titleText + '</p>'
 document.getElementById('zSubTitleText').innerHTML = '<p>' + subTitleText + '</p>'

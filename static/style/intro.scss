@@ -1,0 +1,41 @@
+@import 'main.scss';
+
+/* Intro */
+
+#introFrame {
+  width: 650px;
+  height: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 90px;
+}
+
+#introText {
+  width: 650px;
+  float: left;
+  p {
+    margin: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 21px;
+    font-family: $fontN;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: $white;
+  }
+}
+
+#continueIntro {
+  margin: 0px;
+  padding-top: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 45px;
+  font-family: $fontN;
+  font-size: 15px;
+  text-align: right;
+  color: $white;
+}

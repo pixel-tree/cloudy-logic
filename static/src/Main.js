@@ -1,5 +1,5 @@
 /**
- * CLOUDY LOGIC: An Alternative Guide to Bias in AI.
+ * CLOUDY LOGIC: A Visual Manifesto on Bias.
  *
  * Designed by pixel-tree;
  * RCA MA IED Design Project, 2020.
@@ -7,13 +7,17 @@
 
 import '../style/main.scss'
 
-import { Splash } from './0_splash/Splash'
-import { Pythia } from './X_pythia/Pythia'
-import { Hubble } from './1_hubble/Hubble'
-import { Caustics } from './2_caustics/Caustics'
-import { Noise } from './3_noise/Noise'
-import { Apotheosis } from './4_apotheosis/Apotheosis'
-import { Butterfly } from './5_chaos/Chaos'
+import { Cursor } from './components/0_Cursor'
+import { Splash } from './components/0_Splash'
+import { Intro } from './components/0_Intro'
+import { Pythia } from './components/X_Pythia'
+import { Hubble } from './components/1_Hubble'
+import { Caustics } from './components/2_Caustics'
+import { Noise } from './components/3_Noise'
+import { Apotheosis } from './components/4_Apotheosis'
+import { Butterfly } from './components/5_Chaos'
+
+let $ = require('jquery')
 
 /**
  * Essential metadata.
@@ -34,11 +38,34 @@ meta.id = 'meta'
 document.head.appendChild(meta)
 
 /**
- * Begin (by default ignored in dev; for which dedicated section at bottom).
+ * Begin (production / dev).
  */
 
+// Main container.
+const container = document.createElement('div')
+container.id = 'container'
+document.body.appendChild(container)
+$('#container').hide()
+
+// Cursor.
+const cursor = new Cursor()
+
 if (env !== 'development') {
+
   sequencer()
+
+} else if (env !== 'production') {
+
+  console.log('Development mode.')
+
+  $('#container').show()
+
+  // Currently can't run transitions in dev;
+  // to test these, build app and run with Flask.
+
+  // Scene under development:
+  new Pythia(container)
+
 }
 
 /**
@@ -46,13 +73,11 @@ if (env !== 'development') {
  */
 
 // Clear element.
-
 function clear(elementID) {
   document.getElementById(elementID).innerHTML = ''
 }
 
 // Visual sequencer (for scenes).
-
 function sequencer() {
 
   // Play sound.
@@ -65,23 +90,16 @@ function sequencer() {
     const splash = new Splash()
   }
 
-  // Enter temple. Prelude/navigation.
+  // Intro.
+  if (document.getElementById('scene').content === 'intro') {
+    $('#container').show()
+    const intro = new Intro(container)
+  }
+
+  // Summon Pythia. Navigation.
   if (document.getElementById('scene').content === 'pythia') {
-
-    // Main container (created once; shared across scenes).
-    if (mode.content == '') {
-      const container = document.createElement('div')
-      container.id = 'container'
-      document.body.appendChild(container)
-    }
-
-    else if (mode.content != '') {
-      clear('container')
-    }
-
-    // Summon Pythia.
+    clear('container')
     const pythia = new Pythia(container)
-
   }
 
   // Scene I, II, III, etc.
@@ -113,7 +131,6 @@ function sequencer() {
 }
 
 // Audio sequencer.
-
 function audio() {
 
   var $ = require('jquery')
@@ -163,46 +180,14 @@ function audio() {
 
 }
 
-/**
- * Dev section (by default ignored in production).
- */
-
-if (env !== 'production') {
-
-  console.log('Development mode.')
-
-  const container = document.createElement('div')
-  container.id = 'container'
-  document.body.appendChild(container)
-
-  /**
-   * Currently, cannot run transitions.
-   * To dev these, build first and run in Flask.
-   */
-
-  // Scene under development:
-  // new Scene(container)
-
-}
-
-/* -------------------------------------------- */
-
 export { audio, clear, sequencer }
 
 /**
- * TO DO (in order of importance):
+ * TO DO:
  *
- * Oliver notes.
- * Pythia instructions.
+ * Change variables to let.
  * Pythia fragmented multiple contexts.
- * Regl test (screen resolution? os?)
- * Loader: execute ajax only on first load (skip at refresh).
+ * Troubleshoot Regl animation (os?)
+ * Loader only on first laod (skip at refresh).
  * Clean up scripts.
- */
-
-/*
- * OUTRO IDEA
- * "The weird and wonderful world of neural networks and mathematics..."
- * Lucid visualisation.
- * To be continued...
  */

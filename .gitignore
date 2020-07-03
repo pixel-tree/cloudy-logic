@@ -1,0 +1,10 @@
+.DS_Store
+
+bin/
+lib/
+include/
+server/__pycache__/
+
+static/node_modules/
+
+unused/
