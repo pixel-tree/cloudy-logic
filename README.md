@@ -20,11 +20,11 @@ Yada yada. TBW.
 
 Developed using Python 3 and Node v13.
 
-Project split into two folders: server/ for Python backend and static/ for frontend. The reason being that one of the backend for one of the main components is written in Python. For frontend development use the provided Node development server.
+Project split into two folders: **server/** for Python backend and **static/** for frontend. The reason being that one of the backend for one of the main components is written in Python.
 
 **Disclaimer!**
 
-*I was learning JS and Node during this project and therefore the code is pretty messy. Needs a major rework, e.g., lazy loading, build class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... basically needs to be redesigned top-down.*
+*I was learning JS and Node during this project and so the code is fairly messy. Needs a major rework, e.g., lazy loading, build class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... basically needs to be redesigned top-down.*
 
 Clone repository:
 
@@ -47,7 +47,7 @@ Start webpack-dev-server:
 npm run start
 ```
 
-Access the app through [localhost:8080](http://localhost:8080). Browser refreshes automatically when changes are made.
+Access the app through ***[localhost:8080](http://localhost:8080)***. Browser refreshes automatically when changes are made.
 
 Once finished developing frontend, build the app:
 
@@ -58,9 +58,13 @@ npm run loader
 
 #### DIALOGFLOW
 
-Chatbot component uses Dialogflow v2.
+The chatbot component should be implemented using Dialogflow v2.
 
-Create a new agent; navigate to GCP and create a Service Account for agent; export the keys as a .json file and place in project root; create a .env file in root for environment variables (include project ID from Dialogflow and path to .json file; see placeholders in this repo) -- ***used to prevent sharing sensitive information!***
+It is possible to use a bespoke machine learning model instead; but in that case you will have to rewrite pythia.py. I have chosen to use Dialogflow as Pythia NPC is used for navigation (needs to be trained to recognise specific intents).
+
+Create new project and agent; navigate to GCP console and create a Service Account for agent; export the keys as .json file and place in project root; create .env file for environment variables and place in root (Dialogflow Project ID and path to .json file; see placeholders in repo) ***--important!--*** used to prevent sharing sensitive information.
+
+Chatbot will work only when running Flask/Python WSGI server; not with Node server (see below).
 
 #### SERVER
 
@@ -76,11 +80,11 @@ For local dev server simply run:
 python ../server/cloudy_logic.py
 ```
 
-Access the app through [localhost:8000](http://localhost:8000). Chatbot will work when running Flask server.
+Access the app through ***[localhost:8000](http://localhost:8000)***.
 
 #### DEPLOYMENT
 
-Having made sure that everything functions as intended, configure production server for deployment. There are a multitude of options and it may be easiest to use an app hosting service (GCP App Engine, Heroku, etc.), but I will briefly describe my workflow:
+Having made sure that everything works as intended, configure production server for deployment. There are a multitude of options and it may be easiest to use an app hosting service (GCP App Engine, Heroku, etc.), but I will briefly describe my workflow:
 
 Debian 10 VM running on GCP with static IP;
 
@@ -94,4 +98,4 @@ request SSL certificate using [Certbot](https://certbot.eff.org/lets-encrypt/ubu
 
 set up a background service for the server to stay live 24/7 + automate server launch on boot;
 
-use wsgi.py as the entrypoint, e.g., gunicorn wsgi:app.
+use wsgi.py as entrypoint, e.g., gunicorn wsgi:app.
