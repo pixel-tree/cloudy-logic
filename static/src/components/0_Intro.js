@@ -46,6 +46,9 @@ class Intro {
       if (event.code === 'Space') {
         if (counter == 0) {
 
+          counter += 1
+          document.getElementById('scene').content = 'pythia'
+
           // Audio objects; launch sequencer.
           const temple = document.createElement('audio'),
                 amb = document.createElement('audio')
@@ -64,12 +67,9 @@ class Intro {
           amb.autoplay = false
           document.body.appendChild(amb)
 
+          // Sequencers.
           audio()
-
-          // Visual sequencer.
-          document.getElementById('scene').content = 'pythia'
           sequencer()
-          counter += 1
 
           document.removeEventListener('keyup', event)
 
