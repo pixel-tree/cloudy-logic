@@ -64,7 +64,7 @@ if (env !== 'development') {
   // to test these, build app and run with Flask.
 
   // Scene under development:
-  new Pythia(container)
+  // new Pythia(container)
 
 }
 

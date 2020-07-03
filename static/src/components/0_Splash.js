@@ -74,7 +74,7 @@ class Splash {
 
     document.getElementById('button').onclick = function() {
 
-      document.getElementById('scene').content = 'pythia'
+      document.getElementById('scene').content = 'intro'
 
       // Fade into next sequence.
       $(splashFrame).delay(3).fadeOut('slow')
