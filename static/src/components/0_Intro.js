@@ -6,7 +6,7 @@
 import '../../style/intro.scss'
 
 import { audio, sequencer } from '../Main'
-import { intro_txt } from '../Media'
+import { intro_txt, drone, jh } from '../Media'
 
 class Intro {
   constructor(container) {
@@ -70,7 +70,7 @@ class Intro {
           document.getElementById('scene').content = 'pythia'
           sequencer()
           counter += 1
-          
+
           document.removeEventListener('keyup', event)
 
         }

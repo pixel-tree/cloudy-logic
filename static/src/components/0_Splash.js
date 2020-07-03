@@ -6,7 +6,7 @@
 import '../../style/splash.scss'
 
 import { audio, clear, sequencer } from '../Main'
-import { cloudy_gif, drone, jh } from '../Media'
+import { cloudy_gif } from '../Media'
 
 /* Any changes to SPLASH must be reproduced in LOADER. */
 
