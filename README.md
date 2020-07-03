@@ -24,7 +24,7 @@ Project split into two folders: **server/** for Python backend and **static/** f
 
 ***Disclaimer!***
 
-*I was learning JS and Node during this project and so the code is fairly messy. Needs a major rework, e.g., lazy loading, build class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... should be redesigned top-down.
+*I was learning JS and Node during this project and so the code is fairly messy. Needs a major rework, e.g., lazy loading, build class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... should be redesigned top-down.*
 
 Clone repository:
 
