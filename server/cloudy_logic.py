@@ -1,4 +1,4 @@
-"""An alternative guide to bias in AI.
+"""CLOUDY LOGIC: A Visual Manifesto on Bias.
 
 Designed and implemented by pixel-tree, 2020.
 """
