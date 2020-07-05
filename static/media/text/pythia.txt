@@ -1,6 +1,6 @@
 Stranger, you seem lost. What has brought you to the sacred Temple of Apollo?
-Be considerate with your words--these walls have ears.
-To skip the chit-chat:
+BE CONSIDERATE WITH YOUR WORDS--THESE WALLS HAVE EARS!
+To skip the chit-chat enter:
 linear (all)
 hubble
 caustics

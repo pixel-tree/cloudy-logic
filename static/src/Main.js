@@ -64,7 +64,7 @@ if (env !== 'development') {
   // to test these, build app and run with Flask.
 
   // Scene under development:
-  // new Pythia(container)
+  // new Hubble(container)
 
 }
 
@@ -98,8 +98,15 @@ function sequencer() {
 
   // Summon Pythia. Navigation.
   if (document.getElementById('scene').content === 'pythia') {
-    clear('container')
-    const pythia = new Pythia(container)
+    if (mode.content == '') {
+      $('#introFrame').fadeOut(900, function() {
+        clear('container')
+        const pythia = new Pythia(container)
+      })
+    } else {
+      clear('container')
+      const pythia = new Pythia(container)
+    }
   }
 
   // Scene I, II, III, etc.

@@ -55,8 +55,8 @@ class Terminal {
     // First encounter.
     if (mode != 'fragmented' && mode != 'end') {
       greeting =
-        '[[b;;]' + first_greeting[0] + ']' + '\n' + '\n' +
-        first_greeting[1] + '\n' + '\n' +
+        '[[b;;]' + first_greeting[0] + ']' + '\n' + '\n' + '\n' +
+        first_greeting[1] + '\n' + '\n' + '\n' +
         '[[i;;]' + first_greeting[2] + '\n' + '\n' +
         first_greeting[3] + '\n' +
         first_greeting[4] + '\n' +
