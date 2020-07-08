@@ -22,7 +22,7 @@ class Terminal {
 
     const forbidden = [
       '', 'test',
-      'linear', 'Linear', 'LINEAR',
+      'all', 'All', 'ALL',
       'hubble', 'Hubble', 'HUBBLE',
       'caustics', 'Caustics', 'CAUSTICS',
       'noise', 'Noise', 'NOISE',
@@ -50,30 +50,23 @@ class Terminal {
     const mode = document.getElementById('mode').content
 
     var greeting
-    var first_greeting = pythia_txt.split('\n').slice(0, 9)
+    var first_greeting = pythia_txt.split('\n').slice(0, 2)
 
     // First encounter.
     if (mode != 'fragmented' && mode != 'end') {
       greeting =
         '[[b;;]' + first_greeting[0] + ']' + '\n' + '\n' + '\n' +
-        first_greeting[1] + '\n' + '\n' + '\n' +
-        '[[i;;]' + first_greeting[2] + '\n' + '\n' +
-        first_greeting[3] + '\n' +
-        first_greeting[4] + '\n' +
-        first_greeting[5] + '\n' +
-        first_greeting[6] + '\n' +
-        first_greeting[7] + '\n' +
-        first_greeting[8] + ']' + '\n' + '\n'
+        '[[i;;]' + first_greeting[1] + ']' + '\n' + '\n'
     }
 
     // I've been expecting you to return...
     else if (mode == 'fragmented') {
-      greeting = '[[b;;]' + pythia_txt.split('\n')[9] + ']' + '\n'
+      greeting = '[[b;;]' + pythia_txt.split('\n')[2] + ']' + '\n'
     }
 
     // End.
     else if (mode == 'end') {
-      greeting = '[[b;;]' + pythia_txt.split('\n')[10] + ']' + '\n'
+      greeting = '[[b;;]' + pythia_txt.split('\n')[3] + ']' + '\n'
     }
 
     /**
@@ -133,9 +126,9 @@ class Terminal {
          */
 
         if (
-          command == 'linear'
-          || command == 'Linear'
-          || command == 'LINEAR'
+          command == 'all'
+          || command == 'All'
+          || command == 'ALL'
         ) {
           this.echo(String('\n' + '[[b;;]' + 'May the stars be with you, adventurer!' + ']' + '\n'))
           document.getElementById('mode').content = 'linear'

@@ -7,7 +7,7 @@
 
 import '../style/main.scss'
 
-import { Cursor } from './components/0_Cursor'
+// import { Cursor } from './components/0_Cursor'
 import { Splash } from './components/0_Splash'
 import { Intro } from './components/0_Intro'
 import { Pythia } from './components/X_Pythia'
@@ -48,7 +48,7 @@ document.body.appendChild(container)
 $('#container').hide()
 
 // Cursor.
-const cursor = new Cursor()
+// const cursor = new Cursor()
 
 if (env !== 'development') {
 
@@ -64,7 +64,7 @@ if (env !== 'development') {
   // to test these, build app and run with Flask.
 
   // Scene under development:
-  // new Hubble(container)
+  // new Intro(container)
 
 }
 
@@ -99,7 +99,7 @@ function sequencer() {
   // Summon Pythia. Navigation.
   if (document.getElementById('scene').content === 'pythia') {
     if (mode.content == '') {
-      $('#introFrame').fadeOut(900, function() {
+      $('#introFrame').fadeOut(120, function() {
         clear('container')
         const pythia = new Pythia(container)
       })

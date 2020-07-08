@@ -26,6 +26,7 @@ export { default as intro_txt } from '../media/text/intro.txt'
 export { default as pythia_img } from '../media/visual/pythia.png'
 export { default as pythia_bg } from '../media/visual/pythia_bg.png'
 export { default as pythia_txt } from '../media/text/pythia.txt'
+export { default as q } from '../media/visual/q.png'
 
 /* Hubble */
 

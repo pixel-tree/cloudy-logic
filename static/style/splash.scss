@@ -219,7 +219,7 @@
   letter-spacing: 2.1px;
   padding-left: 10px;
 	border-radius: 30px;
-	cursor: url('../media/cursor.png'), auto;
+	// cursor: url('../media/cursor.png'), auto;
 }
 
 #button:hover {
@@ -227,4 +227,5 @@
   height: 54px;
 	margin-left: -75px;
   font-size: 12px;
+	cursor: pointer;
 }
