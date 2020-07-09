@@ -1,4 +1,4 @@
-![Pythia](repo-media/pythia.png)
+![Pythia](./pythia.png)
 
 # CLOUDY LOGIC: A Visual Manifesto on Bias
 
