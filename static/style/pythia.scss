@@ -27,9 +27,9 @@
   background-image: url('../media/visual/pythia_bg.png');
 }
 
-/* Hint */
+/* Skip */
 
-#hintBox {
+#skipBox {
 	width: 21px;
 	height: 21px;
 	position: absolute;
@@ -41,7 +41,7 @@
 	cursor: default;
 }
 
-#hintIcon {
+#skipIcon {
 	width: 21px;
 	height: 21px;
 	position: absolute;
@@ -49,7 +49,7 @@
 	bottom: 0;
 }
 
-#hintText {
+#skipText {
 	p {
 		display: block;
 		margin: 0;
@@ -65,7 +65,7 @@
 	display: none;
 }
 
-#hintBox:hover {
+#skipBox:hover {
 	animation: expand 0.1s forwards;
 	-webkit-animation: expand 0.1s forwards;
 	-moz-animation: expand 0.1s forwards;
@@ -96,40 +96,40 @@
 	100% { width: 112px; height: 130px; }
 }
 
-#hintBox:hover #hintIcon {
+#skipBox:hover #skipIcon {
 	opacity: 0.6;
 }
 
-#hintBox:hover #hintText{
+#skipBox:hover #skipText{
 	display: block;
-	animation: hintfade 0.3s forwards;
-	-webkit-animation: hintfade 0.3s forwards;
-	-moz-animation: hintfade 0.3s forwards;
-	-o-animation: hintfade 0.3s forwards;
-	-ms-transition: hintfade 0.3s forwards;
+	animation: skipfade 0.3s forwards;
+	-webkit-animation: skipfade 0.3s forwards;
+	-moz-animation: skipfade 0.3s forwards;
+	-o-animation: skipfade 0.3s forwards;
+	-ms-transition: skipfade 0.3s forwards;
 }
 
-@keyframes hintfade {
+@keyframes skipfade {
 	0% { opacity: 0; }
 	30% { opacity: 0; }
 	100% { opacity: 1; }
 }
-@-webkit-keyframes hintfade {
+@-webkit-keyframes skipfade {
 	0% { opacity: 0; }
 	30% { opacity: 0; }
 	100% { opacity: 1; }
 }
-@-moz-keyframes hintfade {
+@-moz-keyframes skipfade {
 	0% { opacity: 0; }
 	30% { opacity: 0; }
 	100% { opacity: 1; }
 }
-@-o-keyframes hintfade {
+@-o-keyframes skipfade {
 	0% { opacity: 0; }
 	30% { opacity: 0; }
 	100% { opacity: 1; }
 }
-@-ms-keyframes hintfade {
+@-ms-keyframes skipfade {
 	0% { opacity: 0; }
 	30% { opacity: 0; }
 	100% { opacity: 1; }

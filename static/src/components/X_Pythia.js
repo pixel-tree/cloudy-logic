@@ -31,21 +31,21 @@ class Pythia {
     // Terminal.
     const terminal = new Terminal(container)
 
-    // Hint box.
-    const hintBox = document.createElement('div')
-    hintBox.id = 'hintBox'
-    pythiaTextBox.appendChild(hintBox)
+    // Skip chit-chat.
+    const skipBox = document.createElement('div')
+    skipBox.id = 'skipBox'
+    pythiaTextBox.appendChild(skipBox)
 
-    const hintIcon = document.createElement('img')
-    hintIcon.id = 'hintIcon'
-    hintIcon.src = q
-    hintBox.appendChild(hintIcon)
+    const skipIcon = document.createElement('img')
+    skipIcon.id = 'skipIcon'
+    skipIcon.src = q
+    skipBox.appendChild(skipIcon)
 
-    const hintText = document.createElement('div')
-    hintText.id = 'hintText'
-    hintBox.appendChild(hintText)
+    const skipText = document.createElement('div')
+    skipText.id = 'skipText'
+    skipBox.appendChild(skipText)
 
-    hintText.innerHTML =
+    skipText.innerHTML =
       '<p>SKIP CHIT-CHAT</p>' +
       '<p>& ENTER SCENE:</p>' +
       '<br>' +
@@ -56,23 +56,6 @@ class Pythia {
       '<p><i>apotheosis</i></p>' +
       '<p><i>chaos</i></p>'
 
-/*
-    // Skip chit-chat.
-    const skip = document.createElement('div')
-    skip.id = 'skip'
-    this._element.appendChild(skip)
-
-    skip.innerHTML =
-      '<p>' +
-      '{ To skip the chit-chat enter: ' +
-      '<i>linear</i> [all], ' +
-      '<i>hubble</i>, ' +
-      '<i>caustics</i>, ' +
-      '<i>noise</i>, ' +
-      '<i>apotheosis</i>, ' +
-      '<i>chaos</i>. }' +
-      '</p>'
-*/
   }
 }
 
