@@ -16,11 +16,9 @@ Developed in response to conversations with various experts and nonexperts about
 
 ### DEVELOPMENT
 
-***Men at some time are masters of their fates;***
-
-***The fault, dear Brutus, is not in our stars,***
-
-***But in ourselves, that we are underlings.***
+"Men at some time are masters of their fates;
+The fault, dear Brutus, is not in our stars,
+But in ourselves, that we are underlings."
 
 *Cassius, Julius Caesar (Shakespeare)*
 
