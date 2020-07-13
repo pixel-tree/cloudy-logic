@@ -38,11 +38,11 @@ As part of my research into ways in which to create an interactive narrative, I 
 
 Developed using Python 3 and Node v13.
 
-Project split into two folders: **server/** for Python backend and **static/** for frontend. The reason being that one of the backend for one of the main components is written in Python.
+Project split into two folders: **server/** for Python backend and **static/** for frontend. The reason being that one of the main components is written in Python.
 
 ***Disclaimer!***
 
-*I was learning JS and Node during this project and so the code is fairly messy. Needs a major rework, e.g., lazy loading, build class of utilities for repetitive tasks/functions, implement algorithms to create elements, etc... should be redesigned top-down.*
+*This is one of my first projects using JS and Node so the codebase is fairly messy. Needs a rework, e.g., lazy loading, develop algos for repetitive tasks, etc... should basically be redesigned top-down.*
 
 Clone repository:
 
@@ -69,7 +69,7 @@ cd static
 npm install
 ```
 
-Sequencer functions are disabled in dev mode. You may develop individual components using the dedicated dev section in src/Main.js.
+Sequencer functions are disabled in dev mode. Use dedicated dev section in Main.js to declare scene under construction.
 
 Start webpack-dev-server (skip to build if no further development needed):
 
@@ -77,9 +77,9 @@ Start webpack-dev-server (skip to build if no further development needed):
 npm run start
 ```
 
-Access the app through ***[localhost:8080](http://localhost:8080)***. Browser refreshes automatically when changes are made.
+Access the app through ***[localhost:8080](http://localhost:8080)***. Browser refreshes when changes are made.
 
-Once finished developing frontend, build the app:
+Once finished building frontend, bundle the app:
 
 ```
 npm run build
@@ -90,11 +90,11 @@ npm run loader
 
 The chatbot component should be implemented using Dialogflow v2.
 
-It is possible to use a bespoke machine learning model instead; but in that case you will have to rewrite pythia.py. I have chosen to use Dialogflow as Pythia NPC is used for navigation (needs to be trained to recognise specific intents).
+It is possible to use a more custom machine learning model instead; but you will have to rewrite pythia.py. I have chosen to use Dialogflow as the chatbot is used for navigation (needs to recognise specific intents).
 
-Create new project and agent; navigate to GCP console and create a Service Account for agent; export the keys as .json file and place in project root; create .env file for environment variables and place in root (Dialogflow Project ID and path to .json file; see placeholders in repo) ***-- important! --*** used to prevent sharing sensitive information.
+Create new project and agent; navigate to GCP console and create a Service Account for agent; export the keys as .json file and place in project root; create .env file, store environment variables and place in root (Dialogflow Project ID and path to .json file; see placeholders in repo) ***-- important! --*** used to prevent sharing sensitive information.
 
-Chatbot will only work when running Flask/Python WSGI server; not with Node server (see below).
+Chatbot will only work when running Flask/Python WSGI server; not with Node.
 
 #### SERVER
 
