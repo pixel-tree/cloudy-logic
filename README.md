@@ -1,4 +1,4 @@
-![Pythia](./pythia.png)
+![Pythia](./README/pythia.gif)
 
 # CLOUDY LOGIC: A Visual Manifesto on Bias
 
@@ -6,15 +6,33 @@ Live demo: [cloudylogic.space](https://cloudylogic.space).
 
 ### CONTEXT
 
-Cloudy Logic is a piece of philosophical writing and a multimedia artwork hosted online, made up of several narratives that broadly contemplate representations, knowledge and the nature of reality. It is inspired by an article of the same name ([James, 2015](https://thenewinquiry.com/cloudy-logic/)), in which parallels are made between machine learning and pseudo-rational practices such as astrological forecasting: essentially, masquerading superstitions in empirical terms to make them seem more credible.
+Cloudy Logic is a piece of philosophical writing and a multimedia artwork hosted online, made up of several narratives that broadly contemplate representations, knowledge and the nature of reality. It is inspired by an article of the same name (James, 2015), in which parallels are made between machine learning and pseudo-rational practices such as astrological forecasting: essentially, masquerading superstitions in empirical terms to make them seem more credible.
 
-Most machine learning systems may be broken down into three main components: data representation (how information is fed into the network), objective function (a way to represent the problem) and optimisation method (the means to achieve our objective). Bias, in this context, is often associated with its negative connotations (e.g. racial bias) or in a more technical sense with underfitting (i.e. failure to capture underlying patterns in the data). The mainstream conversation rarely addresses (inductive) bias for its utility, as the necessary evil: assumptions help learning algorithms distinguish signal from noise (further reading: priors).
+Most machine learning systems may be broken down into three main components: data representation (how information is fed into the network), objective function (a way to represent the problem) and optimisation method (the means to achieve our objective). Bias, in this context, is often associated with its negative connotations (e.g. racial bias) or in a more technical sense with underfitting (i.e. failure to capture underlying patterns in the data). The mainstream conversation rarely addresses (inductive) bias for its utility, as the double-edged sword: assumptions help learning algorithms distinguish signal from noise (further reading: priors). So how should we frame the conversation around bias in AI to constructively discuss its real-world applications and their implications?
 
 Developed in response to conversations with various experts and nonexperts about interpretability in AI, the core idea behind the featured stories is to consider bias in the context of knowledge production, because, without specificity it is merely reduced to rhetoric—a scapegoat for a more expansive problem.
 
+![Chaos](./README/chaos.gif)
+
 ### DEVELOPMENT
 
-Yada yada. TBW.
+Men at some time are masters of their fates;
+The fault, dear Brutus, is not in our stars,
+But in ourselves, that we are underlings.
+
+*Cassius, Julius Caesar (Shakespeare)*
+
+![Representation](./README/representation.png)
+
+My starting point was to design an experience based on the written texts. I built several prototypes utilising various platforms, for testing ways in which I could approach the construction of an interactive system. I wanted to develop something to tell the stories in an engaging and playful way—and considering the historical legacy of prediction and forecasting technologies and their connections to deities and prophecies, the idea to fit the writing within a fictional framework and to create an oracle narrator character seemed fitting.
+
+![Discord](./README/discord.png)
+
+Using custom-built bots and role-menus on Discord (messaging application), I devised an immersive and fragmented narrative, in the sense that the experience was choice-based with certain channels only visible having chosen specific options. A key part of my research was also to determine the system that would be used to develop the AI. For the chatbot, I tested a state-of-art GPT-2 language model, which showed promise after some fine-tuning; but ultimately, I decided that it would be more interesting to explore the possibilities of using the bot as an interface for accessing the narratives and, therefore, required something more easily controllable—something that would reliably provide meaningful information to the user.
+
+![Terminal](./README/terminal.png)
+
+As part of my research into ways in which to create an interactive narrative, I devised plans for a terminal-based multi-user dungeon. The core idea behind this was that users could connect to a shared virtual machine in the cloud and browse the media through a restricted terminal environment. Though this might have been an interesting way to approach my audience, I decided that a browser-based solution would be more appropriate for bringing the text to life.
 
 ### INSTALLATION
 
