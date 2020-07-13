@@ -114,18 +114,14 @@ Access the app through ***[localhost:8000](http://localhost:8000)***.
 
 #### DEPLOYMENT
 
-Having made sure that everything works as intended, configure production server for deployment. There are a multitude of options and it may be easiest to use an app hosting service (GCP App Engine, Heroku, etc.), but I will briefly describe my workflow:
+Having made sure that everything works as intended, configure production server for deployment. There are a multitude of options and it may be easiest to use an app hosting service (GCP App Engine, Heroku, etc.), but I will briefly describe my workflow for documentation purposes:
 
-Debian 10 VM running on GCP with static IP;
-
-clone repo and install dependencies;
-
-purchase domain and set up DNS A record for external IP;
+Debian 10 VM with external domain;
 
 configure ***[NGINX](http://nginx.org/en/docs/beginners_guide.html#conf_structure)*** and ***[Gunicorn](https://docs.gunicorn.org/en/stable/index.html)***;
 
-request SSL certificate using ***[Certbot](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)***;
+SSL certificate using ***[Certbot](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)***;
 
-set up a background service for the server to stay live 24/7 + automate server launch on boot;
+background service for server;
 
-and use wsgi.py as entrypoint, e.g., gunicorn wsgi:app.
+and wsgi.py entrypoint, e.g., gunicorn wsgi:app.
