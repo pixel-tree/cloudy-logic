@@ -24,17 +24,22 @@ class Pythia {
     this._element.appendChild(pythiaImg)
 
     // Pythia textbox.
+
+    const skip = document.createElement('div')
+    skip.id = 'skip'
+    this._element.appendChild(skip)
+
     const pythiaTextBox = document.createElement('div')
     pythiaTextBox.id = 'pythiaTextBox'
     this._element.appendChild(pythiaTextBox)
 
-    // Terminal.
+    // Create terminal.
     const terminal = new Terminal(container)
 
-    // Skip chit-chat.
+    // Skip elements.
     const skipBox = document.createElement('div')
     skipBox.id = 'skipBox'
-    pythiaTextBox.appendChild(skipBox)
+    skip.appendChild(skipBox)
 
     const skipIcon = document.createElement('img')
     skipIcon.id = 'skipIcon'

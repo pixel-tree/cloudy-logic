@@ -67,7 +67,7 @@ if (env !== 'development') {
   // new Return(container)
 
   // Scene under development:
-  new Pythia(container)
+  // new Pythia(container)
 
 }
 
