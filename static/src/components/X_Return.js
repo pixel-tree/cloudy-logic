@@ -25,9 +25,9 @@ class Return {
     // On click.
     returnIcon.onclick = () => {
       // TO DO: sort out typewriter text bug to avoid having to reload.
-      // setTimeout(function(){ location.reload() }, 300)
-      document.getElementById('scene').content = 'pythia'
-      sequencer()
+      setTimeout(function(){ location.reload() }, 300)
+      // document.getElementById('scene').content = 'pythia'
+      // sequencer()
     }
 
   }

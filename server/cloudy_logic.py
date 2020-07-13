@@ -1,6 +1,6 @@
 """CLOUDY LOGIC: A Visual Manifesto on Bias.
 
-Designed and implemented by pixel-tree, 2020.
+Designed by pixel-tree, 2020.
 """
 
 import os

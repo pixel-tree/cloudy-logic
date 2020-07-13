@@ -1,7 +1,7 @@
 """WSGI entry point.
 
-Ignore this file if you have no intention of deploying the application;
-and run cloudy_logic.py instead.
+Ignore if no intention to deploy;
+and run cloudy_logic.py as main.
 """
 
 from cloudy_logic import app
