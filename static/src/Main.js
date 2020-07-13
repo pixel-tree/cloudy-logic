@@ -7,10 +7,11 @@
 
 import '../style/main.scss'
 
-// import { Cursor } from './components/0_Cursor'
-import { Splash } from './components/0_Splash'
+// import { Cursor } from './components/X_Cursor'
+import { Splash } from './components/X_Splash'
 import { Intro } from './components/0_Intro'
 import { Pythia } from './components/X_Pythia'
+import { Return } from './components/X_Return'
 import { Hubble } from './components/1_Hubble'
 import { Caustics } from './components/2_Caustics'
 import { Noise } from './components/3_Noise'
@@ -23,17 +24,17 @@ let $ = require('jquery')
  * Essential metadata.
  */
 
-var env = process.env.NODE_ENV
+let env = process.env.NODE_ENV
 
-var mode = document.createElement('meta')
+let mode = document.createElement('meta')
 mode.id = 'mode'
 document.head.appendChild(mode)
 
-var scene = document.createElement('meta')
+let scene = document.createElement('meta')
 scene.id = 'scene'
 document.head.appendChild(scene)
 
-var meta = document.createElement('meta')
+let meta = document.createElement('meta')
 meta.id = 'meta'
 document.head.appendChild(meta)
 
@@ -63,8 +64,10 @@ if (env !== 'development') {
   // Currently can't run transitions in dev;
   // to test these, build app and run with Flask.
 
+  // new Return(container)
+
   // Scene under development:
-  // new Intro(container)
+  // new Butterfly(container)
 
 }
 
@@ -112,35 +115,42 @@ function sequencer() {
   // Scene I, II, III, etc.
   else if (document.getElementById('scene').content === 'hubble') {
     clear('container')
+    const back = new Return(container)
     const hubble = new Hubble(container)
   }
 
   else if (document.getElementById('scene').content === 'caustics') {
     clear('container')
+    const back = new Return(container)
     const caustics = new Caustics(container)
   }
 
   else if (document.getElementById('scene').content === 'noise') {
     clear('container')
+    const back = new Return(container)
     const noise = new Noise(container)
   }
 
   else if (document.getElementById('scene').content === 'apotheosis') {
     clear('container')
+    const back = new Return(container)
     const apotheosis = new Apotheosis(container)
   }
 
   else if (document.getElementById('scene').content === 'chaos') {
     clear('container')
+    const back = new Return(container)
     const chaos = new Butterfly(container)
   }
 
 }
 
 // Audio sequencer.
+// TO DO: clean conditions.
+
 function audio() {
 
-  var $ = require('jquery')
+  let $ = require('jquery')
 
   // Upon first entrance to temple.
   if (mode.content == '' && scene.content == 'pythia') {
@@ -158,7 +168,16 @@ function audio() {
     setTimeout(function(){ $('#amb')[0].pause() }, 6000)
   }
 
-  // Linear narrative; back in temple.
+  // Linear narrative; return via button.
+  else if (mode.content === 'linear' && scene.content == 'pythia') {
+    $('#amb').animate({volume: 0}, 1500)
+    $('#temple')[0].volume = 0
+    $('#temple')[0].play()
+    $('#temple').animate({volume: 0.1}, 12000)
+    setTimeout(function(){ $('#amb')[0].pause() }, 6000)
+  }
+
+  // Linear narrative; end of experience.
   else if (mode.content == 'linear' && scene.content == 'end') {
     $('#amb').animate({volume: 0}, 1500)
     $('#temple')[0].volume = 0
@@ -190,11 +209,10 @@ function audio() {
 export { audio, clear, sequencer }
 
 /**
- * TO DO:
- *
- * Change variables to let.
+ * GENERAL TO DO:
+ * Sort out typewriter scoping issues.
  * Pythia fragmented multiple contexts.
- * Troubleshoot Regl animation (os?)
- * Loader only on first laod (skip at refresh).
+ * Troubleshoot Regl animation (OS?)
+ * Loader only on first load (skip at refresh).
  * Clean up scripts.
  */

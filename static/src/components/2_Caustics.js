@@ -117,7 +117,7 @@ class Caustics_3ch {
         aCA = 0,
         isBackspacingCA = false
 
-    var speedForwardCA = Math.random() * (90 - 10) + 12,
+    var speedForwardCA = Math.random() * (90 - 10) + 15,
         speedBackspaceCA = 3
 
     var counter = 0

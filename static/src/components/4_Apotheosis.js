@@ -38,7 +38,7 @@ class Apotheosis {
         isBackspacingAQ = false
 
     var speedForwardAQ = Math.random() * (90 - 10) + 15,
-        speedBackspaceAQ = 9
+        speedBackspaceAQ = 3
 
     var counterApoQ = 0
 

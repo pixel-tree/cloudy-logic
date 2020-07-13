@@ -23,6 +23,7 @@ class Terminal {
     const forbidden = [
       '', 'test',
       'all', 'All', 'ALL',
+      'linear', 'Linear', 'LINEAR',
       'hubble', 'Hubble', 'HUBBLE',
       'caustics', 'Caustics', 'CAUSTICS',
       'noise', 'Noise', 'NOISE',
@@ -129,6 +130,9 @@ class Terminal {
           command == 'all'
           || command == 'All'
           || command == 'ALL'
+          || command == 'linear'
+          || command == 'Linear'
+          || command == 'LINEAR'
         ) {
           this.echo(String('\n' + '[[b;;]' + 'May the stars be with you, adventurer!' + ']' + '\n'))
           document.getElementById('mode').content = 'linear'

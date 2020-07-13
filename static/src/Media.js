@@ -28,6 +28,10 @@ export { default as pythia_bg } from '../media/visual/pythia_bg.png'
 export { default as pythia_txt } from '../media/text/pythia.txt'
 export { default as q } from '../media/visual/q.png'
 
+/* Return */
+
+export { default as back } from '../media/visual/return.png'
+
 /* Hubble */
 
 export { default as hubble_gif } from '../media/visual/hubble.gif'

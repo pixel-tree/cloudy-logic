@@ -56,8 +56,8 @@ class Hubble {
         a = 0,
         isBackspacing = false
 
-    var speedForward = Math.random() * (90 - 10) + 12,
-        speedBackspace = 8
+    var speedForward = Math.random() * (90 - 10) + 15,
+        speedBackspace = 3
 
     typeWriter('hubbleText', textArray)
 
