@@ -2,7 +2,7 @@
  * Thanks for visiting RCA2020!
  */
 
-import './end.scss'
+import '../style/end.scss'
 
 let $ = require('jquery')
 

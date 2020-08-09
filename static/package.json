@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js --progress",
-    "loader": "webpack --config webpack.prod.loader.js --progress"
+    "loader": "webpack --config webpack.prod.loader.js --progress",
+    "end": "webpack --config webpack.prod.end.js --progress"
   },
   "author": "pixel-tree",
   "license": "MIT",
