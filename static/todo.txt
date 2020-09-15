@@ -1,0 +1,10 @@
+TO DO
+
+* Combine stylesheets
+* Re-configure webpack (combine config files)
+* Utilities.js for functions that are currently repeated in code
+* Typewriter scoping issues
+* Pythia fragmented multiple contexts
+* Troubleshoot Regl animation (OS?)
+* Fix return button
+* Clean up scripts

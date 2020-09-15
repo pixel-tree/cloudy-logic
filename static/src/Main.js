@@ -207,12 +207,3 @@ function audio() {
 }
 
 export { audio, clear, sequencer }
-
-/**
- * GENERAL TO DO:
- * Sort out typewriter scoping issues.
- * Pythia fragmented multiple contexts.
- * Troubleshoot Regl animation (OS?)
- * Loader only on first load (skip at refresh).
- * Clean up scripts.
- */

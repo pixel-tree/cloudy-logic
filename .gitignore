@@ -1,8 +1,27 @@
-.DS_Store
+# General
 
-bin/
-lib/
-include/
+.DS_Store
+hidden/
+
+# Python
+
+Pipfile.lock
 server/__pycache__/
 
+# Node
+
+static/package-lock.json
 static/node_modules/
+static/build/
+static/build-audio/
+static/build-fonts/
+static/loader/
+
+# Misc
+
+static/about.html
+static/media/about/
+static/src/about/
+static/style/about.scss
+static/webpack.prod.about.js
+
