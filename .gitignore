@@ -19,9 +19,5 @@ static/loader/
 
 # Misc
 
-static/about.html
-static/media/about/
-static/src/about/
-static/style/about.scss
-static/webpack.prod.about.js
+static/about/
 

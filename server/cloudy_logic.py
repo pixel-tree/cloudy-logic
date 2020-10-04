@@ -32,6 +32,12 @@ def index():
     return send_file("../static/index.html")
 
 
+# About.
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    return send_file("../static/about/about.html")
+
+
 # Use cloudy_logic.py for development;
 # but gunicorn (or other production WSGI) + _wsgi.py_ for deployment.
 if __name__ == "__main__":
