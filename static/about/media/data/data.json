@@ -1,0 +1,280 @@
+{
+
+  "intro": [
+    {
+      "id": "",
+      "body": [
+        "{1}"
+      ],
+      "media": [
+        {
+          "Cloudy Logic Main": "./media/visual/placeholder.jpg"
+        }
+      ],
+      "notes": [
+        {
+          "": ""
+        }
+      ],
+      "links": [
+        {
+          "": ""
+        }
+      ]
+    },
+    {
+      "id": "overview",
+      "body": [
+        "Cloudy Logic is a piece of philosophical writing and a multimedia artwork hosted online, made up of several narratives that broadly contemplate representations, knowledge and the nature of reality. It is inspired by an article of the same name [1] in which parallels are made between machine learning and pseudo-rational practices such as astrological forecasting: essentially, masquerading superstitions in empirical terms to make them seem more credible. The relevance of these topics will be discussed throughout this documentation—divided into five sections: Introduction, providing a brief summary of the project, its aims and target audience; Research, expanding on the theoretical and conceptual dimensions of the work and explaining my motivations; Experience, breaking down the audience journey as it was intended, outlining my design methods and discussing the user testing; Future, speculating on potential collaborations and sites for the work and future iterations thereof; and Reflection, connecting the work and its development to Information Experience Design and my practice more generally."
+      ],
+      "media": [
+        {
+          "": ""
+        }
+      ],
+      "notes": [
+        {
+          "[1]": "James, R. (2015). (1)."
+        }
+      ],
+      "links": [
+        {
+          "Cloudy Logic": "https://thenewinquiry.com/cloudy-logic/"
+        }
+      ]
+    },
+    {
+      "id": "aims",
+      "body": [
+        "Most machine learning systems may be broken down into three main components: data representation (how information is fed into the network), objective function (a way to represent the problem) and optimisation method (the means to achieve our objective). Bias, in this context, is often associated with its negative connotations (e.g. racial bias) or in a more technical sense with underfitting (i.e. failure to capture underlying patterns in the data). The mainstream conversation rarely addresses (inductive) bias for its utility, as the double-edged sword: assumptions and prior beliefs help learning algorithms distinguish signal from noise [2]. So how should we frame the conversation around bias in AI to constructively discuss its real-world applications and their implications? My aim, with this artwork, is to broaden the conversation beyond the technologically attuned through considering philosophically some of the most important aspects of machines learning—representations, algorithms, complexity, sensitivity to contextual change and the role of subjectivity, among other themes, some of which will be expanded on in the Research section."
+      ],
+      "media": [
+        {
+          "": ""
+        }
+      ],
+      "notes": [
+        {
+          "[2]": "An overview of priors: p. 154. Goodfellow, I., Bengio, Y., & Courville, A. (2016). (1)."
+        }
+      ],
+      "links": [
+        {
+          "Deep Learning": "http://www.deeplearningbook.org/contents/ml.html"
+        }
+      ]
+    },
+    {
+      "id": "audience",
+      "body": [
+        "{1}",
+        "The work was originally conceived as a piece of internet art following the restrictions set on the physical exhibition of work due to COVID-19. The early prototypes utilised existing digital media such as Discord (social platform) and the command-line interface (SSH connection to shared virtual machine). My target audience was not only technologists and researcher in the field but a more heterogeneous pool of disciplines and dispositions; consisting generally of anyone interested in new media art, machine learning and AI, and those more specifically concerned with the ethical implications of the said technologies and platforms emerging within our social space. Exhibiting the work online might have restricted the development of the project in terms of material exploration and its experiential aspects but it also opened up the possibility to reach a much broader audience, for example, by not being geographically bound nor temporally restricted for its experience. Therefore, my intention was to design the system in a way that would take into consideration the affordances of both the technologically inclined as well as of those leaning toward the other side of the spectrum (this will be illustrated in the Experience section)—ultimately producing an artwork that blends elements of a visual manifesto or essay and more experimental non-linear digital storytelling.",
+        "Note: all the references included in this documentation have been chosen subject to their availability online, whereas my sources are in fact much more expansive. A comprehensive list may be found at the bottom of (1)."
+      ],
+      "media": [
+        {
+          "Audience Diagram": "./media/visual/placeholder.jpg"
+        }
+      ],
+      "notes": [
+        {
+          "": ""
+        }
+      ],
+      "links": [
+        {
+          "Elusive Deep Learning": "https://medium.com/@erik.lintunen/elusive-deep-learning-5cd209a1c278?sk=100acfc23af8e5a3adc457b10dbbee59"
+        }
+      ]
+    }
+  ],
+
+  "research": [
+    {
+      "id": "background",
+      "body": [
+        "The diagram below breaks down the main theoretical ideas behind the work, specifically regarding bias in machine learning systems. I started researching these topics when working on my dissertation—Latent spaces: construction of meaning and knowledge through new media, art, and artificial neural networks—that considers the human experience of algorithmically mediated (knowledge) representations within the ubiquitous infosphere [3]. This research was followed by a published (peer-reviewed) short paper [4] discussing the main points of the dissertation, and I have since written more on the topic, for example, a Philosophy on Medium featured article [5] on deep learning and narrative theory.",
+        "{1}"
+      ],
+      "media": [
+        {
+          "Bias & ML": "./media/visual/placeholder.jpg"
+        }
+      ],
+      "notes": [
+        {
+          "[3]": "Floridi, L. (2014). The Fourth Revolution: How the Infosphere is Reshaping Human Reality. (1)."
+        },
+        {
+          "[4]": "Lintunen, E. (2019). (2)."
+        },
+        {
+          "[5]": "Lintunen, E. (2020). (3)."
+        }
+      ],
+      "links": [
+        {
+          "Article about the book": "https://www.bbc.co.uk/news/business-29896412"
+        },
+        {
+          "Latent Spaces: The High-Dimensional Infosphere": "https://dl.acm.org/doi/10.1145/3363384.3363395"
+        },
+        {
+          "Elusive Deep Learning": "https://medium.com/@erik.lintunen/elusive-deep-learning-5cd209a1c278?sk=100acfc23af8e5a3adc457b10dbbee59"
+        }
+      ]
+    },
+    {
+      "id": "themes & relevance",
+      "body": [
+        "Cloudy Logic has been built on the aforementioned work, developed further in response to conversations with various experts and nonexperts about interpretability in AI. Without specificity, the discourse on bias is merely reduced to rhetoric—a scapegoat for a more expansive problem. Based on my research, there is significant tension between the business logic and the technical logic in AI, that together form a complex web of fantastical promises, sleight of hand, hidden (mechanical) Turkers, real scientific aspiration and knowledge as well as general misconceptions. The hype itself is multifaceted: funding genuine research that has much-deservedly seen spotlight; but often blown out of proportion or otherwise distracting from the real matters at hand. As Michael Jordan phrases the issue: ‘the scope is less about the realisation of science-fiction dreams or nightmares of super-human machines, and more about the need for humans to understand and shape technology as it becomes ever more present and influential in their daily lives.’ [6]",
+        "As AI is rapidly reaching new pinnacles, its achievements may feel overwhelming but, in reality, the fundamental underlying concepts are elegantly simple. Big Data as merely sophisticated statistical analysis poses no intrinsic danger. However, many areas of its application are ethically questionable, such as predictive policing, automated legal decision-making, personalised advertising, and so on. Machine learning even at its current scale is revolutionary [7]; thus, these themes are more relevant than ever. As Robin writes, ‘[forecasting] only ever reproduces society and its most conventional norms, values, and practices.’ [8] The issue, in my mind, is mainly in that there exist no canonised frameworks for responsible innovation in industry (though some research has emerged [9]). Clearly, a more heterogeneous representation of voices is needed in the development of the technology to decentralise the benefits from AI, as opposed to only a few (mainly) American corporations, operating within laws of free market capitalism, optimising their models for profit above all else. Increasing literacy in the field should empower individuals to protect themselves from exploitation. One way to approach this is to consider these systems in terms of information and in the context of knowledge production—hence, the importance of discussing bias in its different manifestations."
+      ],
+      "media": [
+        {
+          "": ""
+        }
+      ],
+      "notes": [
+        {
+          "[6]": "Jordan, M. (2018). (1)."
+        },
+        {
+          "[7]": "For example: (2). But also, a potentially positive transformation: (3)."
+        },
+        {
+          "[8]": "James, R. (4)."
+        },
+        {
+          "[9]": "For example: Lane, M. (2020). (5)."
+        }
+      ],
+      "links": [
+        {
+          "Artificial Intelligence—The Revolution Hasn’t Happened Yet": "https://medium.com/@mijordan3/artificial-intelligence-the-revolution-hasnt-happened-yet-5e1d5812e1e7"
+        },
+        {
+          "Cambridge Analytica": "https://www.theguardian.com/news/2018/may/06/cambridge-analytica-how-turn-clicks-into-votes-christopher-wylie"
+        },
+        {
+          "DeepMind AI Reduces Google Data Centre Cooling Bill by 40%": "https://deepmind.com/blog/article/deepmind-ai-reduces-google-data-centre-cooling-bill-40"
+        },
+        {
+          "(op. cit.)": "https://thenewinquiry.com/cloudy-logic/"
+        },
+        {
+          "Responsible Innovation: The Next Wave of Design Thinking": "https://medium.com/microsoft-design/responsible-innovation-the-next-wave-of-design-thinking-86bc9e9a8ae8"
+        }
+      ]
+    },
+    {
+      "id": "in practice",
+      "body": [
+        "My material research will be detailed in the Experience section, where I describe the prototyping process. The practical implementation of the project is mostly transparent: the code is open source and available through the (1). The development process may be followed from the very beginning to present day, as all changes are visible. The two graphs below illustrate the iterative nature of the development process, representing the lines of code committed between March and August 2020. Some patterns may be identified: between March and May there were few contributions as this was mostly a period of conceptual development, experiential research and prototyping. Toward the end of May, the amount of code committed peaks at its all-time highest, which makes sense as the deadline for completion was in the second week of June. After receiving feedback from my tutors, changes were implemented before the RCA2020 show launched in mid-July.",
+        "{1}",
+        "{2}",
+        "The frontend of Cloudy Logic has been developed in JavaScript, utilising frameworks such as Node for bundling the app, as well as REGL and p5.js for graphics programming. The interface for the experience has been developed without the use of standard UI frameworks such as Angular, React or Vue and, instead, I’ve developed a bespoke sequencer system consisting of event listeners, conditionals and data passed on to metadata tags that are used to determine the order of events. Though this might not be the ideal way to approach the problem, I have several reasons for doing this: firstly, by building something from scratch and using various technologies I understand the underlying concepts in more detail and, secondly, I believe in the value of challenging the status quo and sometimes doing things a bit differently.",
+        "{3}",
+        "{4}",
+        "{5}",
+        "{6}",
+        "SoundCloud embed - Paulstretch Temple",
+        "SoundCloud embed - Paulstretch Amb"
+      ],
+      "media": [
+        {
+          "GitHub Code +-": "./media/visual/placeholder.jpg"
+        },
+        {
+          "GitHub Contributions Average": "./media/visual/placeholder.jpg"
+        },
+        {
+          "REGL": "./media/visual/placeholder.jpg"
+        },
+        {
+          "P5.js": "./media/visual/placeholder.jpg"
+        },
+        {
+          "After Effects": "./media/visual/placeholder.jpg"
+        },
+        {
+          "C4D": "./media/visual/placeholder.jpg"
+        }
+      ],
+      "notes": [
+        {
+          "": ""
+        }
+      ],
+      "links": [
+        {
+          "GitHub repository": "https://github.com/pixel-tree/cloudy-logic"
+        }
+      ]
+    }
+  ],
+
+  "experience": {
+    "body": [
+      ""
+    ],
+    "media": [
+      {
+        "": ""
+      }
+    ],
+    "notes": [
+      {
+        "": ""
+      }
+    ],
+    "links": [
+      {
+        "": ""
+      }
+    ]
+  },
+
+  "future": {
+    "body": [
+      ""
+    ],
+    "media": [
+      {
+        "": ""
+      }
+    ],
+    "notes": [
+      {
+        "": ""
+      }
+    ],
+    "links": [
+      {
+        "": ""
+      }
+    ]
+  },
+
+  "reflection": {
+    "body": [
+      ""
+    ],
+    "media": [
+      {
+        "": ""
+      }
+    ],
+    "notes": [
+      {
+        "": ""
+      }
+    ],
+    "links": [
+      {
+        "": ""
+      }
+    ]
+  }
+
+}

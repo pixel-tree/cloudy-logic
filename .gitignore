@@ -19,5 +19,6 @@ static/loader/
 
 # Misc
 
-static/about/
-
+static/about/package-lock.json
+static/about/node_modules/
+static/about/build/
