@@ -82,34 +82,29 @@
           ]
         },
         {
-          "text": "Evaluation/validation/explanation/communication"
+          "text": "Evaluation/validation/explanation"
         }
       ]
     },
     {
-      "text": "Optimisation Method",
+      "text": "Optimisation",
       "children": [
         {
-          "text": "Data fitting/learning/training",
+          "text": "Algorithms",
           "children": [
             {
-              "text": "Algorithms",
-              "children": [
-                {
-                  "text": "Gradient-based"
-                },
-                {
-                  "text": "Heuristics"
-                },
-                {
-                  "text": "Policy/reinforcement?"
-                }
-              ]
+              "text": "Gradient-based"
             },
             {
-              "text": "Priors?"
+              "text": "Heuristics"
+            },
+            {
+              "text": "Policy/reinforcement?"
             }
           ]
+        },
+        {
+          "text": "Priors?"
         }
       ]
     }
