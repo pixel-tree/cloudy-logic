@@ -25,7 +25,7 @@
           ]
         },
         {
-          "text": "Preprocessing",
+          "text": "Pre-processing",
           "children": [
             {
               "text": "Fusion/integration"
@@ -82,7 +82,10 @@
           ]
         },
         {
-          "text": "Evaluation/validation/explanation"
+          "text": "Evaluation/validation"
+        },
+        {
+          "text": "Explanation"
         }
       ]
     },
