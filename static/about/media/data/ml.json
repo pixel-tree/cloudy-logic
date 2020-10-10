@@ -1,0 +1,117 @@
+{
+  "text": "ML",
+  "children": [
+    {
+      "text": "Data Representation",
+      "children": [
+        {
+          "text": "Collection",
+          "children": [
+            {
+              "text": "Perception"
+            },
+            {
+              "text": "Instrument"
+            },
+            {
+              "text": "Site"
+            },
+            {
+              "text": "Method"
+            },
+            {
+              "text": "Population"
+            }
+          ]
+        },
+        {
+          "text": "Preprocessing",
+          "children": [
+            {
+              "text": "Fusion/integration"
+            },
+            {
+              "text": "Organisation"
+            },
+            {
+              "text": "Annotation"
+            },
+            {
+              "text": "Cleaning"
+            },
+            {
+              "text": "Normalisation"
+            },
+            {
+              "text": "Standardisation"
+            },
+            {
+              "text": "Regularisation"
+            },
+            {
+              "text": "Averaging/scaling"
+            },
+            {
+              "text": "Feature engineering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Objective Function",
+      "children": [
+        {
+          "text": "Problem modelling",
+          "children": [
+            {
+              "text": "Regression"
+            },
+            {
+              "text": "Classification"
+            },
+            {
+              "text": "Decision-making"
+            },
+            {
+              "text": "Subspace Identification"
+            },
+            {
+              "text": "Clustering"
+            }
+          ]
+        },
+        {
+          "text": "Evaluation/validation/explanation/communication"
+        }
+      ]
+    },
+    {
+      "text": "Optimisation Method",
+      "children": [
+        {
+          "text": "Data fitting/learning/training",
+          "children": [
+            {
+              "text": "Algorithms",
+              "children": [
+                {
+                  "text": "Gradient-based"
+                },
+                {
+                  "text": "Heuristics"
+                },
+                {
+                  "text": "Policy/reinforcement?"
+                }
+              ]
+            },
+            {
+              "text": "Priors?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
