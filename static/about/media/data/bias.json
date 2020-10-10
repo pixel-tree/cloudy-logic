@@ -1,0 +1,153 @@
+{
+  "name": "Bias & ML",
+  "children": [
+    {
+      "name": "Human Traces",
+      "children": [
+        {
+          "name": "Fundamental attribution error",
+          "description": "Tendency to believe that what people do reflections who they are (under-emphasis of situational explanations)."
+        },
+        {
+          "name": "Group attribution error",
+          "description": "Generalising to groups based on the characteristics of individuals."
+        },
+        {
+          "name": "Halo effect",
+          "description": "Evaluation augmented by previous judgements."
+        },
+        {
+          "name": "History bias",
+          "description": "Inaccuracies in data due to historical unfairness."
+        },
+        {
+          "name": "Implicit associations and stereotypes",
+          "description": "Unconscious mental representations of objects in memory."
+        },
+        {
+          "name": "Out-group homogeneity",
+          "description": "'They are alike; we are diverse'."
+        },
+        {
+          "name": "Overgeneralisation",
+          "description": "Conclusion reached on the basis of too few data points."
+        },
+        {
+          "name": "Prejudice",
+          "description": "Preconceptions based on one’s perceived group membership."
+        },
+        {
+          "name": "Reporting bias",
+          "description": "Tendency to under-report the information available."
+        },
+        {
+          "name": "Selection bias",
+          "description": "Non-random sample of a population."
+        },
+        {
+          "name": "Stereotypical bias",
+          "description": "Unfounded beliefs about certain groups of people."
+        }
+      ]
+    },
+    {
+      "name": "Human in Method",
+      "children": [
+        {
+          "name": "Anecdotal fallacy",
+          "description": "Drawing conclusions based on non-scientific evidence."
+        },
+        {
+          "name": "Bias blind spot",
+          "description": "Failing to see the impact of bias on own judgement."
+        },
+        {
+          "name": "Choice-supportive bias",
+          "description": "Ascribing positive attributes to a preselected option."
+        },
+        {
+          "name": "Confirmation bias",
+          "description": "Favour information that supports own beliefs and values."
+        },
+        {
+          "name": "Experimenter bias",
+          "description": "Making research decisions to support a mentally predetermined outcome."
+        },
+        {
+          "name": "Illusion of validity and narrative fallacy",
+          "description": "Patterns are often illusions, spurious; but tendency to form narratives around them."
+        },
+        {
+          "name": "Insensitivity to sample size",
+          "description": "Neglect of the fact that variation is more likely in small samples."
+        },
+        {
+          "name": "Intergroup bias",
+          "description": "Favouring members of one’s in-group over out-group."
+        },
+        {
+          "name": "Neglect of probability",
+          "description": "Disregarding prior probabilities."
+        },
+        {
+          "name": "Non-sampling error",
+          "description": "Data entry errors, biased survey questions, non-responses, false information, faulty analysis, random combinations thereof, etc."
+        },
+        {
+          "name": "Sampling error",
+          "description": "Overgeneralisation based on a sample misrepresentative of a population."
+        },
+        {
+          "name": "Subjective validation",
+          "description": "Accepting something if it presents to them in a personal and positive way."
+        }
+      ]
+    },
+    {
+      "name": "Data",
+      "children": [
+        {
+          "name": "Association bias",
+          "description": ""
+        },
+        {
+          "name": "Exclusion bias",
+          "description": ""
+        },
+        {
+          "name": "Measurement bias",
+          "description": ""
+        },
+        {
+          "name": "Observer bias",
+          "description": ""
+        },
+        {
+          "name": "Racial bias",
+          "description": ""
+        },
+        {
+          "name": "Recall bias",
+          "description": ""
+        },
+        {
+          "name": "Sampling bias",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Algorithm",
+      "children": [
+        {
+          "name": "Restriction bias",
+          "description": "What model is able to represent."
+        },
+        {
+          "name": "Preference bias",
+          "description": "What representation the algorithm prefers."
+        }
+      ]
+    }
+  ]
+}
