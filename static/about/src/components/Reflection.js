@@ -86,7 +86,7 @@ class Heatmap {
     // Main frame.
     const content = document.getElementById('content')
 
-    const d3 = require('d3v4')
+    const d3 = require('d3')  // alternatively d3v4.
 
     let margin = {top: 30, right: 30, bottom: 30, left: 30},
         width = 900 - margin.left - margin.bottom,

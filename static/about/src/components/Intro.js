@@ -10,6 +10,12 @@ class Intro {
     // Main frame.
     const content = document.getElementById('content')
 
+    // Header.
+    const header = document.createElement('div')
+    header.id = 'introHeader'
+    header.innerText = 'about cloudy logic'
+    content.appendChild(header)
+
     // Generate content.
     for (let i = 0; i < data.intro.length; i++) {
 

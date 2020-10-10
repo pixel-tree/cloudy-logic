@@ -22,3 +22,4 @@ static/loader/
 static/about/package-lock.json
 static/about/node_modules/
 static/about/build/
+static/about/media/unused/

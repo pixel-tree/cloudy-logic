@@ -8,7 +8,7 @@
       ],
       "media": [
         {
-          "Cloudy Logic Main": "./media/visual/placeholder.jpg"
+          "Cloudy Logic Main": "./media/visual/cloudy.gif"
         }
       ],
       "notes": [
@@ -67,18 +67,16 @@
     {
       "id": "audience",
       "body": [
-        "{1}",
-        "The work was originally conceived as a piece of internet art following the restrictions set on the physical exhibition of work due to COVID-19. The early prototypes utilised existing digital media such as Discord (social platform) and the command-line interface (SSH connection to shared virtual machine). My target audience was not only technologists and researcher in the field but a more heterogeneous pool of disciplines and dispositions; consisting generally of anyone interested in new media art, machine learning and AI, and those more specifically concerned with the ethical implications of the said technologies and platforms emerging within our social space. Exhibiting the work online might have restricted the development of the project in terms of material exploration and its experiential aspects but it also opened up the possibility to reach a much broader audience, for example, by not being geographically bound nor temporally restricted for its experience. Therefore, my intention was to design the system in a way that would take into consideration the affordances of both the technologically inclined as well as of those leaning toward the other side of the spectrum (this will be illustrated in the Experience section)—ultimately producing an artwork that blends elements of a visual manifesto or essay and more experimental non-linear digital storytelling.",
-        "Note: all the references included in this documentation have been chosen subject to their availability online, whereas my sources are in fact much more expansive. A comprehensive list may be found at the bottom of (1)."
+        "The work was originally conceived as a piece of internet art following the restrictions set on the physical exhibition of work due to COVID-19. The early prototypes utilised existing digital media such as Discord (social platform) and the command-line interface (SSH connection to shared virtual machine). My target audience was not only technologists and researcher in the field but a more heterogeneous pool of disciplines and dispositions; consisting generally of anyone interested in new media art, machine learning and AI, and those more specifically concerned with the ethical implications of the said technologies and platforms emerging within our social space. Exhibiting the work online might have restricted the development of the project in terms of material exploration and its experiential aspects but it also opened up the possibility to reach a much broader audience, for example, by not being geographically bound nor temporally restricted for its experience. Therefore, my intention was to design the system in a way that would take into consideration the affordances of both the technologically inclined as well as of those leaning toward the other side of the spectrum (this will be illustrated in the Experience section)—ultimately producing an artwork that blends elements of a visual manifesto or essay and more experimental non-linear digital storytelling."
       ],
       "media": [
         {
-          "Audience Diagram": "./media/visual/placeholder.jpg"
+          "": ""
         }
       ],
       "notes": [
         {
-          "": ""
+          "[Note]": "All the references included in this documentation have been chosen subject to their availability online, whereas my sources are in fact much more expansive. A comprehensive list may be found at the bottom of (1)."
         }
       ],
       "links": [
@@ -93,12 +91,11 @@
     {
       "id": "background",
       "body": [
-        "The diagram below breaks down the main theoretical ideas behind the work, specifically regarding bias in machine learning systems. I started researching these topics when working on my dissertation—Latent spaces: construction of meaning and knowledge through new media, art, and artificial neural networks—that considers the human experience of algorithmically mediated (knowledge) representations within the ubiquitous infosphere [3]. This research was followed by a published (peer-reviewed) short paper [4] discussing the main points of the dissertation, and I have since written more on the topic, for example, a Philosophy on Medium featured article [5] on deep learning and narrative theory.",
-        "{1}"
+        "The diagram below breaks down the main theoretical ideas behind the work, specifically regarding bias in machine learning systems. I started researching these topics when working on my dissertation—Latent spaces: construction of meaning and knowledge through new media, art, and artificial neural networks—that considers the human experience of algorithmically mediated (knowledge) representations within the ubiquitous infosphere [3]. This research was followed by a published (peer-reviewed) short paper [4] discussing the main points of the dissertation, and I have since written more on the topic, for example, a Philosophy on Medium featured article [5] on deep learning and narrative theory."
       ],
       "media": [
         {
-          "Bias & ML": "./media/visual/placeholder.jpg"
+          "": ""
         }
       ],
       "notes": [

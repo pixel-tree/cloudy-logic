@@ -15,7 +15,7 @@ let page = document.createElement('meta')
 page.id = 'page'
 document.head.appendChild(page)
 
-page.content = 'reflection' // Default load page
+page.content = 'introduction' // Default load page
 
 /* Load data */
 
@@ -59,6 +59,7 @@ if (env === 'development') {
 
   // TO DO: troubleshoot file loading for dev server.
   require('../media/visual/placeholder.jpg')
+  require('../media/visual/cloudy.gif')
 
   sequencer()
 

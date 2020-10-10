@@ -154,6 +154,70 @@ a:hover {
 
 }
 
+/* Intro */
+
+#introHeader {
+	width: 900px;
+	font-family: $I;
+	font-size: 15px;
+	letter-spacing: 1.2px;
+	text-shadow: 1.2px 1.2px $black;
+	color: $white;
+	position: absolute;
+	padding-top: 180px;
+	text-align: center;
+}
+
+/* Research */
+
+#dendrogram {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#dendrolabel {
+	opacity: 0;
+	max-width: 18vw;
+	position: absolute;
+	border: 1px solid;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: $white;
+	p {
+		margin: 0;
+	}
+}
+
+#biasName {
+	font-family: $B;
+	text-transform: uppercase;
+	text-align: left;
+	font-size: 13.5px;
+	letter-spacing: 0.9px;
+	text-shadow: 1.2px 1.2px $grayA;
+	line-height: normal;
+	word-wrap: break-word;
+}
+
+#biasText {
+	font-family: $N;
+	text-align: justify;
+	font-size: 15px;
+	letter-spacing: 0.6px;
+	text-shadow: 0.9px 0.9px $grayA;
+	line-height: normal;
+}
+
+#treemap {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: $N;
+	font-size: 13.5px;
+	letter-spacing: 0.9px;
+	text-shadow: 0.6px 0.6px $grayA;
+	text-transform: capitalize;
+}
+
 /* Reflection */
 
 #heatmap {
@@ -164,7 +228,7 @@ a:hover {
 }
 
 #heatHeader {
-	font-family: $N;
+	font-family: $B;
 	text-transform: uppercase;
 }
 
