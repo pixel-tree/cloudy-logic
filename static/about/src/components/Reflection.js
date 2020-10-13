@@ -10,8 +10,6 @@ class Reflection {
     // Main frame.
     const content = document.getElementById('content')
 
-    new Heatmap(content)
-
     // Generate content.
     for (let i = 0; i < data.reflection.length; i++) {
 
@@ -20,6 +18,9 @@ class Reflection {
       title.classList.add('subTitle')
       title.innerText = data.reflection[i].id
       content.appendChild(title)
+
+      // Place heatmap (arbitrary position).
+      if (i === 2) { new Heatmap(content) }
 
       // Main body.
       const body = document.createElement('div')
@@ -61,6 +62,8 @@ class Reflection {
         }
       }
 
+      // TO DO: FIX HEATMAP. Link replace is breaking rectangles.
+
       // Links (if any).
       if (data.reflection[i].links.length > 0) {
           // Replace markers ((1), (2), ...) with links and descriptions.
@@ -88,11 +91,15 @@ class Heatmap {
 
     const d3 = require('d3')  // alternatively d3v4.
 
+    const heatmap = document.createElement('div')
+    heatmap.id = 'heatFrame'
+    content.appendChild(heatmap)
+
     let margin = {top: 30, right: 30, bottom: 30, left: 30},
         width = 900 - margin.left - margin.bottom,
         height = 450 - margin.top - margin.bottom
 
-    let svg = d3.select('#content')
+    let svg = d3.select('#heatFrame')
       .append('svg')
         .attr('id', 'heatmap')
         .attr('width', width + margin.left + margin.right)
@@ -146,7 +153,7 @@ class Heatmap {
 
     d3.csv('https://raw.githubusercontent.com/pixel-tree/cloudy-logic/master/static/about/media/data/pythia.csv', function(data) {
 
-      let tooltip = d3.select('#content')
+      let tooltip = d3.select('#heatFrame')
         .append('div')
         .attr('id', 'tooltip')
 

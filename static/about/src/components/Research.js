@@ -10,9 +10,6 @@ class Research {
     // Main frame.
     const content = document.getElementById('content')
 
-    new Dendrogram(content)
-    new Tree(content)
-
     // Generate content.
     for (let i = 0; i < data.research.length; i++) {
 
@@ -21,6 +18,13 @@ class Research {
       title.classList.add('subTitle')
       title.innerText = data.research[i].id
       content.appendChild(title)
+
+      // Place diagrams (arbitrary position).
+      if (i === 0) {
+        new Dendrogram(content)
+      } else if (i === 1) {
+        new Tree(content)
+      }
 
       // Main body.
       const body = document.createElement('div')
@@ -64,7 +68,7 @@ class Research {
 
       // Links (if any).
       if (data.research[i].links.length > 0) {
-          // Replace markers ((1), (2), ...) with links and descriptions.
+          // Replace markers (1), (2), ...) with links and descriptions.
           for (let j = 0; j < data.research[i].links.length; j++) {
             const link = Object.values(data.research[i].links[j])
             const description = Object.keys(data.research[i].links[j])
@@ -93,8 +97,8 @@ class Dendrogram {
     dendrogram.id = 'dendrogram'
     content.appendChild(dendrogram)
 
-    let width = 450,
-        height = 450,
+    let width = 300,
+        height = 300,
         radius = width / 2
 
     let svg = d3.select('#dendrogram')

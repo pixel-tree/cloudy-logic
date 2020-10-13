@@ -24,8 +24,8 @@ class Nav {
       'introduction',
       'research',
       'experience',
-      'future',
-      'reflection'
+      'reflection',
+      'future'
     ]
 
     const ol = document.createElement('ol')

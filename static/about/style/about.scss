@@ -139,6 +139,10 @@ a:hover {
 	padding-bottom: 3vh;
 }
 
+.image {
+	width: 900px;
+}
+
 .footnotes {
 	width: 900px;
 	p {
@@ -220,6 +224,9 @@ a:hover {
 
 /* Reflection */
 
+#heatFrame {
+}
+
 #heatmap {
 	font-family: $I;
 	font-size: 15px;
@@ -243,13 +250,17 @@ a:hover {
 }
 
 #tooltip {
-	margin-top: 1.5vh;
 	opacity: 0;
 	border: 1px solid;
 	border-radius: 3px;
 	padding: 5px;
 	font-family: $I;
+	text-align: center;
 	font-size: 13.5px;
 	letter-spacing: 0.9px;
 	text-shadow: 0.6px 0.6px $grayA;
+	max-width: 210px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2.1vh;
 }
