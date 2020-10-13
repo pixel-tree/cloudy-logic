@@ -70,11 +70,11 @@ class Reflection {
           for (let j = 0; j < data.reflection[i].links.length; j++) {
             const link = Object.values(data.reflection[i].links[j])
             const description = Object.keys(data.reflection[i].links[j])
-            const replacement = content.innerHTML.replace(
+            const replacement = body.innerHTML.replace(
               '(' + (j + 1) + ')',
               '<a target="_blank" rel="noopener" href="' + link + '">' + description + '</a>'
             )
-          content.innerHTML = replacement
+          body.innerHTML = replacement
         }
       }
 
@@ -127,7 +127,7 @@ class Heatmap {
       .attr('text-anchor', 'middle')
       .attr('x', width / 2)
       .attr('y', 0)
-      .text('user interactions with pythia')
+      .text('User Interactions with Pythia')
     svg.append('text')
       .attr('text-anchor', 'end')
       .attr('x', width)

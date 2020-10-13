@@ -94,7 +94,7 @@
     {
       "id": "background",
       "body": [
-        "The diagram above breaks down some of my initial research around bias in relation to data, their collection and analysis. The list of biases is by no means exhaustive. I started thinking about bias in relation to ICTs and knowledge production when working on my MA dissertation—Latent Spaces: Construction of Meaning and Knowledge Through New Media, Art, and Artificial Neural Networks—that considers the human experience of algorithmically mediated (knowledge) representations within the ubiquitous infosphere [3]. This was followed by a short paper [4] discussing the main points of the dissertation, and I have since written more on the topic, for example, a featured Medium article [5] on deep learning in relation to statistical analysis and storytelling. In Cloudy Logic, I try to highlight the ambiguity of bias: an often misunderstood or misappropriated concept, for which exist varying definitions depending on context that might contradict one another when, for example, blurring together disciplinary jargons. This, due to the interdisciplinary nature of ML research, feels relevant and timely."
+        "The diagram above breaks down some of my initial research around bias in relation to data, their collection and analysis. The list of biases is by no means exhaustive. I started thinking about bias in relation to ICTs and knowledge production when working on my MA dissertation—Latent Spaces: Construction of Meaning and Knowledge Through New Media, Art, and Artificial Neural Networks—that considers the human experience of algorithmically mediated (knowledge) representations within the ubiquitous infosphere [3]. This was followed by a short paper [4] discussing the main points of the dissertation, and I have since written more on the topic, for example, a featured Medium article [5] on deep learning in relation to statistical analysis and storytelling. In Cloudy Logic, I try to highlight the ambiguity of bias: an often misunderstood or misappropriated concept, for which exist varying definitions depending on context that might contradict one another when, for example, blurring together disciplinary jargons. This, due to the interdisciplinary nature of ML research, feels relevant and timely. Professional expertise was sought out for trying to understand some technical aspects, and to map out how these issues might be taken into consideration in industry and in research."
       ],
       "media": [
         {
@@ -127,9 +127,9 @@
     {
       "id": "themes & relevance",
       "body": [
-        "<i>[A certain belief system advocates that] all observed objects exist only relative to the mode of observation by which they are detected, and all theoretical objects exist only relative to the conceptual framework in which they are conceived. It is impossible to know anything independently of the means by which it is known, so it makes no sense to speak of the objective world as it exists independently of all modes of inquiry.</i> [6] [7].",
+        "<i>[A certain belief system advocates that] all observed objects exist only relative to the mode of observation by which they are detected, and all theoretical objects exist only relative to the conceptual framework in which they are conceived. It is impossible to know anything independently of the means by which it is known, so it makes no sense to speak of the objective world as it exists independently of all modes of inquiry.</i> [6] [7]",
         "Evidently, machine learning is multifaceted [8]. Cloudy Logic has been built on the aforementioned research and developed further in response to conversations with various experts and nonexperts about interpretability in AI systems (in this documentation I use AI and ML interchangeably). As implied previously, without specificity the discourse on bias is merely reduced to rhetoric—a scapegoat for a more expansive problem. Based on my research, there are significant tensions between the business logic and the technical logic which, mapped out, would together form a complex web of fantastical promises, sleights of hand, hidden (mechanical) Turkers, real scientific aspirations, intelligent solutions to real-world problems as well as some poorly though-out designs, among much else. The hype has helped to fund important research that has much-deservedly seen spotlight; but often blown out of proportion or otherwise distracting attention away from the real matters at hand. As Michael Jordan phrases the issue: 'the scope is less about the realisation of science-fiction dreams or nightmares of super-human machines, and more about the need for humans to understand and shape technology as it becomes ever more present and influential in their daily lives.' [9] And, ultimately, as any output produced by an ML system is merely a function of its inputs, the humans in the loop should always remain a target of critical inquiry (whether they be political decision-makers, programmers, contributors to datasets, etc).",
-        "<i>Men at some time are masters of their fates; The fault, dear Brutus, is not in our stars, But in ourselves, that we are underlings. – Cassius, Julius Caesar (Shakespeare)</i>",
+        "<i>Men at some time are masters of their fates; The fault, dear Brutus, is not in our stars, But in ourselves, that we are underlings.</i> – Cassius (Shakespeare)",
         "As AI is rapidly reaching new pinnacles and increasing levels of complexity, its operational aspects may feel overwhelming to understand but, in reality, the underlying mathematical concepts are relatively simple (elegantly so). Big Data as an abstraction poses no intrinsic danger; however, many manifestations of its application are ethically questionable, such as predictive policing, automated legal decision-making, personalised advertising, and so on (often reinforcing existing biases and exploiting vulnerable individuals). Machine learning even at its current scale, as proven [10], is revolutionary. Thus, these themes are more relevant than ever [11]. As Robin writes, '[forecasting] only ever reproduces society and its most conventional norms, values, and practices.' [12]. The issue, in my mind, is a lack of regulation around AI. Clearly, if models are optimised for metrics that translate to profits above all else (at the expense of say personal health, human rights, political integrity and/or moral virtues), introducing frameworks for responsible innovation [13] will help to decentralise the benefits from the technology. One way to further this cause is to increase literacy in the field, and this includes considering the themes discussed in Cloudy Logic—the relationships of information processing, social systems and knowledge production (and another relevant question might be to do with how these relate to power and its distribution)."
       ],
       "media": [
@@ -142,10 +142,10 @@
           "[6]": "An Interview with Alan Wallace (2007): (1)."
         },
         {
-          "[7]": "This is similar to the way in which Barad discusses epistemic apparatuses, with which arbitrary activities are performed enabling 'the production and reconfiguring of difference'. Barad, K. (2007). (2), p. 232."
+          "[7]": "This is similar to the way in which Barad discusses epistemic apparatuses, with which arbitrary activities are performed enabling 'the production and reconfiguring of difference.' Barad, K. (2007). (2), p. 232."
         },
         {
-          "[8]": "The tree map is incomplete and merely a part of my process, with which I’ve tried to externalise some of my thinking regarding ML and its components."
+          "[8]": "The tree map is incomplete and merely a part of my process, with which I've tried to externalise some of my thinking regarding ML and its components."
         },
         {
           "[9]": "Jordan, M. (2018). (3)."
@@ -171,7 +171,7 @@
           "Meeting the Universe Halfway": "https://read.dukeupress.edu/books/book/1068/Meeting-the-Universe-HalfwayQuantum-Physics-and"
         },
         {
-          "Artificial Intelligence—The Revolution Hasn’t Happened Yet": "https://medium.com/@mijordan3/artificial-intelligence-the-revolution-hasnt-happened-yet-5e1d5812e1e7"
+          "Artificial Intelligence—The Revolution Hasn't Happened Yet": "https://medium.com/@mijordan3/artificial-intelligence-the-revolution-hasnt-happened-yet-5e1d5812e1e7"
         },
         {
           "Cambridge Analytica": "https://www.theguardian.com/news/2018/may/06/cambridge-analytica-how-turn-clicks-into-votes-christopher-wylie"
@@ -212,7 +212,7 @@
           "GitHub Code +-": "./media/visual/github.jpg"
         },
         {
-          "After Effects example": "./media/visual/ae.png"
+          "After Effects example": "./media/visual/ae.gif"
         },
         {
           "REGL example": "./media/visual/regl.gif"
@@ -241,16 +241,17 @@
     {
       "id": "narrative",
       "body": [
-        "I decided to focus the narrative on some of the (in my opinion) most important things to consider in terms of bias in the context of ML and statistical analysis. The five chapters are as follows:",
-        "Hubble—information is physical, and data are always produced through some intermediate instruments and by various methods of measurement;",
-        "Caustics—models of natural phenomena are based on approximations (there are limitations to the levels of accuracy in which we are able to measure and represent things, and a delicate balancing act involved in achieving appropriate proportions of general patterns to lower-level detail);",
-        "Noise—knowledge representations are based on assumptions (axioms, postulates, etc.);",
-        "Apotheosis—scientific determinism and the incredibly complex, entropy-rich world (too many variables to consider); and",
-        "Chaos—the sensitivity of (nonlinear) systems based on exponential operations (e.g. neural networks) to contextual change (the inability to deal with randomness)."
+        "{1}",
+        "I decided to focus the narrative on some of the (in my opinion) most important things to consider in terms of bias in the context of ML and statistical analysis more generally. The five chapters are listed below.",
+        "<b>Hubble</b>—information is physical, and data are always produced through some intermediate instruments and methods for measurement;",
+        "<b>Caustics</b>—models of natural phenomena are based on approximations (there are limitations to the levels of accuracy in which we are able to measure and represent things, and a delicate balancing act involved in achieving appropriate proportions of general patterns to lower-level detail);",
+        "<b>Noise</b>—knowledge representations are based on assumptions (axioms, postulates, etc.);",
+        "<b>Apotheosis</b>—scientific determinism and the incredibly complex, entropy-rich world (too many variables to consider); and",
+        "<b>Chaos</b>—the sensitivity of (nonlinear) systems that follow exponential laws (e.g. neural networks) to contextual change (the inability to deal with randomness)."
       ],
       "media": [
         {
-          "": ""
+          "Representations": "./media/visual/representation.png"
         }
       ],
       "notes": [
@@ -268,11 +269,11 @@
       "id": "prototyping",
       "body": [
         "{1}",
-        "Several prototypes were developed and tested for the construction of an interactive system. The first was a terminal-based multi-user dungeon, in that users would connect to a shared virtual machine in the cloud and experience the content using a restricted shell (with certain permission and limitations to manipulate the system). However, when my target audience became clearer, I decided that it would be best to include a graphical user interface. The command-line would have been fitting considering the themes (peering under the hood and unpicking of a complex system); so, in the end, I implemented a terminal interface for the browser (image below) that combines the best of the two approaches: functionality, aesthetics and connection to the narrative.",
+        "Several prototypes were developed and tested for the construction of an interactive system. The first was a terminal-based multi-user dungeon (above), in that users would connect to a shared virtual machine in the cloud and experience the content using a restricted shell (with certain permission and limitations to manipulate the system). However, when my target audience became clearer, I decided that it would be best to include a graphical user interface. The command-line would have been fitting considering the themes (peering under the hood and unpicking of a complex system); so, in the end, I implemented a terminal interface for the browser (below) that combines the best of the two approaches: functionality, aesthetics and connection to the narrative.",
         "{2}",
         "I wanted to devise an experience that would include mediating the stories in an engaging and playful manner. Considering the historical legacy of prediction and forecasting technologies—their emergence through quasi-religious rituals, deities, experiments and prophecies—it seemed suitable to weave the writings into a fictional narrative. Upon entry, the user is transported to the Temple of Apollo, where they are introduced to the high priestess, Pythia, the oracle of Delphi. I reflect more on this component as an interface for the experience in the reflection section.",
         "{3}",
-        "The second prototype for the storytelling system was made using custom-built bots and role menus on Discord. This approach resulted in a fragmented and choice-based experience, in the sense that the channels and content shown to a user would be determined by the options chosen throughout the journey. A key part of my testing was also to determine the appropriate system to represent Pythia (as a fictional character). I tested a state-of-the-art AI language model [15]; but ultimately, it was impractical for delivering crucial information to the user (more entertainment value than anything else). As time went on, through extensive testing it became evident that both the best practical and dramaturgical decision would be to place Pythia at the beginning of the story: used as an interface to access the individual chapters and, perhaps more importantly, from this emerged a material narrator for the texts. The result is a more generic AI that recognises and acts on intents in the user’s writing; but crucial for navigating through the work, and in the process I have realised that there is scope to use similar technology for developing very novel interactive experiences (realisation that is briefly resurfaced in the future section)."
+        "The second prototype for the storytelling system was made using custom-built bots and role menus on Discord. This approach resulted in a fragmented and choice-based experience, in the sense that the channels and content shown to a user would be determined by the options chosen throughout the journey. A key part of my testing was also to determine the appropriate system to represent Pythia (as a fictional character). I tested a state-of-the-art AI language model [15]; but ultimately, it was impractical for delivering crucial information to the user (more entertainment value than anything else). As time went on, through extensive testing it became evident that both the best practical and dramaturgical decision would be to place Pythia at the beginning of the story: used as an interface to access the individual chapters and, perhaps more importantly, from this emerged a material narrator for the texts. The result is a more generic AI that recognises and acts on intents in the user's writing; but crucial for navigating through the work, and in the process I have realised that there is scope to use similar technology for developing very novel interactive experiences (a realisation that is briefly resurfaced in the future section)."
       ],
       "media": [
         {
@@ -299,11 +300,13 @@
     {
       "id": "user testing",
       "body": [
-        "{1}",
-        "{2}",
-        "{3}",
         "The main bulk of user testing (for the current live version—the browser implementation) focussed on three key aspects: media elements, their layout and overall aesthetics; interface and its functionality; and narrative, its dramaturgy and overall flow. The images above are examples of the work done in each. The experience was tested across browsers and operating systems. The UI was tested with individuals at various levels of digital literacy. In terms of affordances [16], my intention was to find a balance between a UX that would 1) challenge people (the somewhat unusual introduction where the user is presented with Pythia and little to indicate what follows or how to proceed) thereby igniting a sense of discovery and 2) not resemble a burdensome puzzle that would result in disengagement or frustration. Based on overall feedback, I implemented a short introduction to provide some context and instructions for proceeding directly to the stories. The work lasts for approximately 30-45 minutes if experienced in a single session, but the user may choose to explore individual chapters instead.",
-        ""
+        "Elements / OS / Browser",
+        "{1}",
+        "UI",
+        "{2}",
+        "UX / Narrative",
+        "{3}"
       ],
       "media": [
         {
@@ -335,8 +338,8 @@
       "body": [
         "{1}",
         "Beyond my user tests, the work has been a success among my target audience, based on the fact that it was featured in two guest-curated collections as part of RCA2020: (1) (John Maeda) and (2) (Anna Ridler). This is an honour in and of itself, but it is also indicative of the work reaching my target audience—both established technologists with research experience in the field as well as individuals working on and/or thinking about the ethical implications of AI and Big Data.",
-        "<i>Frankly, I expected to see more critical works like Cloudy Logic that address what happens when companies and entities in our world start to learn how to speaks machine — that will likely come in work by the future humanist technologists of the RCA. – John Maeda.</i>",
-        "<i>It is also important to remember, as Erik Lintunen does in his writing and project 'Cloudy Logic' how complex and brittle these systems are – how they are ‘precise, intricate and sensitive to contextual change’ – and how hard it discuss and explore the nuances of how they actually work without a background in digital technologies or data practices. But these projects, and the other work across IED, open up and build a vocabulary and language around artificial intelligence for other creative practitioners and the wider general public and present an alternative way of engaging with machine learning. – Anna Ridler</i>"
+        "<i>Frankly, I expected to see more critical works like Cloudy Logic that address what happens when companies and entities in our world start to learn how to speaks machine — that will likely come in work by the future humanist technologists of the RCA.</i> – John Maeda.",
+        "<i>It is also important to remember, as Erik Lintunen does in his writing and project 'Cloudy Logic' how complex and brittle these systems are – how they are 'precise, intricate and sensitive to contextual change' – and how hard it discuss and explore the nuances of how they actually work without a background in digital technologies or data practices. But these projects, and the other work across IED, open up and build a vocabulary and language around artificial intelligence for other creative practitioners and the wider general public and present an alternative way of engaging with machine learning.</i> – Anna Ridler"
       ],
       "media": [
         {
@@ -360,9 +363,9 @@
     {
       "id": "analytics",
       "body": [
-        "This section includes some relevant analytics from the show period of 15.7.-31.7.2020. All collected user data are anonymous and exclude geographical information. I sought advice from a tutor to discuss the ethics of data collection, and they suggested that I weave a disclosure into the narrative. This materialised as the greeting from Pythia: be considerate with your words—these walls are listening!",
+        "This section includes some relevant analytics from the show period of 15.7.-31.7.2020. All collected user data are anonymous and exclude geographical information. I sought advice from a tutor to discuss the ethics of data collection, and they suggested that I weave a disclosure into the narrative. This materialised as the greeting from Pythia: be considerate with your words—these walls have ears!",
         "{1}",
-        "Google offers very sophisticated tools to analyse the performance of the chatbot (for instance, the map above); but surprisingly in this case they provided very little qualitative insight (hence the lack of detail in the image). I wanted to avoid mapping out obvious metrics and their correlations. Instead, I built a dataset from the conversation data, in that I’ve randomly chosen a sample of 50 conversations (with more than two user messages in each) and recorded the number of user messages per session and the length of each. From these, I’ve constructed a heatmap visualising the progression of each conversation: each column 1-50 on the x-axis represents a single conversation and the y-axis displays the number of user messages as part of each conversation. The colour represents the length of the message (exact figure is displayed below the graph on hover)."
+        "Google offers very sophisticated tools to analyse the performance of chatbots (for instance, the map above); but surprisingly in this case they provided very little qualitative insight (hence the lack of detail in the image). I wanted to avoid mapping out obvious metrics and their correlations. Instead, I built a dataset from the conversation data, in that I've randomly chosen a sample of 50 conversations (with more than two user messages in each) and recorded the number of user messages per session and the length of each. From these, I've constructed a heatmap visualising the progression of each conversation: each column 1-50 on the x-axis represents a single conversation and the y-axis displays the number of user messages as part of each conversation. The colour represents the length of the message (exact figure is displayed below the graph on hover)."
       ],
       "media": [
         {
@@ -383,14 +386,14 @@
     {
       "id": "",
       "body": [
-        "I’ve also included a few conversations. The first two are examples of relatively successful interactions that follow my design, the third is spam and the rest are some (for me emotionally striking) peculiarities brought into the Temple.",
+        "I've also included a few conversations. The first two are examples of relatively successful interactions that follow my design, the third is spam and the rest are some (for me emotionally striking) peculiarities brought into the Temple. All sessions begin with the greeting: stranger, you seem lost–what has brought you to the sacred Temple of Apollo?",
         "{1}",
         "{2}",
         "{3}",
         "{4}",
         "{5}",
         "{6}",
-        "The conversation data may be used to improve the experience or to inform a better design as part of a future project. From my analysis, I see that a significant proportion of conversations begin with a generic greeting; a large number of consecutive short messages indicate spam (though if the string length of each is the same there might be issues communicating with the bot); and generally, users have engaged for around 3-4 messages on average before switching to more terse replies."
+        "The conversation data may be used to improve the experience or to inform a better design for a future project. From my analysis, I see that a significant proportion of conversations begin with a generic greeting; a large number of consecutive short messages indicate spam (though if the string length of each is the same there might be issues communicating with the bot); and generally, users have engaged for around 3-4 messages on average before switching to more terse replies."
       ],
       "media": [
         {
@@ -424,9 +427,9 @@
       ]
     },
     {
-      "id": "IED and personal practice",
+      "id": "links to IED",
       "body": [
-        "In addition to some of the points outlined throughout this documentation, I think one of the most fascinating aspects of the work that relates to Information Experience Design is the use of Pythia as an interface for the narrative. I think that, given a more complex AI and a more systematic data collection design, analysing natural language would be an insightful way to conduct user experience design. This process has provided me with plenty of ideas for future projects. For example, intent recognition could be used for much more than building chatbots and sequencing content, such as manipulating the parameters of interactive media. Due to the capabilities of existing software (intent trees, speech recognition, etc.) there is potential for designing sophisticated multimedia narratives.",
+        "In addition to everything already outlined, I think one of the most fascinating aspects of the work that relates to Information Experience Design is the use of Pythia as an interface for the narrative. I think that, given a more complex AI and a more systematic data collection design, the analysis of natural language would be an insightful way to conduct user experience design. This process has provided me with plenty of ideas for future projects. For example, intent recognition could be used for much more than building chatbots and sequencing content, such as manipulating the parameters of interactive media. Due to the capabilities of existing software (intent trees, speech recognition, etc.) there is potential for designing sophisticated multimedia narratives.",
         "Contemplating on how IED has influenced my practice, my interests have evolved beyond a superficial interest in data physicalisation for the sake of novel experiences toward a more research-focussed direction. However, I think that producing new media has transformative potential: my view is that we construct our realities through discourse—the exchange of information with the world—and therefore, new experiences may transform how we perceive and understand our realities! Equally, new media provide new means to engage in research.",
         "Some of my IED-related reading during the development of this project includes:<br><br>Theodor Adorno (social conformism and irrationality)<br>Karen Barad (representationalism vs performativity)<br>Adrian Mackenzie (machine learning and knowledge production)<br>Nate Silver (historical context on forecasting technologies and practices)<br>Hito Steyerl (pattern recognition)"
       ],
@@ -450,10 +453,9 @@
 
   "future": [
     {
-      "id": "",
+      "id": "cloudy logic",
       "body": [
-        "Cloudy Logic, as an online artwork, could exist as part of (1)—a collection of works described as ‘projects that push the boundaries of art, technology, design and culture. Experiments inspire, teach, and delight.’ The work could also be distributed via any other online platform with a focus on exploring the social implications of ICTs; and the project could also be physically exhibited with further development, as part of residencies such as (2), (3), (4), (5), among other opportunities. Interactive articles have emerged as a new type of computational communication medium, which leverage ‘active reading techniques to make ideas more accessible to a broad range of people’ and have been shown to improve retention [17].",
-        "I see the future direction for my practice as research at the intersection of data science, interaction design and digital storytelling. Hypothetically, collaborators for my work could include research scientists in the field of ML (designing ways in which to physicalise their research), social scientists (devising novel research methods for studying social spaces) or community groups (designing experiences for educational or otherwise altruistic purposes). I think, as informationally embodied organisms existing within informational environments, exploring how information flows and is processed is crucial for understanding the world that we inhabit. Therefore, designing ways in which to make sense and to discuss complex topics is perhaps problem-solving at its very best."
+        "Cloudy Logic, as an online artwork, could exist as part of (1)—a collection of works described as 'projects that push the boundaries of art, technology, design and culture. Experiments inspire, teach, and delight.' The work could also be distributed via any other online platform with a focus on exploring the social implications of ICTs; and the project could also be physically exhibited with further development, as part of residencies such as (2), (3), (4), (5), among other opportunities. Interactive articles have emerged as a new type of computational communication medium, which leverage 'active reading techniques to make ideas more accessible to a broad range of people' and have been shown to improve retention [17]."
       ],
       "media": [
         {
@@ -483,6 +485,27 @@
         },
         {
           "Communicating with Interactive Articles": "https://distill.pub/2020/communicating-with-interactive-articles/"
+        }
+      ]
+    },
+    {
+      "id": "personal practice",
+      "body": [
+        "I see the future direction for my practice as research at the intersection of data science, interaction design and digital storytelling. Hypothetically, collaborators for my work could include research scientists in the field of ML (designing ways in which to physicalise their research and visualise various manifestations of biases), social scientists (devising novel research methods for studying social spaces) or community groups (designing experiences for educational or otherwise altruistic purposes). I think, as informationally embodied organisms existing within informational environments, exploring how information flows and is processed is crucial for understanding the world that we inhabit. Therefore, designing ways in which to make sense and to discuss complex topics is perhaps problem-solving at its very best."
+      ],
+      "media": [
+        {
+          "": ""
+        }
+      ],
+      "notes": [
+        {
+          "": ""
+        }
+      ],
+      "links": [
+        {
+          "": ""
         }
       ]
     }

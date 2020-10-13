@@ -15,7 +15,7 @@ let page = document.createElement('meta')
 page.id = 'page'
 document.head.appendChild(page)
 
-page.content = 'reflection' // Default load page
+page.content = 'introduction' // Default load page
 
 /* Load data */
 
@@ -58,30 +58,22 @@ if (env === 'development') {
   console.log('Development mode.')
 
   // TO DO: troubleshoot file loading for dev server.
-
   require('../media/visual/placeholder.jpg')
-
   require('../media/visual/cloudy.gif')
-
   require('../media/visual/github.jpg')
-
-  require('../media/visual/ae.png')
+  require('../media/visual/ae.gif')
   require('../media/visual/regl.gif')
   require('../media/visual/p5.gif')
   require('../media/visual/c4d.gif')
-
+  require('../media/visual/representation.png')
   require('../media/visual/terminal.png')
   require('../media/visual/pythia.gif')
   require('../media/visual/discord.png')
-
   require('../media/visual/test-OS.png')
   require('../media/visual/test-UI.png')
   require('../media/visual/test-UX.png')
-
   require('../media/visual/rca2020.png')
-
   require('../media/visual/intents.png')
-
   require('../media/visual/convo-1.png')
   require('../media/visual/convo-2.png')
   require('../media/visual/convo-spam.png')
@@ -89,15 +81,8 @@ if (env === 'development') {
   require('../media/visual/convo-love.png')
   require('../media/visual/convo-scared.png')
 
-
-
-
   sequencer()
 
-} else {
-
-  sequencer()
-
-}
+} else { sequencer() }
 
 export { data }
