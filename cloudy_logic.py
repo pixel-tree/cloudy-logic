@@ -11,7 +11,7 @@ from pythia import detect_intent_texts
 
 app = Flask(__name__,
             static_url_path="",
-            static_folder=os.path.abspath("../static"))
+            static_folder=os.path.abspath("./static"))
 
 
 # Pythia.
@@ -29,13 +29,13 @@ def send_message():
 # General.
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return send_file("../static/index.html")
+    return send_file("./static/index.html")
 
 
 # About.
 @app.route('/about', methods=['GET', 'POST'])
 def about():
-    return send_file("../static/about/about.html")
+    return send_file("./static/about/about.html")
 
 
 # Use cloudy_logic.py for development;
