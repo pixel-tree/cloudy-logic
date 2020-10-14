@@ -70,7 +70,7 @@
     {
       "id": "audience",
       "body": [
-        "The work was originally conceived as a piece of internet art, due to the restrictions set on the physical exhibition of work in response to COVID-19. During prototyping, I explored various options for disseminating my work digitally, such as Discord (social platform) and a shared virtual machine (accessed using SSH and the command-line interface). The project targets a mixed audience: not only technologists and researchers already in the field but also any individuals specifically interested in the ethical implications of machine learning and AI -powered technologies (emerging rapidly and increasingly mediating our social space [3]). Developing the work for an online delivery opened up the experience to a broader audience. With no durational nor geographical restrictions, the work is available to anyone at no cost and on-demand. This considered, my intention was to design the system taking into account the affordances of both the technologically inclined as well as of those less computer literate—ultimately, producing an artwork that combines elements of essay-writing, data visualisation and experimental digital storytelling."
+        "The work was originally conceived as a piece of internet art, due to the restrictions set on the physical exhibition of work in response to COVID-19. I explored various options for disseminating my work digitally, such as Discord (social platform) and a shared virtual machine (accessed using SSH and the command-line interface). The project targets a mixed audience: not only technologists and researchers already in the field but also any individuals specifically interested in the ethical implications of machine learning and AI -powered technologies (emerging rapidly within our social space [3]). Developing the work for an online delivery opened up the experience to a broader audience. With no durational nor geographical restrictions, the work is available to anyone on-demand. This considered, my intention was to design the system taking into account the affordances of both the technologically inclined as well as those less computer literate—ultimately, producing an artwork that combines elements of essay-writing, data visualisation and experimental digital storytelling."
       ],
       "media": [
         {
@@ -371,9 +371,9 @@
     {
       "id": "analytics",
       "body": [
-        "This section includes some analytics from the show period of 15.7.-31.7.2020. All collected user data are anonymous and exclude geographical information. I sought advice from a tutor to discuss the ethics of this, and they suggested that I weave a disclosure into the narrative. This materialised as the greeting: be considerate with your words—these walls have ears!",
+        "This section includes analytics from the show period of 15.7.-31.7.2020. All collected user data are anonymous and exclude geographical information. I sought advice from a tutor to discuss the ethics of this, and they suggested that I weave a disclosure into the narrative. This materialised as the greeting: be considerate with your words—these walls have ears!",
         "{1}",
-        "Dialogflow offers sophisticated tools to analyse the performance of chatbots. Surprisingly, they provided little qualitative insight (hence the intentional lack of detail above). Instead, I built a dataset consisting of 50 randomly sampled conversations. For each, I recorded the number of user messages per session and the length of each message. From these, I constructed a heat map to visualise the conversation progression: the columns 1-50 on the x-axis represent individual users/sessions, and the y-axis is used to display the quantity of user messages within each. The colour represents the length of the message and an exact figure is provided below the graph (on hover)."
+        "Dialogflow offers sophisticated tools to analyse the performance of chatbots. Surprisingly, these provided little qualitative insight (hence the intentional lack of detail above). Instead, I built a dataset consisting of 50 randomly sampled conversations. For each, I recorded the number of user messages per session and the length of each message. From these, I constructed a heat map to visualise the conversation progression: the columns 1-50 on the x-axis represent individual users/sessions, and the y-axis is used to display the quantity of user messages within each. The colour represents the length of the message and an exact figure is provided below the graph (on hover)."
       ],
       "media": [
         {
@@ -394,14 +394,14 @@
     {
       "id": "",
       "body": [
-        "A few conversations have been selected to be shared below. The first two are examples of interactions that follow my design; the third I suspect is spam but the rest are some peculiarities brought into the Temple. All sessions begin with the greeting: stranger, you seem lost–what has brought you to the sacred Temple of Apollo?",
+        "I have chosen to share a few conversations below. The first two are examples of interactions that follow my design; the third I suspect is spam; and the rest are some peculiarities brought into the Temple. All sessions begin with a shared greeting: stranger, you seem lost–what has brought you to the sacred Temple of Apollo?",
         "{1}",
         "{2}",
         "{3}",
         "{4}",
         "{5}",
         "{6}",
-        "The conversation data may be used to inform a better design for a future iteration of the project. From my analysis, I see that a significant proportion of conversations begin with a generic greeting; a large number of consecutive short messages indicates spam (though if the string length is often repeated there might be communication issues); and generally, users have engaged for 3-4 messages on average before switching to terse replies."
+        "The conversation data may be used to inform a better design for a future iteration of the project. From my analysis, I see that 1) a significant proportion of conversations begin with a generic greeting, 2) a large number of consecutive short messages indicates spam (though if the string length is often repeated there might be communication issues) and 3) generally, users have engaged for 3-4 messages on average before switching to terse replies."
       ],
       "media": [
         {
@@ -437,7 +437,7 @@
     {
       "id": "links to IED",
       "body": [
-        "There are several facets of the work that relate to Information Experience Design. Firstly, the somewhat novel way in which the information has been communicated. Secondly, the use of artistic methods in conducting user experience research. Given a more participatory design, an analysis of natural language and associated metadata could be very insightful in studying emergent behaviours in social and digital contexts (and in fact, an entire field of social data science has emerged). In terms of experience, intent recognition has potential beyond creating chatbots and sequencing content. For instance, it could be used to manipulate the parameters of interactive media: in theory, the capabilities of existing software (intent trees, speech recognition, etc.) allow for the design of sophisticated multimedia narratives.",
+        "There are several facets of the work that relate to Information Experience Design. Firstly, the somewhat novel way in which the information has been communicated. Secondly, the use of artistic methods in conducting user experience research. Given a more participatory design, an analysis of natural language and associated metadata could be very insightful in studying emergent behaviours in social and digital contexts (and in fact, an entire field of social data science has emerged). In terms of experience, intent recognition has heaps of potential beyond chatbots and sequencing content. For instance, it could be used to manipulate the parameters of interactive media: in theory, the capabilities of existing software (intent trees, speech recognition, etc.) allow for the design of sophisticated multimedia narratives.",
         "Contemplating more broadly, on how IED has influenced my practice, my interests have transcended a superficial fascination of data physicalisation toward a research-focussed direction grounded in real-world issues. New media has transformative potential: my view, aligned with Wallace and Barad, is that we construct our realities through material-discursive practices—the exchange of information with our surroundings—and therefore, new experiences are latent spaces for alternative ways in which to perceive and understand the world!"
       ],
       "media": [
@@ -464,7 +464,7 @@
       "body": [
         "As an online artwork, Cloudy Logic could exist as part of (1)—a collection of works described as 'projects that push the boundaries of art, technology, design and culture. Experiments inspire, teach, and delight.' As a research project, the work could be distributed via any other online platform with a focus on the social implications of ICTs.",
         "The work could also be physically exhibited with further development, as part of residencies such as (2), (3), (4), (5), among others. Interactive articles have emerged as a new type of computational communication medium, which leverage 'active reading techniques to make ideas more accessible to a broad range of people' and have been shown to improve retention [15].",
-        "There is scope for further collaborations and this could include, for instance, research scientists in the field of ML (designing ways in which to physicalise their research) or social scientists (devising research methods for studying specific manifestations of bias). In these cases, the appropriate venue for publishing the work could be something like (6)."
+        "There is scope for further collaborations and these could include, for instance, research scientists in the field of ML (designing ways in which to physicalise their research) or social scientists (devising research methods for studying specific manifestations of bias). In these cases, the appropriate venue for publishing the work could be something like (6)."
       ],
       "media": [
         {
