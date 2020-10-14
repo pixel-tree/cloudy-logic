@@ -11,7 +11,7 @@ import '../style/main.scss'
 import { Splash } from './components/X_Splash'
 import { Intro } from './components/0_Intro'
 import { Pythia } from './components/X_Pythia'
-import { Return } from './components/X_Return'
+// import { Return } from './components/X_Return'
 import { Hubble } from './components/1_Hubble'
 import { Caustics } from './components/2_Caustics'
 import { Noise } from './components/3_Noise'
@@ -48,6 +48,15 @@ container.id = 'container'
 document.body.appendChild(container)
 $('#container').hide()
 
+// About Cloudy Logic.
+const about = document.createElement('a')
+about.setAttribute('href', 'https://cloudylogic.space/about')
+about.setAttribute('target', '_blank')
+about.setAttribute('rel', 'noopener')
+about.id = 'aboutLink'
+about.innerText = 'About 🔍'
+document.body.appendChild(about)
+
 // Cursor.
 // const cursor = new Cursor()
 
@@ -62,12 +71,10 @@ if (env !== 'development') {
   $('#container').show()
 
   // Currently can't run transitions in dev;
-  // to test these, build app and run with Flask.
-
-  // new Return(container)
+  // to test these, build app and run using Flask.
 
   // Scene under development:
-  // new Pythia(container)
+  new Intro(container)
 
 }
 
@@ -115,31 +122,26 @@ function sequencer() {
   // Scene I, II, III, etc.
   else if (document.getElementById('scene').content === 'hubble') {
     clear('container')
-    const back = new Return(container)
     const hubble = new Hubble(container)
   }
 
   else if (document.getElementById('scene').content === 'caustics') {
     clear('container')
-    const back = new Return(container)
     const caustics = new Caustics(container)
   }
 
   else if (document.getElementById('scene').content === 'noise') {
     clear('container')
-    const back = new Return(container)
     const noise = new Noise(container)
   }
 
   else if (document.getElementById('scene').content === 'apotheosis') {
     clear('container')
-    const back = new Return(container)
     const apotheosis = new Apotheosis(container)
   }
 
   else if (document.getElementById('scene').content === 'chaos') {
     clear('container')
-    const back = new Return(container)
     const chaos = new Butterfly(container)
   }
 
