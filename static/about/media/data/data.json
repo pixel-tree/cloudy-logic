@@ -8,7 +8,7 @@
       ],
       "media": [
         {
-          "Cloudy Logic Main": "./media/visual/cloudy.gif"
+          "Cloudy Logic Main": "./about/media/visual/cloudy.gif"
         }
       ],
       "notes": [
@@ -189,7 +189,7 @@
       ],
       "media": [
         {
-          "GitHub Code +-": "./media/visual/github.jpg"
+          "GitHub Code +-": "./about/media/visual/github.jpg"
         }
       ],
       "notes": [
@@ -219,7 +219,7 @@
       ],
       "media": [
         {
-          "Representations": "./media/visual/representation.png"
+          "Representations": "./about/media/visual/representation.png"
         }
       ],
       "notes": [
@@ -245,13 +245,13 @@
       ],
       "media": [
         {
-          "Terminal MUD": "./media/visual/terminal.png"
+          "Terminal MUD": "./about/media/visual/terminal.png"
         },
         {
-          "Pythia / Temple of Apollo": "./media/visual/pythia.gif"
+          "Pythia / Temple of Apollo": "./about/media/visual/pythia.gif"
         },
         {
-          "Discord": "./media/visual/discord.png"
+          "Discord": "./about/media/visual/discord.png"
         }
       ],
       "notes": [
@@ -282,16 +282,16 @@
       ],
       "media": [
         {
-          "After Effects example": "./media/visual/ae.gif"
+          "After Effects example": "./about/media/visual/ae.gif"
         },
         {
-          "REGL example": "./media/visual/regl.gif"
+          "REGL example": "./about/media/visual/regl.gif"
         },
         {
-          "p5.js example": "./media/visual/p5.gif"
+          "p5.js example": "./about/media/visual/p5.gif"
         },
         {
-          "C4D example": "./media/visual/c4d.gif"
+          "C4D example": "./about/media/visual/c4d.gif"
         }
       ],
       "notes": [
@@ -318,13 +318,13 @@
       ],
       "media": [
         {
-          "Testing Media Elements": "./media/visual/test-OS.png"
+          "Testing Media Elements": "./about/media/visual/test-OS.png"
         },
         {
-          "Interface Testing": "./media/visual/test-UI.png"
+          "Interface Testing": "./about/media/visual/test-UI.png"
         },
         {
-          "Walkthrough Test": "./media/visual/test-UX.png"
+          "Walkthrough Test": "./about/media/visual/test-UX.png"
         }
       ],
       "notes": [
@@ -351,7 +351,7 @@
       ],
       "media": [
         {
-          "Humanistic Technologists Design for the Now RCA2020": "./media/visual/rca2020.png"
+          "RCA2020 Collections": "./about/media/visual/rca2020.png"
         }
       ],
       "notes": [
@@ -377,7 +377,7 @@
       ],
       "media": [
         {
-          "Intent Path Data": "./media/visual/intents.png"
+          "Intent Path Data": "./about/media/visual/intents.png"
         }
       ],
       "notes": [
@@ -405,22 +405,22 @@
       ],
       "media": [
         {
-          "Successful Conversation 1": "./media/visual/convo-1.png"
+          "Successful Conversation 1": "./about/media/visual/convo-1.png"
         },
         {
-          "Successful Conversation 2": "./media/visual/convo-2.png"
+          "Successful Conversation 2": "./about/media/visual/convo-2.png"
         },
         {
-          "Nasty Spam": "./media/visual/convo-spam.png"
+          "Nasty Spam": "./about/media/visual/convo-spam.png"
         },
         {
-          "Loss": "./media/visual/convo-loss.png"
+          "Loss": "./about/media/visual/convo-loss.png"
         },
         {
-          "Love": "./media/visual/convo-love.png"
+          "Love": "./about/media/visual/convo-love.png"
         },
         {
-          "Scared": "./media/visual/convo-scared.png"
+          "Scared": "./about/media/visual/convo-scared.png"
         }
       ],
       "notes": [
