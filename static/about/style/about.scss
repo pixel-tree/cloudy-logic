@@ -81,6 +81,9 @@ li {
   text-shadow: 0.9px 0.9px $grayA;
   cursor: pointer;
 }
+.liActive {
+	font-family: $B;
+}
 
 #content {
 	width: 900px;

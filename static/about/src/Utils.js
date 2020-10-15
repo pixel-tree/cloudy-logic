@@ -34,10 +34,25 @@ class Nav {
 
     for (let i = 0; i < items.length; i++) {
 
+      // Individual items.
       const li = document.createElement('li')
       li.innerText = items[i]
 
+      // Style corresponding menu item for default load page.
+      if (document.getElementById('page').content === li.innerHTML) {
+        li.classList.add('liActive')
+      }
+
+      // On item click.
       li.onclick = function() {
+
+        // Style only active menu link.
+        for (let j = 0; j < ol.children.length; j++) {
+          ol.children[j].classList.remove('liActive')
+        }
+        li.classList.add('liActive')
+
+        // Sequencer.
         if (document.getElementById('page').content !== this.innerHTML) {
           document.getElementById('page').content = this.innerHTML
           sequencer()
